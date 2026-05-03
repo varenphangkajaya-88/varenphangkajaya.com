@@ -1,0 +1,153 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - label: "Homepage Cells"
+        name: "homepage"
+        file: "_data/homepage.json"
+        fields:
+          - label: "Creative Track — Hero Photo"
+            name: "creative_hero"
+            widget: "image"
+            required: false
+            hint: "Full bleed background for Creative Direction cell on homepage"
+          - label: "Shopify Track — Hero Photo"
+            name: "shopify_hero"
+            widget: "image"
+            required: false
+            hint: "Full bleed background for Shopify & CRM cell on homepage"
+          - label: "Systems Track — Hero Photo"
+            name: "systems_hero"
+            widget: "image"
+            required: false
+            hint: "Full bleed background for Systems & Web App cell on homepage"
+
+  - name: "creative"
+    label: "Creative Direction"
+    files:
+      - label: "Campaign Production"
+        name: "campaigns"
+        file: "_data/campaigns.json"
+        fields:
+          - label: "Cover Photo"
+            name: "cover"
+            widget: "image"
+            required: false
+          - label: "Description"
+            name: "description"
+            widget: "text"
+          - label: "Campaign Photos"
+            name: "photos"
+            widget: "list"
+            fields:
+              - { label: "Photo", name: "photo", widget: "image" }
+              - { label: "Campaign Name", name: "name", widget: "string" }
+              - { label: "Year", name: "year", widget: "string" }
+
+      - label: "Brand Activation & Pop Up"
+        name: "activation"
+        file: "_data/activation.json"
+        fields:
+          - label: "Cover Photo"
+            name: "cover"
+            widget: "image"
+            required: false
+          - label: "Description"
+            name: "description"
+            widget: "text"
+          - label: "Hertape Laundry — Photos"
+            name: "laundry_photos"
+            widget: "list"
+            fields:
+              - { label: "Photo", name: "photo", widget: "image" }
+          - label: "Her Airlines — Photos"
+            name: "airlines_photos"
+            widget: "list"
+            fields:
+              - { label: "Photo", name: "photo", widget: "image" }
+
+  - name: "shopify"
+    label: "Shopify & CRM"
+    files:
+      - label: "Hertape — Shopify Build"
+        name: "hertape_shop"
+        file: "_data/hertape_shop.json"
+        fields:
+          - label: "Cover Photo"
+            name: "cover"
+            widget: "image"
+            required: false
+          - label: "Description"
+            name: "description"
+            widget: "text"
+          - label: "Store Screenshots"
+            name: "photos"
+            widget: "list"
+            fields:
+              - { label: "Photo", name: "photo", widget: "image" }
+
+      - label: "Maison Kolori — CRM"
+        name: "maison"
+        file: "_data/maison.json"
+        fields:
+          - label: "Cover Photo"
+            name: "cover"
+            widget: "image"
+            required: false
+          - label: "Description"
+            name: "description"
+            widget: "text"
+          - label: "Work Photos"
+            name: "photos"
+            widget: "list"
+            fields:
+              - { label: "Photo", name: "photo", widget: "image" }
+
+  - name: "systems"
+    label: "Systems & Web App"
+    files:
+      - label: "Operational Systems"
+        name: "ops"
+        file: "_data/ops.json"
+        fields:
+          - label: "Cover Photo"
+            name: "cover"
+            widget: "image"
+            required: false
+          - label: "Description"
+            name: "description"
+            widget: "text"
+          - label: "Hertape Smart App — Photos"
+            name: "smartapp_photos"
+            widget: "list"
+            fields:
+              - { label: "Photo", name: "photo", widget: "image" }
+          - label: "Cahaya Walet Jaya — Photos"
+            name: "cwj_photos"
+            widget: "list"
+            fields:
+              - { label: "Photo", name: "photo", widget: "image" }
+
+      - label: "Moneymani Web App"
+        name: "finance"
+        file: "_data/finance.json"
+        fields:
+          - label: "Cover Photo"
+            name: "cover"
+            widget: "image"
+            required: false
+          - label: "Description"
+            name: "description"
+            widget: "text"
+          - label: "App Screenshots"
+            name: "photos"
+            widget: "list"
+            fields:
+              - { label: "Photo", name: "photo", widget: "image" }
