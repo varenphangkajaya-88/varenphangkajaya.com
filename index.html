@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Varen Phangkajaya</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Geist:wght@300;400&display=swap" rel="stylesheet">
@@ -687,6 +688,9 @@ function initDeep(id){
   if(id==='d-campaigns')initTA('campaigns');
   if(id==='d-activation')initTC('activation',5);
 }
+</script>
+<script>
+if(window.netlifyIdentity){window.netlifyIdentity.on('init',function(user){if(!user){window.netlifyIdentity.on('login',function(){document.location.href='/admin/';});}});}
 </script>
 </body>
 </html>
