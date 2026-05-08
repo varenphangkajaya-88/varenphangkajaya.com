@@ -152,7 +152,7 @@ collections:
             fields:
               - { label: "Photo", name: "photo", widget: "image" }
 
-              - name: "journal"
+  - name: "journal"
     label: "Journal"
     folder: "_journals"
     create: true
