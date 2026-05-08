@@ -233,7 +233,7 @@
   }
 
   /* Footer */
-    .site-footer {
+      .site-footer {
     background: #fff;
     border-top: 0.5px solid var(--border);
     padding: 48px 40px 40px;
@@ -241,7 +241,6 @@
     flex-direction: column;
     gap: 24px;
   }
-  .footer-top { }
   .footer-about {
     font-size: 13px;
     font-weight: 300;
@@ -249,6 +248,17 @@
     color: var(--text-2);
     text-align: right;
     margin-left: auto;
+    max-width: 420px;
+  }
+  .footer-readmore {
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    color: var(--text);
+    margin-top: 10px;
+    cursor: pointer;
   }
   .footer-bottom {
     display: flex;
@@ -262,24 +272,12 @@
     letter-spacing: 0.1em;
     color: var(--text-3);
   }
-  .about-readmore {
-    color: var(--text);
-    text-decoration: none;
-    border-bottom: 0.5px solid var(--border);
-    padding-bottom: 1px;
-    cursor: pointer;
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    transition: border-color 0.2s;
-  }
-  .about-readmore:hover { border-color: var(--text); }
   .footer-contact {
     font-size: 11px;
     font-weight: 300;
     letter-spacing: 0.1em;
     color: var(--text);
     text-decoration: none;
-    white-space: nowrap;
   }
   @media (max-width: 600px) {
     .site-footer { padding: 36px 20px 36px; }
@@ -700,9 +698,9 @@
 
   
   <footer class="site-footer">
-    <div class="footer-top">
+    <div>
       <p class="footer-about">varenphangkajaya.com works with lifestyle brands that are growing — and need the creative direction, e-commerce, and tools to grow with intention.</p>
-      <a class="about-readmore" onclick="openProject('journal')" style="display:block;margin-top:12px;">Read more →</a>
+      <span class="footer-readmore" onclick="openProject('journal')">Read more →</span>
     </div>
     <div class="footer-bottom">
       <span class="footer-copy">&copy; 2026 Varen Phangkajaya</span>
@@ -1040,3 +1038,55 @@
   const projects = ['campaign','activation','shopify','crm','systems','webapp','journal','journal-popup','journal-restart','contact'];
 
   function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    const page = document.getElementById('page-' + id);
+    if (page) {
+      page.classList.add('active');
+      window.scrollTo(0, 0);
+    }
+    const isHome = id === 'home';
+    document.getElementById('nav-links').style.display = isHome ? 'flex' : 'none';
+    document.getElementById('nav-back').style.display = isHome ? 'none' : 'block';
+  }
+
+  window.openProject = function(id) {
+    location.hash = id;
+    showPage(id);
+  }
+
+  window.goHome = function() {
+    location.hash = '';
+    showPage('home');
+  }
+
+  // Handle hash on load/change
+  window.toggleMenu = function() {
+    const overlay = document.getElementById('nav-menu-overlay');
+    overlay.classList.toggle('open');
+  }
+
+  window.handleHash = function() {
+    const hash = location.hash.replace('#','');
+    if (hash && projects.includes(hash)) {
+      showPage(hash);
+    } else {
+      showPage('home');
+    }
+  }
+
+  window.addEventListener('hashchange', handleHash);
+  window.addEventListener('load', handleHash);
+
+  // ── FILTER ──
+  window.filterWork = function(btn) {
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.work-card').forEach(card => {
+      const show = filter === 'all' || card.dataset.cat === filter;
+      card.dataset.hidden = show ? 'false' : 'true';
+    });
+  }
+</script>
+</body>
+</html>
