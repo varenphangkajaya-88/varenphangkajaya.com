@@ -537,7 +537,7 @@
   <div class="nav-right">
     <div class="nav-links" id="nav-links">
       <a onclick="goHome()">Work</a>
-      <a onclick="openProject('about')">About</a>
+      <a onclick="openProject('journal')">Journal</a>
       <a href="mailto:varenphangkajaya@gmail.com">Contact</a>
     </div>
     <button class="nav-back" id="nav-back" onclick="goHome()">← Back</button>
@@ -669,7 +669,7 @@
   
   <footer class="site-footer">
     <div class="footer-top">
-      <p class="footer-about">varenphangkajaya.com works with lifestyle brands that are growing — and need the creative direction, e-commerce, and tools to grow with intention. <a class="about-readmore" onclick="openProject('about')">Read more →</a></p>
+      <p class="footer-about">varenphangkajaya.com works with lifestyle brands that are growing — and need the creative direction, e-commerce, and tools to grow with intention.<br><br><a class="about-readmore" onclick="openProject('journal')">Read more →</a></p>
     </div>
     <div class="footer-bottom">
       <span class="footer-copy">&copy; 2026 Varen Phangkajaya</span>
@@ -876,10 +876,10 @@
   </div>
 
 <!-- About -->
-<div class="page fade-in" id="page-about">
+<div class="page fade-in" id="page-journal">
   <div class="project-page">
-    <div class="project-cat">About</div>
-    <h1 class="project-title">Varen Phangkajaya</h1>
+    <div class="project-cat">Journal</div>
+    <h1 class="project-title">Writing & Notes</h1>
     <div class="project-meta">
       <div class="project-meta-item"><div class="project-meta-label">Based in</div><div class="project-meta-value">Jakarta</div></div>
       <div class="project-meta-item"><div class="project-meta-label">Brand</div><div class="project-meta-value">Hertape</div></div>
@@ -905,7 +905,7 @@
 
 <script>
   // ── ROUTING ──
-  const projects = ['campaign','activation','shopify','crm','systems','webapp','about'];
+  const projects = ['campaign','activation','shopify','crm','systems','webapp','journal'];
 
   function showPage(id) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
