@@ -151,3 +151,24 @@ collections:
             widget: "list"
             fields:
               - { label: "Photo", name: "photo", widget: "image" }
+
+              - name: "journal"
+    label: "Journal"
+    folder: "_journals"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+      - label: "Cover Photo"
+        name: "cover"
+        widget: "image"
+        required: false
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
