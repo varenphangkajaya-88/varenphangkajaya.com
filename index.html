@@ -115,7 +115,7 @@
 
   /* Grid */
   .work-grid {
-    padding: 0 28px 64px;
+    padding: 0 40px 80px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0;
@@ -125,7 +125,7 @@
 
   .work-card {
     cursor: pointer;
-    padding: 12px;
+    padding: 48px;
   }
   .work-card[data-hidden="true"] { display: none; }
 
@@ -233,44 +233,27 @@
   }
 
   /* Footer */
-  .site-footer {
+    .site-footer {
     background: #fff;
     border-top: 0.5px solid var(--border);
     padding: 48px 40px 40px;
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 24px;
   }
-  .footer-top {
-    display: flex;
-    padding-bottom: 24px;
-    border-bottom: 0.5px solid var(--border);
-    margin-bottom: 20px;
-  }
+  .footer-top { }
   .footer-about {
     font-size: 13px;
     font-weight: 300;
     line-height: 1.75;
     color: var(--text-2);
-    max-width: 420px;
+    max-width: 480px;
   }
-  .footer-contact {
-    font-size: 11px;
-    font-weight: 300;
-    letter-spacing: 0.1em;
-    color: var(--text);
-    text-decoration: none;
-    border-bottom: 0.5px solid var(--border);
-    padding-bottom: 1px;
-    white-space: nowrap;
-    flex-shrink: 0;
-    transition: border-color 0.2s;
-  }
-  .footer-contact:hover { border-color: var(--text); }
   .footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
   .footer-copy {
     font-size: 10px;
@@ -278,8 +261,29 @@
     letter-spacing: 0.1em;
     color: var(--text-3);
   }
+  .about-readmore {
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 0.5px solid var(--border);
+    padding-bottom: 1px;
+    cursor: pointer;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    transition: border-color 0.2s;
+  }
+  .about-readmore:hover { border-color: var(--text); }
+  .footer-contact {
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: var(--text);
+    text-decoration: none;
+    white-space: nowrap;
+  }
   @media (max-width: 600px) {
     .site-footer { padding: 36px 20px 36px; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
+  }
     .footer-top { flex-direction: column; align-items: flex-start; gap: 20px; }
   }
 
@@ -457,7 +461,7 @@
     .site-nav { padding: 16px 20px; }
     .index-section { padding: 32px 20px 28px; }
     .work-grid { padding: 0 8px 48px; gap: 0; }
-    .work-card { padding: 8px; }
+    .work-card { padding: 24px; }
     .home-about { padding: 24px 20px; flex-direction: column; align-items: flex-start; gap: 16px; }
     .home-about-right { text-align: left; }
     .site-footer { padding: 16px 20px; }
@@ -533,7 +537,7 @@
   <div class="nav-right">
     <div class="nav-links" id="nav-links">
       <a onclick="goHome()">Work</a>
-      <a href="#about" onclick="goHome()">About</a>
+      <a onclick="openProject('about')">About</a>
       <a href="mailto:varenphangkajaya@gmail.com">Contact</a>
     </div>
     <button class="nav-back" id="nav-back" onclick="goHome()">← Back</button>
@@ -662,15 +666,15 @@
 
   </div>
 
-  <!-- About strip -->
-  <div class="home-about" id="about">
-    <p class="home-about-intro">varenphangkajaya.com works with lifestyle brands that are growing — and need the creative direction, e-commerce, and tools to grow with intention. <a class="about-readmore" onclick="openProject('about')">Read more →</a></p>
   
-  </div>
-
   <footer class="site-footer">
-    <a href="mailto:varenphangkajaya@gmail.com" class="footer-contact">Get in touch</a>
-      <div class="footer-bottom"><span class="footer-copy">&copy; 2026 Varen Phangkajaya</span></div>
+    <div class="footer-top">
+      <p class="footer-about">varenphangkajaya.com works with lifestyle brands that are growing — and need the creative direction, e-commerce, and tools to grow with intention. <a class="about-readmore" onclick="openProject('about')">Read more →</a></p>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 Varen Phangkajaya</span>
+      <a href="mailto:varenphangkajaya@gmail.com" class="footer-contact">Get in touch</a>
+    </div>
   </footer>
 
 </div>
@@ -870,11 +874,38 @@
     </div>
     <a href="https://carat-app-pi.vercel.app" target="_blank" class="project-link">View live app →</a>
   </div>
+
+<!-- About -->
+<div class="page fade-in" id="page-about">
+  <div class="project-page">
+    <div class="project-cat">About</div>
+    <h1 class="project-title">Varen Phangkajaya</h1>
+    <div class="project-meta">
+      <div class="project-meta-item"><div class="project-meta-label">Based in</div><div class="project-meta-value">Jakarta</div></div>
+      <div class="project-meta-item"><div class="project-meta-label">Brand</div><div class="project-meta-value">Hertape</div></div>
+      <div class="project-meta-item"><div class="project-meta-label">Available</div><div class="project-meta-value">Yes</div></div>
+    </div>
+    <p class="project-body">varenphangkajaya.com works with lifestyle brands that are growing — and need the creative direction, e-commerce, and tools to grow with intention.</p>
+    <div class="project-scope">
+      <div class="project-scope-title">Services</div>
+      <ul class="project-scope-list">
+        <li>Creative direction & campaign production</li>
+        <li>Brand activation & event concept</li>
+        <li>Shopify store design & development</li>
+        <li>CRM & email marketing (Klaviyo)</li>
+        <li>Internal tools & web apps</li>
+        <li>Custom Shopify Liquid development</li>
+      </ul>
+    </div>
+    <a href="mailto:varenphangkajaya@gmail.com" class="project-link">Get in touch →</a>
+  </div>
+</div>
+
 </div>
 
 <script>
   // ── ROUTING ──
-  const projects = ['campaign','activation','shopify','crm','systems','webapp'];
+  const projects = ['campaign','activation','shopify','crm','systems','webapp','about'];
 
   function showPage(id) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
