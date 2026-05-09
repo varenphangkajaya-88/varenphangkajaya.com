@@ -1047,53 +1047,60 @@
     </div>
   </div>
 </div>
-<!-- Journal: Pop-up lessons -->
-<div class="page fade-in" id="page-journal-popup">
-  <div class="journal-article">
-    <div class="journal-article-hero">
-      <!-- swap: <img src="images/journal/popup-hero.jpg" alt=""> -->
-      <span class="journal-article-hero-placeholder">Hero photo</span>
-    </div>
-    <div class="journal-article-date">2025</div>
-    <h1 class="journal-article-title">Five lessons no one taught me until I opened my own pop-up</h1>
-    <div class="journal-article-body">
-      <p>I had run Hertape for three years before we did our first pop-up. I thought I was ready. I had the products, the team, the aesthetics locked. What I didn't have was any real understanding of what it means to operate in physical space — and how differently people behave when they can touch things.</p>
-      <p>Here's what I wish someone had told me before we opened the doors.</p>
-      <ol>
-        <li><strong>The layout is the product.</strong> How you arrange a physical space shapes what people buy and how long they stay. We redesigned our floor layout three times across three pop-ups. Every change moved the numbers. It's not decoration — it's conversion rate optimization in three dimensions.</li>
-        <li><strong>Your best customers will show up on day one.</strong> The people who follow you most closely, who've been waiting — they come first. Build something worth their loyalty. The energy of that first wave sets the tone for everything that follows.</li>
-      </ol>
-      <div class="journal-article-pair">
-        <div class="journal-article-pair-photo">
-          <!-- swap: <img src="images/journal/popup-1.jpg" alt=""> -->
-          <span class="journal-article-pair-placeholder">Photo</span>
-        </div>
-        <div class="journal-article-pair-photo">
-          <!-- swap: <img src="images/journal/popup-2.jpg" alt=""> -->
-          <span class="journal-article-pair-placeholder">Photo</span>
-        </div>
-      </div>
-      <ol start="3">
-        <li><strong>Offline traffic doesn't convert online automatically.</strong> We had thousands of people walk through. Our online sales barely moved during the event. The bridge between offline and online has to be built deliberately — QR codes, exclusive drops, email capture at the door. It doesn't happen by itself.</li>
-        <li><strong>Your team's energy is visible.</strong> When my team was tired, customers felt it. When they were excited, the space felt different. Managing morale during a 9-day run is as important as any logistics decision.</li>
-        <li><strong>The real value comes after.</strong> The best thing that came from our pop-ups wasn't the revenue during the event. It was the content, the community, the trust signals for customers who weren't there. Document everything. The pop-up ends. The content doesn't.</li>
-      </ol>
-    </div>
-  </div>
-</div>
+<script>
+  // ── ROUTING ──
+  const projects = ['campaign','activation','shopify','crm','systems','webapp','journal','journal-popup','journal-restart','contact'];
 
-<!-- Journal: Restart -->
-<div class="page fade-in" id="page-journal-restart">
-  <div class="journal-article">
-    <div class="journal-article-hero">
-      <!-- swap: <img src="images/journal/restart-hero.jpg" alt=""> -->
-      <span class="journal-article-hero-placeholder">Hero photo</span>
-    </div>
-    <div class="journal-article-date">2025</div>
-    <h1 class="journal-article-title">If I could start my business again, I'd do these <em>five things</em> differently</h1>
-    <div class="journal-article-body">
-      <p>Hertape didn't start with a plan. It started with a product I wanted to exist and a stubborn belief that I could figure out the rest as I went. That worked — until it didn't. Here's the honest version of what I'd change.</p>
-      <ol>
-        <li><strong>I'd build the system before I needed it.</strong> I spent years running operations in my head and on WhatsApp. By the time I built Hertape Smart App — a proper internal OS for the team — we were already behind. Systems should be infrastructure, not a rescue mission.</li>
-        <li><strong>I'd collect emails from day one.</strong> We had customers before we had a list. Every sale that happened before we had CRM set up was a relationship we couldn't build on. Email is the only channel you actually own.</li>
-      </ol>
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    const page = document.getElementById('page-' + id);
+    if (page) {
+      page.classList.add('active');
+      window.scrollTo(0, 0);
+    }
+    const isHome = id === 'home';
+    document.getElementById('nav-links').style.display = isHome ? 'flex' : 'none';
+    document.getElementById('nav-back').style.display = isHome ? 'none' : 'block';
+  }
+
+  window.openProject = function(id) {
+    location.hash = id;
+    showPage(id);
+  }
+
+  window.goHome = function() {
+    location.hash = '';
+    showPage('home');
+  }
+
+  // Handle hash on load/change
+  window.toggleMenu = function() {
+    const overlay = document.getElementById('nav-menu-overlay');
+    overlay.classList.toggle('open');
+  }
+
+  window.handleHash = function() {
+    const hash = location.hash.replace('#','');
+    if (hash && projects.includes(hash)) {
+      showPage(hash);
+    } else {
+      showPage('home');
+    }
+  }
+
+  window.addEventListener('hashchange', handleHash);
+  window.addEventListener('load', handleHash);
+
+  // ── FILTER ──
+  window.filterWork = function(btn) {
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.work-card').forEach(card => {
+      const show = filter === 'all' || card.dataset.cat === filter;
+      card.dataset.hidden = show ? 'false' : 'true';
+    });
+  }
+</script>
+</body>
+</html>
