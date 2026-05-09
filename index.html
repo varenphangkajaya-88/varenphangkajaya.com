@@ -827,6 +827,7 @@
     font-family: -apple-system, 'Helvetica Neue', sans-serif;
     font-size: 12px; line-height: 1.4;
     display: flex; flex-direction: column;
+    position: absolute; inset: 0;
   }
   .app-modal-screen .s-hdr {
     background: #fff; border-bottom: 0.5px solid #E2DDD5;
@@ -843,7 +844,7 @@
   }
   .app-modal-screen .s-tab.on { color: #1A1714; border-bottom-color: #B8975A; font-weight: 500; }
   .app-modal-screen .s-body {
-    padding: 12px 16px; display: flex; flex-direction: column; gap: 8px;
+    padding: 12px 16px; display: flex; flex-direction: column; gap: 8px; flex: 1; overflow: hidden;
   }
   .app-modal-screen .s-card {
     background: #fff; border: 0.5px solid #E2DDD5; border-radius: 8px; padding: 10px 14px;
@@ -882,7 +883,7 @@
   .app-modal-screen .s-sst { background: #FAEEDA; color: #633806; border-radius: 4px; padding: 3px 6px; font-size: 10px; font-weight: 500; width: 100%; }
 
   /* pin screen */
-  .app-modal-screen .s-pin { background: #F7F4EF; padding: 24px 20px 16px; display: flex; flex-direction: column; align-items: center; }
+  .app-modal-screen .s-pin { background: #F7F4EF; padding: 24px 20px 16px; display: flex; flex-direction: column; align-items: center; flex: 1; justify-content: center; }
   .app-modal-screen .s-pin-logo { width: 52px; height: 52px; background: #1A1714; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
   .app-modal-screen .s-pin-lt { font-size: 14px; font-weight: 500; color: #F7F4EF; }
   .app-modal-screen .s-pin-t { font-size: 16px; font-weight: 500; color: #1A1714; margin-bottom: 4px; }
@@ -927,7 +928,7 @@
   .app-modal-screen .rh-tabs { display: flex; background: #fff; border-bottom: 0.5px solid #E8E8E4; padding: 0 14px; }
   .app-modal-screen .rh-tab { padding: 8px 12px; font-size: 11px; color: #AAA; border-bottom: 2px solid transparent; }
   .app-modal-screen .rh-tab.on { color: #111; border-bottom-color: #111; font-weight: 500; }
-  .app-modal-screen .rh-body { background: #F1EFE8; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; }
+  .app-modal-screen .rh-body { background: #F1EFE8; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; flex: 1; overflow: hidden; }
   .app-modal-screen .rh-card { background: #fff; border: 0.5px solid #E8E8E4; border-radius: 9px; padding: 10px 12px; }
   .app-modal-screen .rh-name { font-size: 12px; font-weight: 500; color: #111; }
   .app-modal-screen .rh-sub { font-size: 11px; color: #666; margin-top: 2px; }
@@ -1385,7 +1386,7 @@
   <div class="app-modal-layout">
     <button class="app-modal-nav" onclick="navAppModal('factoryModal',-1)">&#8249;</button>
     <div class="app-modal-center">
-      <div style="width:100%;aspect-ratio:16/9;">
+      <div style="width:100%;aspect-ratio:16/9;position:relative;">
         <div id="factoryModal-s0" class="app-modal-screen"><div class="s-hdr"><span class="s-hdr-t">Raw Materials</span><span class="s-hdr-s">Admin</span></div>
         <div class="s-tabs"><div class="s-tab on">Stock</div><div class="s-tab">Buy</div><div class="s-tab">Sell</div><div class="s-tab">Value</div></div>
         <div class="s-body">
@@ -1535,7 +1536,7 @@
   <div class="app-modal-layout">
     <button class="app-modal-nav" onclick="navAppModal('rehabModal',-1)">&#8249;</button>
     <div class="app-modal-center">
-      <div style="width:100%;aspect-ratio:16/9;">
+      <div style="width:100%;aspect-ratio:16/9;position:relative;">
         <div id="rehabModal-s0" class="app-modal-screen"><div class="rh-hdr"><span class="rh-ht">RehabScheduler</span><span class="rh-hs">Fri, 9 May 2026</span></div>
         <div class="rh-tabs"><div class="rh-tab on">Dashboard</div><div class="rh-tab">Schedule</div><div class="rh-tab">Patients</div></div>
         <div class="rh-body">
