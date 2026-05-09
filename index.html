@@ -439,6 +439,7 @@
     aspect-ratio: 4/3;
     background: #C8C4BC;
     overflow: hidden;
+    position: relative;
   }
   .project-gallery-img img {
     width: 100%;
@@ -450,21 +451,46 @@
     grid-column: 1 / -1;
     aspect-ratio: 16/7;
   }
-
+  /* Scale mock screens to fit gallery containers */
+  .project-gallery-img.full > .rep-wrap,
+  .project-gallery-img.full > .rh-wrap {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .project-gallery-img.full > .rep-wrap *,
+  .project-gallery-img.full > .rh-wrap * {
+    font-size: calc(var(--mock-scale, 0.55) * 1em);
+  }
 
   /* Portrait screenshot gallery — Option C */
   .project-gallery-portrait {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     margin-top: 10px;
   }
   .project-gallery-img.portrait {
     aspect-ratio: 9/16;
     grid-column: auto;
+    position: relative;
+  }
+  .project-gallery-img.portrait > .mock-wrap,
+  .project-gallery-img.portrait > .pin-wrap {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .project-gallery-img.portrait > div[style*="position:relative"] {
+    position: absolute !important;
+    inset: 0;
+    width: 100%;
+    height: 100%;
   }
   @media (max-width: 600px) {
-    .project-gallery-portrait { grid-template-columns: 1fr 1fr; }
+    .project-gallery-portrait { grid-template-columns: repeat(2, 1fr); }
   }
   /* Mobile adjustments */
   @media (max-width: 600px) {
@@ -738,6 +764,18 @@
   .mbtn-ghost { background:none; border:0.5px solid #E8E8E4; border-radius:6px; padding:7px; font-size:9px; color:#666; text-align:center; }
   .mbtn-save { background:#111; border-radius:6px; padding:7px; font-size:9px; color:#fff; text-align:center; }
 
+
+
+  /* Scale mock content inside gallery containers using zoom */
+  .project-gallery-img.full .rep-wrap,
+  .project-gallery-img.full .rh-wrap {
+    zoom: 0.42;
+  }
+  .project-gallery-img.portrait .mock-wrap,
+  .project-gallery-img.portrait .pin-wrap,
+  .project-gallery-img.portrait > div {
+    zoom: 0.28;
+  }
   /* Animations */
   .fade-in { animation: fadeIn 0.5s ease forwards; }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
