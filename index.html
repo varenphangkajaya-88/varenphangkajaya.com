@@ -824,7 +824,7 @@
   .app-modal-screen {
     width: 100%; background: #F7F4EF;
     border-radius: 8px; overflow: hidden;
-    font-family: -apple-system, 'Helvetica Neue', sans-serif;
+    font-family: 'Inter', 'DM Sans', -apple-system, sans-serif;
     font-size: 12px; line-height: 1.4;
     display: flex; flex-direction: column;
     position: absolute; inset: 0;
@@ -1265,11 +1265,6 @@
 <!-- CRM -->
 <div class="page fade-in" id="page-crm">
   <div class="project-page">
-    <div class="project-hero-img">
-      <div class="project-hero-illus">
-        <svg viewBox="0 0 80 80" fill="none"><rect x="10" y="22" width="60" height="38" rx="2" stroke="#111" stroke-width="1.2"/><path d="M10 30 L40 48 L70 30" stroke="#111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </div>
-    </div>
     <div class="project-cat">CRM & Email</div>
     <h1 class="project-title">MK Brand <em>CRM System</em></h1>
     <div class="project-meta">
@@ -1289,241 +1284,13 @@
         <li>Custom project tracker for client handover</li>
       </ul>
     </div>
-    <button class="app-preview-btn" onclick="openAppModal('mkModal')">Preview project &#8594;</button>
-
-<div class="app-modal-overlay" id="mkModal-overlay">
-  <button class="app-modal-close" onclick="closeAppModal('mkModal')">&times;</button>
-  <div class="app-modal-layout">
-    <button class="app-modal-nav" onclick="navAppModal('mkModal',-1)">&#8249;</button>
-    <div class="app-modal-center">
-      <div style="width:320px;aspect-ratio:9/16;position:relative;">
-        <div id="mkModal-s0" class="app-modal-screen"><div style="background:#A8C3D8;height:3px;flex-shrink:0;"></div>
-        <div style="background:#fff;padding:10px 16px;border-bottom:0.5px solid #e8e8e8;flex-shrink:0;">
-          <div style="font-size:13px;font-weight:600;color:#1a1a1a;">MK Brand Web Dev</div>
-          <div style="font-size:10px;color:#888;">Phase 3 · CRM System</div>
-        </div>
-        <div style="display:flex;gap:5px;padding:10px 16px;background:#fff;border-bottom:0.5px solid #e8e8e8;flex-wrap:wrap;flex-shrink:0;">
-          <span style="font-size:10px;padding:4px 10px;border-radius:20px;background:#A8C3D8;color:#1a1a1a;font-weight:500;">Campaign flows</span>
-          <span style="font-size:10px;padding:4px 10px;border-radius:20px;border:0.5px solid #ccc;color:#666;">Email copy</span>
-          <span style="font-size:10px;padding:4px 10px;border-radius:20px;border:0.5px solid #ccc;color:#666;">Design</span>
-          <span style="font-size:10px;padding:4px 10px;border-radius:20px;border:0.5px solid #ccc;color:#666;">To-do</span>
-        </div>
-        <div style="padding:12px 16px;flex:1;overflow:hidden;background:#f5f5f3;display:flex;flex-direction:column;gap:8px;">
-          <div style="font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#999;border-bottom:0.5px solid #e8e8e8;padding-bottom:5px;">5 Automated flows</div>
-          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:8px;padding:9px 12px;">
-            <div style="display:flex;justify-content:space-between;align-items:center;">
-              <span style="font-size:12px;font-weight:500;color:#1a1a1a;">Welcome Series</span>
-              <span style="font-size:10px;padding:2px 8px;border-radius:20px;background:#d4edda;color:#155724;">Active</span>
-            </div>
-            <div style="font-size:10px;color:#888;margin-top:2px;">3 emails · ID / MY / SG</div>
-          </div>
-          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:8px;padding:9px 12px;">
-            <div style="display:flex;justify-content:space-between;align-items:center;">
-              <span style="font-size:12px;font-weight:500;color:#1a1a1a;">Abandoned Cart</span>
-              <span style="font-size:10px;padding:2px 8px;border-radius:20px;background:#d4edda;color:#155724;">Active</span>
-            </div>
-            <div style="font-size:10px;color:#888;margin-top:2px;">2 emails · with coupon</div>
-          </div>
-          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:8px;padding:9px 12px;">
-            <div style="display:flex;justify-content:space-between;align-items:center;">
-              <span style="font-size:12px;font-weight:500;color:#1a1a1a;">Win-back</span>
-              <span style="font-size:10px;padding:2px 8px;border-radius:20px;background:#d4edda;color:#155724;">Active</span>
-            </div>
-            <div style="font-size:10px;color:#888;margin-top:2px;">1 email · 7-day expiry</div>
-          </div>
-          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:8px;padding:9px 12px;">
-            <div style="display:flex;justify-content:space-between;align-items:center;">
-              <span style="font-size:12px;font-weight:500;color:#1a1a1a;">Birthday</span>
-              <span style="font-size:10px;padding:2px 8px;border-radius:20px;background:#d4edda;color:#155724;">Active</span>
-            </div>
-            <div style="font-size:10px;color:#888;margin-top:2px;">1 email · yearly repeat</div>
-          </div>
-          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:8px;padding:9px 12px;">
-            <div style="display:flex;justify-content:space-between;align-items:center;">
-              <span style="font-size:12px;font-weight:500;color:#1a1a1a;">Back in Stock</span>
-              <span style="font-size:10px;padding:2px 8px;border-radius:20px;background:#d4edda;color:#155724;">Active</span>
-            </div>
-            <div style="font-size:10px;color:#888;margin-top:2px;">Klaviyo App Embed</div>
-          </div>
-        </div></div>
-<div id="mkModal-s1" class="app-modal-screen" style="display:none;"><div style="background:#A8C3D8;height:3px;flex-shrink:0;"></div>
-        <div style="background:#fff;padding:10px 16px;border-bottom:0.5px solid #e8e8e8;flex-shrink:0;">
-          <div style="font-size:13px;font-weight:600;color:#1a1a1a;">Email copy</div>
-          <div style="font-size:10px;color:#888;">Welcome flow · Indonesia</div>
-        </div>
-        <div style="padding:12px 16px;flex:1;overflow:hidden;background:#f5f5f3;display:flex;flex-direction:column;gap:8px;">
-          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:8px;overflow:hidden;">
-            <div style="background:#A8C3D8;padding:8px 12px;">
-              <div style="font-size:10px;font-weight:600;color:#1a1a1a;">Email 1 — Welcome</div>
-              <div style="font-size:9px;color:#1a1a1a;opacity:0.65;">Subject: Selamat datang di MAISON.Klub ✨</div>
-            </div>
-            <div style="padding:10px 12px;font-size:10px;color:#444;line-height:1.6;">
-              Halo [First Name],<br><br>
-              Terima kasih sudah bergabung. Nikmati <strong>10% off</strong> untuk pembelian pertamamu dengan kode di bawah.
-            </div>
-            <div style="margin:0 12px 10px;background:#f5f5f3;border-radius:6px;padding:8px 12px;text-align:center;">
-              <div style="font-size:9px;color:#888;margin-bottom:2px;">Kode promo</div>
-              <div style="font-size:14px;font-weight:600;color:#1a1a1a;letter-spacing:0.1em;">WELCOME10</div>
-              <div style="font-size:9px;color:#888;margin-top:1px;">Berlaku 7 hari</div>
-            </div>
-          </div>
-          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:8px;overflow:hidden;">
-            <div style="background:#e8f0f5;padding:8px 12px;">
-              <div style="font-size:10px;font-weight:600;color:#1a1a1a;">Email 2 — Brand story</div>
-              <div style="font-size:9px;color:#555;">Subject: Kenalan sama MAISON Kolori</div>
-            </div>
-            <div style="padding:10px 12px;font-size:10px;color:#444;line-height:1.6;">
-              Kami percaya fashion adalah ekspresi diri. Setiap koleksi dirancang dengan intention — untuk perempuan yang tahu apa yang dia mau.
-            </div>
-          </div>
-        </div></div>
-<div id="mkModal-s2" class="app-modal-screen" style="display:none;"><div style="background:#A8C3D8;height:3px;flex-shrink:0;"></div>
-        <div style="background:#fff;padding:10px 16px;border-bottom:0.5px solid #e8e8e8;flex-shrink:0;">
-          <div style="font-size:13px;font-weight:600;color:#1a1a1a;">Coupon pools</div>
-          <div style="font-size:10px;color:#888;">9 pools · 3 markets</div>
-        </div>
-        <div style="padding:12px 16px;flex:1;overflow:hidden;background:#f5f5f3;display:flex;flex-direction:column;gap:8px;">
-          <div style="font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#999;border-bottom:0.5px solid #e8e8e8;padding-bottom:5px;">Indonesia (ID)</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;">
-            <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 10px;text-align:center;">
-              <div style="font-size:9px;color:#888;margin-bottom:2px;">Welcome</div>
-              <div style="font-size:12px;font-weight:600;color:#1a1a1a;">10%</div>
-              <div style="font-size:8px;color:#A8C3D8;margin-top:1px;">WELCOME10ID</div>
-            </div>
-            <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 10px;text-align:center;">
-              <div style="font-size:9px;color:#888;margin-bottom:2px;">Win-back</div>
-              <div style="font-size:12px;font-weight:600;color:#1a1a1a;">15%</div>
-              <div style="font-size:8px;color:#A8C3D8;margin-top:1px;">WINBACK15ID</div>
-            </div>
-            <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 10px;text-align:center;">
-              <div style="font-size:9px;color:#888;margin-bottom:2px;">Birthday</div>
-              <div style="font-size:12px;font-weight:600;color:#1a1a1a;">20%</div>
-              <div style="font-size:8px;color:#A8C3D8;margin-top:1px;">BDAY20ID</div>
-            </div>
-          </div>
-          <div style="font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#999;border-bottom:0.5px solid #e8e8e8;padding-bottom:5px;margin-top:2px;">Malaysia (MY)</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;">
-            <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 10px;text-align:center;">
-              <div style="font-size:9px;color:#888;margin-bottom:2px;">Welcome</div>
-              <div style="font-size:12px;font-weight:600;color:#1a1a1a;">10%</div>
-              <div style="font-size:8px;color:#A8C3D8;margin-top:1px;">WELCOME10MY</div>
-            </div>
-            <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 10px;text-align:center;">
-              <div style="font-size:9px;color:#888;margin-bottom:2px;">Win-back</div>
-              <div style="font-size:12px;font-weight:600;color:#1a1a1a;">15%</div>
-              <div style="font-size:8px;color:#A8C3D8;margin-top:1px;">WINBACK15MY</div>
-            </div>
-            <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 10px;text-align:center;">
-              <div style="font-size:9px;color:#888;margin-bottom:2px;">Birthday</div>
-              <div style="font-size:12px;font-weight:600;color:#1a1a1a;">20%</div>
-              <div style="font-size:8px;color:#A8C3D8;margin-top:1px;">BDAY20MY</div>
-            </div>
-          </div>
-          <div style="font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#999;border-bottom:0.5px solid #e8e8e8;padding-bottom:5px;margin-top:2px;">Singapore (SG)</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;">
-            <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 10px;text-align:center;">
-              <div style="font-size:9px;color:#888;margin-bottom:2px;">Welcome</div>
-              <div style="font-size:12px;font-weight:600;color:#1a1a1a;">10%</div>
-              <div style="font-size:8px;color:#A8C3D8;margin-top:1px;">WELCOME10SG</div>
-            </div>
-            <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 10px;text-align:center;">
-              <div style="font-size:9px;color:#888;margin-bottom:2px;">Win-back</div>
-              <div style="font-size:12px;font-weight:600;color:#1a1a1a;">15%</div>
-              <div style="font-size:8px;color:#A8C3D8;margin-top:1px;">WINBACK15SG</div>
-            </div>
-            <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 10px;text-align:center;">
-              <div style="font-size:9px;color:#888;margin-bottom:2px;">Birthday</div>
-              <div style="font-size:12px;font-weight:600;color:#1a1a1a;">20%</div>
-              <div style="font-size:8px;color:#A8C3D8;margin-top:1px;">BDAY20SG</div>
-            </div>
-          </div>
-        </div></div>
-<div id="mkModal-s3" class="app-modal-screen" style="display:none;"><div style="background:#A8C3D8;height:3px;flex-shrink:0;"></div>
-        <div style="background:#fff;padding:10px 16px;border-bottom:0.5px solid #e8e8e8;flex-shrink:0;">
-          <div style="font-size:13px;font-weight:600;color:#1a1a1a;">To-do &amp; timeline</div>
-          <div style="font-size:10px;color:#888;">Phase 3 · Klaviyo setup</div>
-        </div>
-        <div style="padding:12px 16px;flex:1;overflow:hidden;background:#f5f5f3;display:flex;flex-direction:column;gap:6px;">
-          <div style="font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#999;border-bottom:0.5px solid #e8e8e8;padding-bottom:5px;">Completed</div>
-          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-size:11px;color:#1a1a1a;">5 Klaviyo flows setup</span>
-            <span style="font-size:9px;padding:2px 7px;border-radius:20px;background:#d4edda;color:#155724;">&#10003; Done</span>
-          </div>
-          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-size:11px;color:#1a1a1a;">9 email templates</span>
-            <span style="font-size:9px;padding:2px 7px;border-radius:20px;background:#d4edda;color:#155724;">&#10003; Done</span>
-          </div>
-          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-size:11px;color:#1a1a1a;">DNS &amp; deliverability setup</span>
-            <span style="font-size:9px;padding:2px 7px;border-radius:20px;background:#d4edda;color:#155724;">&#10003; Done</span>
-          </div>
-          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-size:11px;color:#1a1a1a;">3 signup forms</span>
-            <span style="font-size:9px;padding:2px 7px;border-radius:20px;background:#d4edda;color:#155724;">&#10003; Done</span>
-          </div>
-          <div style="font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#999;border-bottom:0.5px solid #e8e8e8;padding-bottom:5px;margin-top:2px;">In progress</div>
-          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-size:11px;color:#1a1a1a;">Back in Stock E2E test</span>
-            <span style="font-size:9px;padding:2px 7px;border-radius:20px;background:#fff3cd;color:#856404;">In progress</span>
-          </div>
-          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-size:11px;color:#1a1a1a;">Boutique static codes</span>
-            <span style="font-size:9px;padding:2px 7px;border-radius:20px;background:#fff3cd;color:#856404;">In progress</span>
-          </div>
-        </div></div>
-
-      </div>
-      <div class="app-modal-dots" id="mkModal-dots"></div>
-      <div class="app-modal-lbl" id="mkModal-lbl"></div>
-    </div>
-    <button class="app-modal-nav" onclick="navAppModal('mkModal',1)">&#8250;</button>
-  </div>
-</div>
-<script>
-(function(){
-  var labels_mkModal = ['Campaign flows', 'Email copy', 'Coupon pools', 'Project tracker'];
-  var cur_mkModal = 0;
-  var total_mkModal = 4;
-  function show_mkModal() {
-    for(var i=0;i<total_mkModal;i++) {
-      var el=document.getElementById('mkModal-s'+i);
-      if(el) el.style.display = i===cur_mkModal ? '' : 'none';
-    }
-    document.getElementById('mkModal-lbl').textContent = labels_mkModal[cur_mkModal];
-    var d=document.getElementById('mkModal-dots'); d.innerHTML='';
-    for(var i=0;i<total_mkModal;i++) {
-      var dot=document.createElement('div'); dot.className='app-modal-dot'+(i===cur_mkModal?' on':'');
-      (function(idx){ dot.onclick=function(){cur_mkModal=idx;show_mkModal();}; })(i);
-      d.appendChild(dot);
-    }
-  }
-  window._openHandlers = window._openHandlers || {};
-  window._openHandlers['mkModal'] = function() { cur_mkModal=0; show_mkModal(); document.getElementById('mkModal-overlay').classList.add('open'); };
-  window._navHandlers = window._navHandlers || {};
-  window._navHandlers['mkModal'] = function(dir) { cur_mkModal=(cur_mkModal+dir+total_mkModal)%total_mkModal; show_mkModal(); };
-  document.getElementById('mkModal-overlay').addEventListener('click', function(e) {
-    if(e.target===this) this.classList.remove('open');
-  });
-  document.addEventListener('keydown', function(e) {
-    if(!document.getElementById('mkModal-overlay').classList.contains('open')) return;
-    if(e.key==='ArrowLeft') { cur_mkModal=(cur_mkModal-1+total_mkModal)%total_mkModal; show_mkModal(); }
-    if(e.key==='ArrowRight') { cur_mkModal=(cur_mkModal+1)%total_mkModal; show_mkModal(); }
-    if(e.key==='Escape') document.getElementById('mkModal-overlay').classList.remove('open');
-  });
-  show_mkModal();
-})();
-</script>
+    <a href="https://mkbrand-crm-demo.netlify.app/" target="_blank" class="project-link">View live demo &#8594;</a>
   </div>
 </div>
 
 <!-- Systems -->
 <div class="page fade-in" id="page-systems">
   <div class="project-page">
-    <div class="project-hero-img">
-      <div class="project-hero-illus">
-        <svg viewBox="0 0 80 80" fill="none"><rect x="24" y="8" width="32" height="62" rx="5" stroke="#111" stroke-width="1.2"/><line x1="32" y1="16" x2="48" y2="16" stroke="#111" stroke-width="1.2" stroke-linecap="round"/><circle cx="40" cy="60" r="3" stroke="#111" stroke-width="1.2"/></svg>
-      </div>
-    </div>
     <div class="project-cat">Systems & Web App</div>
     <h1 class="project-title">Hertape Smart App — <em>Internal OS</em></h1>
     <div class="project-meta">
@@ -1544,19 +1311,14 @@
         <li>PIN-based authentication per team member</li>
       </ul>
     </div>
-    <a href="https://hertape-smartapp-demo.netlify.app" target="_blank" class="project-link">View live demo →</a>
+    <a href="https://hertapedemo.netlify.app/" target="_blank" class="project-link">View live demo &#8594;</a>
   </div>
 </div>
 
 <!-- Web App -->
 <div class="page fade-in" id="page-webapp">
   <div class="project-page">
-    <div class="project-hero-img">
-      <div class="project-hero-illus">
-        <svg viewBox="0 0 80 80" fill="none"><line x1="10" y1="10" x2="10" y2="64" stroke="#111" stroke-width="1.2" stroke-linecap="round"/><line x1="10" y1="64" x2="70" y2="64" stroke="#111" stroke-width="1.2" stroke-linecap="round"/><polyline points="18,52 32,36 46,44 60,20 72,12" stroke="#111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </div>
-    </div>
-    <div class="project-cat">Web App</div>
+        <div class="project-cat">Web App</div>
     <h1 class="project-title">Financial Planner App — <em>Moneymani</em></h1>
     <div class="project-meta">
       <div class="project-meta-item"><div class="project-meta-label">Stack</div><div class="project-meta-value">Next.js · Supabase</div></div>
@@ -1583,179 +1345,67 @@
     <button class="app-modal-nav" onclick="navAppModal('caratModal',-1)">&#8249;</button>
     <div class="app-modal-center">
       <div style="width:320px;aspect-ratio:9/16;position:relative;">
-        <div id="caratModal-s0" class="app-modal-screen"><div style="background:#9AAED8;height:3px;flex-shrink:0;"></div>
-        <div style="background:#E8EEF7;padding:14px 16px 10px;flex-shrink:0;">
-          <div style="font-size:10px;color:#6B8BBF;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px;">Selamat datang</div>
-          <div style="font-size:22px;font-weight:500;color:#1a1a2e;">Rp 12.450.000</div>
-          <div style="font-size:11px;color:#6B8BBF;">Net worth · updated now</div>
-        </div>
-        <div style="padding:10px 16px;flex:1;overflow:hidden;background:#E8EEF7;display:flex;flex-direction:column;gap:8px;">
+        <div id="caratModal-s0" class="app-modal-screen"><div style="background:#9AAED8;padding:14px 16px 16px;flex-shrink:0;"><div style="font-size:11px;color:rgba(255,255,255,0.75);margin-bottom:2px;">money많이</div><div style="font-size:20px;font-weight:700;color:#fff;">Accounts &amp; Transactions</div></div>
+        <div style="flex:1;overflow:hidden;background:#f5f5f7;padding:12px 14px;display:flex;flex-direction:column;gap:8px;">
+          <div style="background:#fff;border-radius:12px;padding:12px 14px;"><div style="font-size:11px;color:#888;margin-bottom:4px;">Net Worth</div><div style="font-size:20px;font-weight:700;color:#1a1a1a;">Rp 10.217.387</div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:10px;padding-top:10px;border-top:0.5px solid #f0f0f0;"><div><div style="font-size:10px;color:#888;margin-bottom:1px;">Total Assets</div><div style="font-size:11px;font-weight:500;color:#9AAED8;">Rp 13.831.468</div></div><div><div style="font-size:10px;color:#888;margin-bottom:1px;">Total Debt</div><div style="font-size:11px;font-weight:500;color:#D85A30;">Rp 3.614.081</div></div><div><div style="font-size:10px;color:#888;margin-bottom:1px;">Accounts</div><div style="font-size:11px;font-weight:500;color:#1a1a1a;">7</div></div></div></div>
+          <div style="font-size:10px;font-weight:600;letter-spacing:0.08em;color:#888;">BANK</div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-            <div style="background:#fff;border-radius:10px;padding:10px 12px;">
-              <div style="font-size:10px;color:#6B8BBF;margin-bottom:3px;">Pemasukan</div>
-              <div style="font-size:16px;font-weight:500;color:#1D9E75;">+5.000.000</div>
-              <div style="font-size:9px;color:#9AAED8;">Mei 2026</div>
-            </div>
-            <div style="background:#fff;border-radius:10px;padding:10px 12px;">
-              <div style="font-size:10px;color:#6B8BBF;margin-bottom:3px;">Pengeluaran</div>
-              <div style="font-size:16px;font-weight:500;color:#D85A30;">-2.340.000</div>
-              <div style="font-size:9px;color:#9AAED8;">Mei 2026</div>
-            </div>
+            <div style="background:#fff;border-radius:10px;overflow:hidden;"><div style="height:3px;background:#9AAED8;"></div><div style="padding:10px 12px;"><div style="font-size:11px;font-weight:500;color:#1a1a1a;margin-bottom:1px;">Dana 5530</div><div style="font-size:9px;color:#888;margin-bottom:5px;">Dana</div><div style="font-size:14px;font-weight:600;color:#1a1a1a;">Rp 8.649</div></div></div>
+            <div style="background:#fff;border-radius:10px;overflow:hidden;"><div style="height:3px;background:#9AAED8;"></div><div style="padding:10px 12px;"><div style="font-size:11px;font-weight:500;color:#1a1a1a;margin-bottom:1px;">BCA 2228</div><div style="font-size:9px;color:#888;margin-bottom:5px;">BCA</div><div style="font-size:14px;font-weight:600;color:#1a1a1a;">Rp 13.782.344</div></div></div>
           </div>
-          <div style="background:#fff;border-radius:10px;padding:10px 12px;">
-            <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
-              <span style="font-size:11px;font-weight:500;color:#1a1a2e;">Saving rate</span>
-              <span style="font-size:11px;font-weight:500;color:#1D9E75;">53%</span>
-            </div>
-            <div style="height:6px;background:#E8EEF7;border-radius:3px;overflow:hidden;">
-              <div style="width:53%;height:100%;background:#9AAED8;border-radius:3px;"></div>
-            </div>
-          </div>
-          <div style="background:#fff;border-radius:10px;padding:10px 12px;">
-            <div style="font-size:11px;font-weight:500;color:#1a1a2e;margin-bottom:8px;">Transaksi terbaru</div>
-            <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:0.5px solid #E8EEF7;"><span style="font-size:11px;color:#444;">Gaji</span><span style="font-size:11px;color:#1D9E75;">+5.000.000</span></div>
-            <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:0.5px solid #E8EEF7;"><span style="font-size:11px;color:#444;">Groceries</span><span style="font-size:11px;color:#D85A30;">-450.000</span></div>
-            <div style="display:flex;justify-content:space-between;padding:4px 0;"><span style="font-size:11px;color:#444;">Kopi</span><span style="font-size:11px;color:#D85A30;">-55.000</span></div>
-          </div>
-        </div>
-        <div style="background:#fff;border-top:0.5px solid #E8EEF7;display:flex;padding:8px 0 10px;">
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AAED8" stroke-width="1.5"><path d="M3 12L12 4l9 8"/><path d="M5 10v9h4v-5h6v5h4v-9"/></svg><span style="font-size:9px;color:#9AAED8;font-weight:500;">Home</span></div>
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg><span style="font-size:9px;color:#ccc;">Akun</span></div>
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><div style="width:30px;height:30px;border-radius:50%;background:#9AAED8;display:flex;align-items:center;justify-content:center;margin-top:-8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg><span style="font-size:9px;color:#ccc;">Report</span></div>
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg><span style="font-size:9px;color:#ccc;">Settings</span></div>
-        </div></div>
-<div id="caratModal-s1" class="app-modal-screen" style="display:none;"><div style="background:#9AAED8;padding:14px 16px 12px;flex-shrink:0;">
-          <div style="font-size:11px;color:rgba(255,255,255,0.7);margin-bottom:2px;">Net Worth</div>
-          <div style="font-size:24px;font-weight:500;color:#fff;">Rp 12.450.000</div>
-        </div>
-        <div style="padding:10px 16px;flex:1;overflow:hidden;background:#E8EEF7;display:flex;flex-direction:column;gap:8px;">
-          <div style="font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#6B8BBF;">Bank</div>
+          <div style="font-size:10px;font-weight:600;letter-spacing:0.08em;color:#888;">E-WALLET</div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-            <div style="background:#fff;border-radius:10px;overflow:hidden;">
-              <div style="height:4px;background:#1D9E75;"></div>
-              <div style="padding:10px 12px;">
-                <div style="font-size:10px;color:#6B8BBF;margin-bottom:2px;">BCA</div>
-                <div style="font-size:14px;font-weight:500;color:#1a1a2e;">Rp 8.200.000</div>
-              </div>
-            </div>
-            <div style="background:#fff;border-radius:10px;overflow:hidden;">
-              <div style="height:4px;background:#9AAED8;"></div>
-              <div style="padding:10px 12px;">
-                <div style="font-size:10px;color:#6B8BBF;margin-bottom:2px;">Mandiri</div>
-                <div style="font-size:14px;font-weight:500;color:#1a1a2e;">Rp 2.750.000</div>
-              </div>
-            </div>
+            <div style="background:#fff;border-radius:10px;overflow:hidden;"><div style="height:3px;background:#1D9E75;"></div><div style="padding:10px 12px;"><div style="font-size:11px;font-weight:500;color:#1a1a1a;margin-bottom:1px;">Shopee Pay</div><div style="font-size:9px;color:#888;margin-bottom:5px;">Shopee</div><div style="font-size:14px;font-weight:600;color:#1a1a1a;">Rp 28.661</div></div></div>
+            <div style="background:#fff;border-radius:10px;overflow:hidden;"><div style="height:3px;background:#00ADEF;"></div><div style="padding:10px 12px;"><div style="font-size:11px;font-weight:500;color:#1a1a1a;margin-bottom:1px;">Gopay 5530</div><div style="font-size:9px;color:#888;margin-bottom:5px;">Gopay</div><div style="font-size:14px;font-weight:600;color:#1a1a1a;">Rp 11.814</div></div></div>
           </div>
-          <div style="font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#6B8BBF;margin-top:2px;">E-wallet</div>
+        </div>
+        <div style="background:#fff;border-top:0.5px solid #f0f0f0;display:flex;padding:8px 0 10px;">
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span style="font-size:9px;color:#888;">Home</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AAED8" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg><span style="font-size:9px;color:#9AAED8;font-weight:500;">Accounts</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><div style="width:32px;height:32px;border-radius:50%;background:#9AAED8;display:flex;align-items:center;justify-content:center;margin-top:-10px;border:2px solid #fff;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg><span style="font-size:9px;color:#888;">Report</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg><span style="font-size:9px;color:#888;">Settings</span></div>
+        </div></div>
+<div id="caratModal-s1" class="app-modal-screen" style="display:none;"><div style="flex:1;background:rgba(0,0,0,0.15);"></div>
+        <div style="background:#fff;border-radius:20px 20px 0 0;flex-shrink:0;padding-bottom:16px;">
+          <div style="display:flex;justify-content:center;padding:8px 0;"><div style="width:36px;height:4px;border-radius:2px;background:#e0e0e0;"></div></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:4px 18px 14px;"><div style="font-size:16px;font-weight:600;color:#1a1a1a;">What do you want to add?</div><div style="width:28px;height:28px;border-radius:50%;background:#f5f5f5;display:flex;align-items:center;justify-content:center;font-size:14px;color:#888;">&#215;</div></div>
+          <div style="padding:0 16px;display:flex;flex-direction:column;gap:6px;">
+            <div style="font-size:10px;font-weight:600;letter-spacing:0.06em;color:#888;padding:2px 0;">TRANSACTIONS</div>
+            <div style="background:#fff;border:0.5px solid #f0f0f0;border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:12px;"><div style="width:36px;height:36px;border-radius:10px;background:#FDECEA;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D85A30" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><div><div style="font-size:13px;font-weight:500;color:#1a1a1a;">Manual transaction</div><div style="font-size:11px;color:#888;">Log income / expense</div></div></div>
+            <div style="background:#fff;border:0.5px solid #f0f0f0;border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:12px;"><div style="width:36px;height:36px;border-radius:10px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></div><div><div style="font-size:13px;font-weight:500;color:#1a1a1a;">Scan receipt <span style="font-size:10px;background:#EEF2F8;color:#9AAED8;padding:1px 6px;border-radius:6px;">Basic</span></div><div style="font-size:11px;color:#888;">Upload receipt photo, AI auto-parses</div></div></div>
+            <div style="background:#fff;border:0.5px solid #f0f0f0;border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:12px;"><div style="width:36px;height:36px;border-radius:10px;background:#f5f5f5;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div><div style="font-size:13px;font-weight:500;color:#1a1a1a;">Upload e-statement <span style="font-size:10px;background:#EEF2F8;color:#9AAED8;padding:1px 6px;border-radius:6px;">Basic</span></div><div style="font-size:11px;color:#888;">PDF or screenshot of bank statement</div></div></div>
+            <div style="font-size:10px;font-weight:600;letter-spacing:0.06em;color:#888;padding:2px 0;">GOALS &amp; PLANNING</div>
+            <div style="background:#fff;border:0.5px solid #f0f0f0;border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:12px;"><div style="width:36px;height:36px;border-radius:10px;background:#E8F5EE;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1D9E75" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><div><div style="font-size:13px;font-weight:500;color:#1a1a1a;">New goal</div><div style="font-size:11px;color:#888;">Add a saving goal</div></div></div>
+            <div style="background:#fff;border:0.5px solid #f0f0f0;border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:12px;"><div style="width:36px;height:36px;border-radius:10px;background:#FFF3E0;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E67E22" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div><div><div style="font-size:13px;font-weight:500;color:#1a1a1a;">Add Debt</div><div style="font-size:11px;color:#888;">CC, PayLater, installments</div></div></div>
+          </div>
+        </div></div>
+<div id="caratModal-s2" class="app-modal-screen" style="display:none;"><div style="background:#9AAED8;padding:14px 16px 16px;flex-shrink:0;"><div style="font-size:11px;color:rgba(255,255,255,0.75);margin-bottom:2px;">&lt; Settings</div><div style="font-size:20px;font-weight:700;color:#fff;">Billing &amp; Plan</div></div>
+        <div style="flex:1;overflow:hidden;background:#f5f5f7;padding:12px 14px;display:flex;flex-direction:column;gap:8px;">
+          <div style="background:#fff;border-radius:12px;padding:12px 14px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;"><div style="display:flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9AAED8" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg><span style="font-size:14px;font-weight:600;color:#1a1a1a;">Basic</span></div><span style="font-size:11px;background:#f0f0f0;padding:3px 10px;border-radius:20px;color:#888;">Active</span></div><div style="font-size:12px;color:#888;">Rp 199.000/year</div><div style="font-size:11px;color:#aaa;margin-top:1px;">Renewal: April 8, 2027 &middot; 334 days left</div></div>
+          <div style="background:#fff;border-radius:12px;padding:12px 14px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-size:13px;font-weight:500;color:#1a1a1a;">AI Analysis</span><span style="font-size:11px;color:#888;">0/15 this month</span></div><div style="height:5px;background:#f0f0f0;border-radius:3px;overflow:hidden;margin-bottom:4px;"><div style="width:0%;height:100%;background:#9AAED8;border-radius:3px;"></div></div><div style="font-size:11px;color:#aaa;">Resets at the start of each month</div></div>
+          <div style="background:#fff;border-radius:12px;overflow:hidden;"><div style="display:flex;justify-content:space-between;padding:10px 14px;border-bottom:0.5px solid #f5f5f5;"><span style="font-size:12px;color:#1a1a1a;">Input manual</span><span style="font-size:12px;color:#888;">Unlimited</span></div><div style="display:flex;justify-content:space-between;padding:10px 14px;border-bottom:0.5px solid #f5f5f5;"><span style="font-size:12px;color:#1a1a1a;">AI Financial Analysis</span><span style="font-size:12px;color:#888;">15x/month</span></div><div style="display:flex;justify-content:space-between;padding:10px 14px;border-bottom:0.5px solid #f5f5f5;"><span style="font-size:12px;color:#1a1a1a;">Upload e-statement</span><span style="font-size:12px;color:#ccc;">&mdash;</span></div><div style="display:flex;justify-content:space-between;padding:10px 14px;"><span style="font-size:12px;color:#1a1a1a;">Upload struk/receipt</span><span style="font-size:12px;color:#ccc;">&mdash;</span></div></div>
+          <div style="background:#9AAED8;border-radius:12px;padding:14px;text-align:center;"><span style="font-size:13px;font-weight:500;color:#fff;">Upgrade to Pro &mdash; Rp 249.000/year</span></div>
+        </div>
+        <div style="background:#fff;border-top:0.5px solid #f0f0f0;display:flex;padding:8px 0 10px;">
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span style="font-size:9px;color:#888;">Home</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg><span style="font-size:9px;color:#888;">Accounts</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><div style="width:32px;height:32px;border-radius:50%;background:#9AAED8;display:flex;align-items:center;justify-content:center;margin-top:-10px;border:2px solid #fff;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg><span style="font-size:9px;color:#888;">Report</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AAED8" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg><span style="font-size:9px;color:#9AAED8;font-weight:500;">Settings</span></div>
+        </div></div>
+<div id="caratModal-s3" class="app-modal-screen" style="display:none;"><div style="background:#fff;padding:10px 14px;border-bottom:0.5px solid #f0f0f0;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;"><div style="display:flex;align-items:center;gap:8px;"><div style="width:32px;height:32px;border-radius:50%;background:#EEF2F8;display:flex;align-items:center;justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9AAED8" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div><div><div style="font-size:13px;font-weight:500;color:#1a1a1a;">Financial Chingu</div><div style="font-size:10px;color:#1D9E75;">Online</div></div></div><div style="display:flex;align-items:center;gap:8px;"><span style="font-size:10px;color:#888;background:#f5f5f5;padding:3px 8px;border-radius:20px;">0/15 this month</span><span style="font-size:14px;color:#888;">&#215;</span></div></div>
+        <div style="background:#f5f5f7;padding:7px 14px;flex-shrink:0;"><div style="font-size:10px;color:#9AAED8;">Data Mei: Rp 0 in &middot; Rp 0 out &middot; Saving 0%</div></div>
+        <div style="flex:1;overflow:hidden;padding:14px;display:flex;flex-direction:column;gap:10px;">
+          <div style="background:#fff;border-radius:12px;padding:14px;font-size:12px;color:#1a1a1a;line-height:1.6;">Annyeong! I&apos;m <strong>Financial Chingu</strong>, your finance assistant. I&apos;ve read your data this month. What would you like to know?</div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-            <div style="background:#fff;border-radius:10px;overflow:hidden;">
-              <div style="height:4px;background:#D85A30;"></div>
-              <div style="padding:10px 12px;">
-                <div style="font-size:10px;color:#6B8BBF;margin-bottom:2px;">GoPay</div>
-                <div style="font-size:14px;font-weight:500;color:#1a1a2e;">Rp 850.000</div>
-              </div>
-            </div>
-            <div style="background:#fff;border-radius:10px;overflow:hidden;">
-              <div style="height:4px;background:#9B59B6;"></div>
-              <div style="padding:10px 12px;">
-                <div style="font-size:10px;color:#6B8BBF;margin-bottom:2px;">OVO</div>
-                <div style="font-size:14px;font-weight:500;color:#1a1a2e;">Rp 650.000</div>
-              </div>
-            </div>
-          </div>
-          <div style="font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#6B8BBF;margin-top:2px;">Cash</div>
-          <div style="background:#fff;border-radius:10px;overflow:hidden;width:50%;">
-            <div style="height:4px;background:#F39C12;"></div>
-            <div style="padding:10px 12px;">
-              <div style="font-size:10px;color:#6B8BBF;margin-bottom:2px;">Dompet</div>
-              <div style="font-size:14px;font-weight:500;color:#1a1a2e;">Rp 0</div>
-            </div>
+            <div style="background:#fff;border:0.5px solid #f0f0f0;border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:6px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg><span style="font-size:11px;color:#1a1a1a;">Analyze my finances</span></div>
+            <div style="background:#fff;border:0.5px solid #f0f0f0;border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:6px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg><span style="font-size:11px;color:#1a1a1a;">Reduce spending</span></div>
+            <div style="background:#fff;border:0.5px solid #f0f0f0;border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:6px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg><span style="font-size:11px;color:#1a1a1a;">Reach saving goals</span></div>
+            <div style="background:#fff;border:0.5px solid #f0f0f0;border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:6px;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><span style="font-size:11px;color:#1a1a1a;">Tips for tracking</span></div>
           </div>
         </div>
-        <div style="background:#fff;border-top:0.5px solid #E8EEF7;display:flex;padding:8px 0 10px;">
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><path d="M3 12L12 4l9 8"/><path d="M5 10v9h4v-5h6v5h4v-9"/></svg><span style="font-size:9px;color:#ccc;">Home</span></div>
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AAED8" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg><span style="font-size:9px;color:#9AAED8;font-weight:500;">Akun</span></div>
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><div style="width:30px;height:30px;border-radius:50%;background:#9AAED8;display:flex;align-items:center;justify-content:center;margin-top:-8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg><span style="font-size:9px;color:#ccc;">Report</span></div>
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg><span style="font-size:9px;color:#ccc;">Settings</span></div>
-        </div></div>
-<div id="caratModal-s2" class="app-modal-screen" style="display:none;"><div style="background:#E8EEF7;padding:14px 16px 10px;flex-shrink:0;">
-          <div style="font-size:14px;font-weight:500;color:#1a1a2e;">Saving goals</div>
-          <div style="font-size:11px;color:#6B8BBF;">3 goals aktif</div>
-        </div>
-        <div style="padding:10px 16px;flex:1;overflow:hidden;background:#E8EEF7;display:flex;flex-direction:column;gap:8px;">
-          <div style="background:#fff;border-radius:10px;padding:12px 14px;">
-            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
-              <div><div style="font-size:12px;font-weight:500;color:#1a1a2e;">Emergency fund</div><div style="font-size:10px;color:#6B8BBF;">Target: Rp 30.000.000</div></div>
-              <span style="font-size:10px;padding:2px 8px;border-radius:20px;background:#E8EEF7;color:#6B8BBF;">41%</span>
-            </div>
-            <div style="height:6px;background:#E8EEF7;border-radius:3px;overflow:hidden;"><div style="width:41%;height:100%;background:#9AAED8;border-radius:3px;"></div></div>
-            <div style="font-size:10px;color:#6B8BBF;margin-top:4px;">Rp 12.450.000 terkumpul</div>
-          </div>
-          <div style="background:#fff;border-radius:10px;padding:12px 14px;">
-            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
-              <div><div style="font-size:12px;font-weight:500;color:#1a1a2e;">MacBook Pro</div><div style="font-size:10px;color:#6B8BBF;">Target: Rp 25.000.000</div></div>
-              <span style="font-size:10px;padding:2px 8px;border-radius:20px;background:#E8EEF7;color:#6B8BBF;">68%</span>
-            </div>
-            <div style="height:6px;background:#E8EEF7;border-radius:3px;overflow:hidden;"><div style="width:68%;height:100%;background:#1D9E75;border-radius:3px;"></div></div>
-            <div style="font-size:10px;color:#6B8BBF;margin-top:4px;">Rp 17.000.000 terkumpul</div>
-          </div>
-          <div style="background:#fff;border-radius:10px;padding:12px 14px;">
-            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
-              <div><div style="font-size:12px;font-weight:500;color:#1a1a2e;">Liburan Seoul</div><div style="font-size:10px;color:#6B8BBF;">Target: Rp 15.000.000</div></div>
-              <span style="font-size:10px;padding:2px 8px;border-radius:20px;background:#E8EEF7;color:#6B8BBF;">20%</span>
-            </div>
-            <div style="height:6px;background:#E8EEF7;border-radius:3px;overflow:hidden;"><div style="width:20%;height:100%;background:#D85A30;border-radius:3px;"></div></div>
-            <div style="font-size:10px;color:#6B8BBF;margin-top:4px;">Rp 3.000.000 terkumpul</div>
-          </div>
-        </div>
-        <div style="background:#fff;border-top:0.5px solid #E8EEF7;display:flex;padding:8px 0 10px;">
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><path d="M3 12L12 4l9 8"/><path d="M5 10v9h4v-5h6v5h4v-9"/></svg><span style="font-size:9px;color:#ccc;">Home</span></div>
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg><span style="font-size:9px;color:#ccc;">Akun</span></div>
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><div style="width:30px;height:30px;border-radius:50%;background:#9AAED8;display:flex;align-items:center;justify-content:center;margin-top:-8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg><span style="font-size:9px;color:#ccc;">Report</span></div>
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg><span style="font-size:9px;color:#ccc;">Settings</span></div>
-        </div></div>
-<div id="caratModal-s3" class="app-modal-screen" style="display:none;"><div style="background:#E8EEF7;padding:14px 16px 10px;flex-shrink:0;">
-          <div style="font-size:14px;font-weight:500;color:#1a1a2e;">AI Analysis</div>
-          <div style="font-size:11px;color:#6B8BBF;">Powered by Claude</div>
-        </div>
-        <div style="padding:10px 16px;flex:1;overflow:hidden;background:#E8EEF7;display:flex;flex-direction:column;gap:8px;">
-          <div style="background:#fff;border-radius:10px;padding:12px 14px;">
-            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:8px;">
-              <div style="width:28px;height:28px;border-radius:50%;background:#9AAED8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="font-size:11px;color:#fff;font-weight:500;">AI</span></div>
-              <div style="background:#E8EEF7;border-radius:0 10px 10px 10px;padding:9px 12px;flex:1;">
-                <div style="font-size:11px;color:#1a1a2e;line-height:1.5;">Saving rate kamu bulan ini <strong>53%</strong> — sangat bagus! Emergency fund sudah 41% dari target. Prioritaskan top-up supaya bisa capai 3 bulan pengeluaran.</div>
-              </div>
-            </div>
-            <div style="display:flex;align-items:flex-start;gap:8px;flex-direction:row-reverse;">
-              <div style="width:28px;height:28px;border-radius:50%;background:#E8EEF7;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="font-size:11px;color:#6B8BBF;">U</span></div>
-              <div style="background:#9AAED8;border-radius:10px 0 10px 10px;padding:9px 12px;flex:1;">
-                <div style="font-size:11px;color:#fff;line-height:1.5;">Berapa yang harus aku sisihkan tiap bulan buat emergency fund?</div>
-              </div>
-            </div>
-          </div>
-          <div style="background:#fff;border-radius:10px;padding:12px 14px;">
-            <div style="display:flex;align-items:flex-start;gap:8px;">
-              <div style="width:28px;height:28px;border-radius:50%;background:#9AAED8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="font-size:11px;color:#fff;font-weight:500;">AI</span></div>
-              <div style="background:#E8EEF7;border-radius:0 10px 10px 10px;padding:9px 12px;flex:1;">
-                <div style="font-size:11px;color:#1a1a2e;line-height:1.5;">Sisa target: <strong>Rp 17.550.000</strong>. Kalau sisihkan <strong>Rp 1.500.000/bulan</strong>, selesai dalam ~12 bulan. Mau aku buatkan reminder bulanan?</div>
-              </div>
-            </div>
-          </div>
-          <div style="background:#fff;border-radius:10px;padding:8px 14px;display:flex;gap:8px;align-items:center;">
-            <div style="flex:1;font-size:11px;color:#9AAED8;">Tanya sesuatu...</div>
-            <div style="width:28px;height:28px;border-radius:50%;background:#9AAED8;display:flex;align-items:center;justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
-          </div>
-        </div>
-        <div style="background:#fff;border-top:0.5px solid #E8EEF7;display:flex;padding:8px 0 10px;">
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><path d="M3 12L12 4l9 8"/><path d="M5 10v9h4v-5h6v5h4v-9"/></svg><span style="font-size:9px;color:#ccc;">Home</span></div>
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg><span style="font-size:9px;color:#ccc;">Akun</span></div>
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><div style="width:30px;height:30px;border-radius:50%;background:#9AAED8;display:flex;align-items:center;justify-content:center;margin-top:-8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg><span style="font-size:9px;color:#ccc;">Report</span></div>
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg><span style="font-size:9px;color:#ccc;">Settings</span></div>
-        </div></div>
+        <div style="background:#fff;padding:10px 14px;border-top:0.5px solid #f0f0f0;display:flex;align-items:center;gap:8px;flex-shrink:0;"><div style="flex:1;background:#f5f5f7;border-radius:20px;padding:9px 14px;font-size:12px;color:#aaa;">Ask about your finances...</div><div style="width:32px;height:32px;border-radius:50%;background:#f0f0f0;display:flex;align-items:center;justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div></div></div>
 
       </div>
       <div class="app-modal-dots" id="caratModal-dots"></div>
@@ -1766,7 +1416,7 @@
 </div>
 <script>
 (function(){
-  var labels_caratModal = ['Dashboard', 'Akun', 'Goals', 'AI analysis'];
+  var labels_caratModal = ['Accounts & Transactions', 'Add menu', 'Billing & Plan', 'Financial Chingu AI'];
   var cur_caratModal = 0;
   var total_caratModal = 4;
   function show_caratModal() {
@@ -1875,29 +1525,21 @@
           </div>
           <div style="font-size:11px;color:#9B9189;margin-top:12px;">Lupa PIN? Hubungi admin</div>
         </div></div>
-<div id="factoryModal-s3" class="app-modal-screen" style="display:none;"><div class="s-hdr"><span class="s-hdr-t">Absensi</span><span class="s-hdr-s">Senin, 9 Mei 2026 &middot; 07:15</span></div>
+<div id="factoryModal-s3" class="app-modal-screen" style="display:none;"><div class="s-hdr"><span class="s-hdr-t">Absensi</span><span class="s-hdr-s">Senin, 9 Mei &middot; 07:15</span></div>
         <div class="s-tabs"><div class="s-tab on">Hari ini</div><div class="s-tab">Riwayat</div></div>
         <div class="s-body">
-          <div class="s-ab-status"><div class="s-ab-dot"></div><span class="s-ab-txt">Lokasi terverifikasi &middot; 0.8m dari titik absensi</span></div>
+          <div style="background:#E8F5EE;border:0.5px solid #B0DFC4;border-radius:8px;padding:8px 12px;display:flex;align-items:center;gap:7px;"><div style="width:8px;height:8px;border-radius:50%;background:#2E7D5E;flex-shrink:0;"></div><span style="font-size:11px;color:#2E7D5E;">Lokasi terverifikasi &middot; 0.8m dari titik absensi</span></div>
           <div class="s-ab-card">
             <div class="s-ab-ch">Status hari ini</div>
             <div class="s-ab-row"><span class="s-ab-rl">Check-in</span><span class="s-ab-rv">Belum</span></div>
             <div class="s-ab-row"><span class="s-ab-rl">Check-out</span><span class="s-ab-rv">&mdash;</span></div>
             <div class="s-ab-row"><span class="s-ab-rl">Status</span><span style="font-size:10px;background:#F1EFE8;padding:3px 9px;border-radius:20px;color:#9B9189;">Belum absen</span></div>
           </div>
-          <div class="s-ab-btn"><div class="s-ab-bdot"></div>Check-in Sekarang</div>
+          <div style="background:#1A1714;border-radius:8px;padding:12px;text-align:center;display:flex;align-items:center;justify-content:center;gap:7px;"><div style="width:8px;height:8px;border-radius:50%;background:#F7F4EF;"></div><span style="font-size:13px;font-weight:500;color:#F7F4EF;">Check-in Sekarang</span></div>
           <div style="font-size:11px;color:#9B9189;text-align:center;">Kamu berada di area pabrik</div>
-          <div class="s-sh" style="margin-top:4px;">Slip gaji &mdash; April 2026</div>
-          <div class="s-slip">
-            <div class="s-slip-l">Take home pay</div>
-            <div class="s-slip-v">Rp 3.200.000</div>
-            <div class="s-slip-p">April 2026 &middot; 26 hari kerja</div>
-          </div>
-          <div class="s-card" style="padding:8px 14px;">
-            <div class="s-slip-row"><span class="s-slip-rl">Gaji pokok</span><span style="font-size:11px;color:#1A1714;">Rp 3.000.000</span></div>
-            <div class="s-slip-row"><span class="s-slip-rl">Tunjangan hadir</span><span style="font-size:11px;color:#1A1714;">Rp 300.000</span></div>
-            <div class="s-slip-row"><span class="s-slip-rl">Potongan</span><span style="font-size:11px;color:#C0392B;">&minus;Rp 100.000</span></div>
-          </div>
+          <div class="s-sh">Slip gaji &mdash; April 2026</div>
+          <div style="background:#1A1714;border-radius:8px;padding:10px 14px;"><div style="font-size:9px;letter-spacing:0.08em;text-transform:uppercase;color:#6B645A;margin-bottom:2px;">Take home pay</div><div style="font-size:18px;font-weight:500;color:#B8975A;">Rp 3.200.000</div><div style="font-size:9px;color:#6B645A;margin-top:1px;">April 2026 &middot; 26 hari kerja</div></div>
+          <div class="s-card" style="padding:8px 14px;"><div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:0.5px solid #F0EDE6;"><span style="font-size:11px;color:#6B645A;">Gaji pokok</span><span style="font-size:11px;color:#1A1714;">Rp 3.000.000</span></div><div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:0.5px solid #F0EDE6;"><span style="font-size:11px;color:#6B645A;">Tunjangan hadir</span><span style="font-size:11px;color:#1A1714;">Rp 300.000</span></div><div style="display:flex;justify-content:space-between;padding:4px 0;"><span style="font-size:11px;color:#6B645A;">Potongan</span><span style="font-size:11px;color:#C0392B;">&minus;Rp 100.000</span></div></div>
         </div>
         <div class="s-bnav">
           <div class="s-bnav-i"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9B9189" stroke-width="1.5"><path d="M3 12L12 4l9 8"/><path d="M5 10v9h4v-5h6v5h4v-9"/></svg><div class="s-bnav-il">Beranda</div></div>
@@ -1906,7 +1548,6 @@
           <div class="s-bnav-i"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9B9189" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg><div class="s-bnav-il">Gaji</div></div>
           <div class="s-bnav-i"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9B9189" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><div class="s-bnav-il">Profil</div></div>
         </div></div>
-
       </div>
       <div class="app-modal-dots" id="factoryModal-dots"></div>
       <div class="app-modal-lbl" id="factoryModal-lbl"></div>
@@ -2089,7 +1730,6 @@
     <p class="contact-intro">For project inquiries, collaborations, or just to say hello — reach out directly.</p>
     <a href="mailto:varenphangkajaya@gmail.com" class="contact-email" target="_blank">varenphangkajaya@gmail.com</a>
     <div class="contact-socials">
-      <a href="https://instagram.com/hertape.id" target="_blank" class="contact-social">Instagram — @hertape.id</a>
       <a href="https://upwork.com/freelancers/~0124205ffc9e45813f" target="_blank" class="contact-social">Upwork — Varen Phangkajaya</a>
     </div>
   </div>
