@@ -1377,15 +1377,15 @@
         <li>Offline-first with local data persistence</li>
       </ul>
     </div>
-    <button class="app-preview-btn" onclick="openAppModal('factory-modal')">Preview app &#8594;</button>
+    <button class="app-preview-btn" onclick="openAppModal('factoryModal')">Preview app &#8594;</button>
 
-<div class="app-modal-overlay" id="factory-modal-overlay">
-  <button class="app-modal-close" onclick="closeAppModal('factory-modal')">&times;</button>
+<div class="app-modal-overlay" id="factoryModal-overlay">
+  <button class="app-modal-close" onclick="closeAppModal('factoryModal')">&times;</button>
   <div class="app-modal-layout">
-    <button class="app-modal-nav" onclick="navAppModal('factory-modal',-1)">&#8249;</button>
+    <button class="app-modal-nav" onclick="navAppModal('factoryModal',-1)">&#8249;</button>
     <div class="app-modal-center">
       <div style="width:340px;">
-        <div id="factory-modal-s0" class="app-modal-screen"><div class="s-hdr"><span class="s-hdr-t">Raw Materials</span><span class="s-hdr-s">Admin</span></div>
+        <div id="factoryModal-s0" class="app-modal-screen"><div class="s-hdr"><span class="s-hdr-t">Raw Materials</span><span class="s-hdr-s">Admin</span></div>
         <div class="s-tabs"><div class="s-tab on">Stock</div><div class="s-tab">Buy</div><div class="s-tab">Sell</div><div class="s-tab">Value</div></div>
         <div class="s-body">
           <div class="s-sh">Current stock</div>
@@ -1397,7 +1397,7 @@
           <div class="s-card"><div class="s-row"><span class="s-lbl">PB-2026-018</span><span class="s-gold">3.200 g</span></div><div class="s-sub">Supplier A · 5 May</div></div>
           <div class="s-card"><div class="s-row"><span class="s-lbl">PB-2026-017</span><span class="s-gold">2.850 g</span></div><div class="s-sub">Supplier B · 28 Apr</div></div>
         </div></div>
-<div id="factory-modal-s1" class="app-modal-screen" style="display:none;"><div class="s-hdr"><span class="s-hdr-t">Production</span><span class="s-hdr-s">Admin</span></div>
+<div id="factoryModal-s1" class="app-modal-screen" style="display:none;"><div class="s-hdr"><span class="s-hdr-t">Production</span><span class="s-hdr-s">Admin</span></div>
         <div class="s-tabs"><div class="s-tab on">Batch</div><div class="s-tab">Invoice</div><div class="s-tab">Stock</div></div>
         <div class="s-body">
           <div class="s-card"><div class="s-row"><span class="s-lbl">Batch #024</span><span class="s-pill s-ok">Done</span></div><div class="s-sub">Output: 3.200 g · 5 May</div></div>
@@ -1408,7 +1408,7 @@
           <div class="s-card"><div class="s-row"><span class="s-lbl">INV-2026-041</span><span class="s-gold">Rp 3.6M</span></div><div class="s-sub">Buyer A · 5 May</div></div>
           <div class="s-card"><div class="s-row"><span class="s-lbl">INV-2026-040</span><span class="s-gold">Rp 2.1M</span></div><div class="s-sub">Buyer B · 28 Apr</div></div>
         </div></div>
-<div id="factory-modal-s2" class="app-modal-screen" style="display:none;"><div class="s-pin">
+<div id="factoryModal-s2" class="app-modal-screen" style="display:none;"><div class="s-pin">
           <div class="s-pin-logo"><span class="s-pin-lt">FS</span></div>
           <div class="s-pin-t">Factory System</div>
           <div class="s-pin-s">Masuk dengan PIN kamu</div>
@@ -1428,7 +1428,7 @@
           </div>
           <div style="font-size:11px;color:#9B9189;margin-top:12px;">Lupa PIN? Hubungi admin</div>
         </div></div>
-<div id="factory-modal-s3" class="app-modal-screen" style="display:none;"><div class="s-hdr"><span class="s-hdr-t">Absensi</span><span class="s-hdr-s">Senin, 9 Mei 2026 &middot; 07:15</span></div>
+<div id="factoryModal-s3" class="app-modal-screen" style="display:none;"><div class="s-hdr"><span class="s-hdr-t">Absensi</span><span class="s-hdr-s">Senin, 9 Mei 2026 &middot; 07:15</span></div>
         <div class="s-tabs"><div class="s-tab on">Hari ini</div><div class="s-tab">Riwayat</div></div>
         <div class="s-body">
           <div class="s-ab-status"><div class="s-ab-dot"></div><span class="s-ab-txt">Lokasi terverifikasi &middot; 0.8m dari titik absensi</span></div>
@@ -1461,53 +1461,53 @@
         </div></div>
 
       </div>
-      <div class="app-modal-dots" id="factory-modal-dots"></div>
-      <div class="app-modal-lbl" id="factory-modal-lbl"></div>
+      <div class="app-modal-dots" id="factoryModal-dots"></div>
+      <div class="app-modal-lbl" id="factoryModal-lbl"></div>
     </div>
-    <button class="app-modal-nav" onclick="navAppModal('factory-modal',1)">&#8250;</button>
+    <button class="app-modal-nav" onclick="navAppModal('factoryModal',1)">&#8250;</button>
   </div>
 </div>
 <script>
 (function(){
-  var labels_factory-modal = ['Raw Materials', 'Production', 'Employee login', 'Absensi & gaji'];
-  var cur_factory-modal = 0;
-  var total_factory-modal = 4;
-  function show_factory-modal() {
-    for(var i=0;i<total_factory-modal;i++) {
-      var el=document.getElementById('factory-modal-s'+i);
-      if(el) el.style.display = i===cur_factory-modal ? '' : 'none';
+  var labels_factoryModal = ['Raw Materials', 'Production', 'Employee login', 'Absensi & gaji'];
+  var cur_factoryModal = 0;
+  var total_factoryModal = 4;
+  function show_factoryModal() {
+    for(var i=0;i<total_factoryModal;i++) {
+      var el=document.getElementById('factoryModal-s'+i);
+      if(el) el.style.display = i===cur_factoryModal ? '' : 'none';
     }
-    document.getElementById('factory-modal-lbl').textContent = labels_factory-modal[cur_factory-modal];
-    var d=document.getElementById('factory-modal-dots'); d.innerHTML='';
-    for(var i=0;i<total_factory-modal;i++) {
-      var dot=document.createElement('div'); dot.className='app-modal-dot'+(i===cur_factory-modal?' on':'');
-      (function(idx){ dot.onclick=function(){cur_factory-modal=idx;show_factory-modal();}; })(i);
+    document.getElementById('factoryModal-lbl').textContent = labels_factoryModal[cur_factoryModal];
+    var d=document.getElementById('factoryModal-dots'); d.innerHTML='';
+    for(var i=0;i<total_factoryModal;i++) {
+      var dot=document.createElement('div'); dot.className='app-modal-dot'+(i===cur_factoryModal?' on':'');
+      (function(idx){ dot.onclick=function(){cur_factoryModal=idx;show_factoryModal();}; })(i);
       d.appendChild(dot);
     }
   }
   window.openAppModal = window.openAppModal || function(id) {
     document.getElementById(id+'-overlay').classList.add('open');
   };
-  window.openAppModal_factory-modal = function() {
-    cur_factory-modal=0; show_factory-modal();
-    document.getElementById('factory-modal-overlay').classList.add('open');
+  window.openAppModal_factoryModal = function() {
+    cur_factoryModal=0; show_factoryModal();
+    document.getElementById('factoryModal-overlay').classList.add('open');
   };
   window.closeAppModal = window.closeAppModal || function(id) {
     document.getElementById(id+'-overlay').classList.remove('open');
   };
   window.navAppModal = window.navAppModal || function(id, dir) {
-    if(id==='factory-modal') { cur_factory-modal=(cur_factory-modal+dir+total_factory-modal)%total_factory-modal; show_factory-modal(); }
+    if(id==='factoryModal') { cur_factoryModal=(cur_factoryModal+dir+total_factoryModal)%total_factoryModal; show_factoryModal(); }
   };
-  document.getElementById('factory-modal-overlay').addEventListener('click', function(e) {
+  document.getElementById('factoryModal-overlay').addEventListener('click', function(e) {
     if(e.target===this) this.classList.remove('open');
   });
   document.addEventListener('keydown', function(e) {
-    if(!document.getElementById('factory-modal-overlay').classList.contains('open')) return;
-    if(e.key==='ArrowLeft') { cur_factory-modal=(cur_factory-modal-1+total_factory-modal)%total_factory-modal; show_factory-modal(); }
-    if(e.key==='ArrowRight') { cur_factory-modal=(cur_factory-modal+1)%total_factory-modal; show_factory-modal(); }
-    if(e.key==='Escape') document.getElementById('factory-modal-overlay').classList.remove('open');
+    if(!document.getElementById('factoryModal-overlay').classList.contains('open')) return;
+    if(e.key==='ArrowLeft') { cur_factoryModal=(cur_factoryModal-1+total_factoryModal)%total_factoryModal; show_factoryModal(); }
+    if(e.key==='ArrowRight') { cur_factoryModal=(cur_factoryModal+1)%total_factoryModal; show_factoryModal(); }
+    if(e.key==='Escape') document.getElementById('factoryModal-overlay').classList.remove('open');
   });
-  show_factory-modal();
+  show_factoryModal();
 })();
 </script>
   </div>
@@ -1533,15 +1533,15 @@
         <li>Mobile-first PWA, installable on staff devices</li>
       </ul>
     </div>
-    <button class="app-preview-btn" onclick="openAppModal('rehab-modal')">Preview app &#8594;</button>
+    <button class="app-preview-btn" onclick="openAppModal('rehabModal')">Preview app &#8594;</button>
 
-<div class="app-modal-overlay" id="rehab-modal-overlay">
-  <button class="app-modal-close" onclick="closeAppModal('rehab-modal')">&times;</button>
+<div class="app-modal-overlay" id="rehabModal-overlay">
+  <button class="app-modal-close" onclick="closeAppModal('rehabModal')">&times;</button>
   <div class="app-modal-layout">
-    <button class="app-modal-nav" onclick="navAppModal('rehab-modal',-1)">&#8249;</button>
+    <button class="app-modal-nav" onclick="navAppModal('rehabModal',-1)">&#8249;</button>
     <div class="app-modal-center">
       <div style="width:340px;">
-        <div id="rehab-modal-s0" class="app-modal-screen"><div class="rh-hdr"><span class="rh-ht">RehabScheduler</span><span class="rh-hs">Fri, 9 May 2026</span></div>
+        <div id="rehabModal-s0" class="app-modal-screen"><div class="rh-hdr"><span class="rh-ht">RehabScheduler</span><span class="rh-hs">Fri, 9 May 2026</span></div>
         <div class="rh-tabs"><div class="rh-tab on">Dashboard</div><div class="rh-tab">Schedule</div><div class="rh-tab">Patients</div></div>
         <div class="rh-body">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
@@ -1555,7 +1555,7 @@
           <div class="rh-card"><div class="rh-row2"><div><div class="rh-name">Patient B</div><div class="rh-sub">Room 105 · ST</div></div><span class="rh-pill rh-risk">At risk</span></div><div class="rh-track"><div class="rh-fill" style="width:40%;background:#BA7517;"></div></div></div>
           <div class="rh-card"><div class="rh-row2"><div><div class="rh-name">Patient C</div><div class="rh-sub">Room 303 · PT</div></div><span class="rh-pill rh-ok">On track</span></div><div class="rh-track"><div class="rh-fill" style="width:90%;background:#1D9E75;"></div></div></div>
         </div></div>
-<div id="rehab-modal-s1" class="app-modal-screen" style="display:none;"><div class="rh-hdr"><span class="rh-ht">Schedule</span><span class="rh-hs">Today</span></div>
+<div id="rehabModal-s1" class="app-modal-screen" style="display:none;"><div class="rh-hdr"><span class="rh-ht">Schedule</span><span class="rh-hs">Today</span></div>
         <div style="background:#F1EFE8;flex:1;padding:12px 14px;">
           <div class="s-brd">
             <div class="s-brd-hd" style="grid-template-columns:52px repeat(3,1fr);">
@@ -1569,7 +1569,7 @@
             <div class="s-brd-r" style="grid-template-columns:52px repeat(3,1fr);"><div class="s-brd-t">13:00</div><div class="s-slot"><div class="s-spt">Pasien G</div></div><div class="s-slot"><div class="s-sot">Pasien C</div></div><div class="s-slot"><div class="s-sst">Pasien H</div></div></div>
           </div>
         </div></div>
-<div id="rehab-modal-s2" class="app-modal-screen" style="display:none;"><div class="rh-hdr"><span class="rh-ht">Therapists</span><span class="rh-hs">Productivity</span></div>
+<div id="rehabModal-s2" class="app-modal-screen" style="display:none;"><div class="rh-hdr"><span class="rh-ht">Therapists</span><span class="rh-hs">Productivity</span></div>
         <div class="rh-body">
           <div class="rh-card">
             <div class="rh-row2" style="margin-bottom:7px;"><div><div class="rh-name">Therapist A</div><div class="rh-sub">Physical Therapy</div></div><span class="rh-pill rh-ok">Active</span></div>
@@ -1586,7 +1586,7 @@
             <div class="rh-tbar"><div class="rh-tbar-l">Sessions</div><div class="rh-track" style="flex:1;margin-top:0;"><div class="rh-fill" style="width:40%;background:#BA7517;"></div></div><div style="font-size:11px;color:#666;margin-left:6px;">2/5</div></div>
           </div>
         </div></div>
-<div id="rehab-modal-s3" class="app-modal-screen" style="display:none;"><div style="opacity:0.3;display:flex;flex-direction:column;overflow:hidden;flex:1;">
+<div id="rehabModal-s3" class="app-modal-screen" style="display:none;"><div style="opacity:0.3;display:flex;flex-direction:column;overflow:hidden;flex:1;">
           <div class="rh-hdr"><span class="rh-ht">RehabScheduler</span><span class="rh-hs">9 May 2026</span></div>
           <div class="rh-body">
             <div class="rh-card"><div class="rh-name">Patient A</div><div class="rh-track" style="margin-top:6px;"><div class="rh-fill" style="width:75%;background:#1D9E75;"></div></div></div>
@@ -1610,53 +1610,53 @@
         </div></div>
 
       </div>
-      <div class="app-modal-dots" id="rehab-modal-dots"></div>
-      <div class="app-modal-lbl" id="rehab-modal-lbl"></div>
+      <div class="app-modal-dots" id="rehabModal-dots"></div>
+      <div class="app-modal-lbl" id="rehabModal-lbl"></div>
     </div>
-    <button class="app-modal-nav" onclick="navAppModal('rehab-modal',1)">&#8250;</button>
+    <button class="app-modal-nav" onclick="navAppModal('rehabModal',1)">&#8250;</button>
   </div>
 </div>
 <script>
 (function(){
-  var labels_rehab-modal = ['Dashboard', 'Schedule board', 'Therapist productivity', 'Add session'];
-  var cur_rehab-modal = 0;
-  var total_rehab-modal = 4;
-  function show_rehab-modal() {
-    for(var i=0;i<total_rehab-modal;i++) {
-      var el=document.getElementById('rehab-modal-s'+i);
-      if(el) el.style.display = i===cur_rehab-modal ? '' : 'none';
+  var labels_rehabModal = ['Dashboard', 'Schedule board', 'Therapist productivity', 'Add session'];
+  var cur_rehabModal = 0;
+  var total_rehabModal = 4;
+  function show_rehabModal() {
+    for(var i=0;i<total_rehabModal;i++) {
+      var el=document.getElementById('rehabModal-s'+i);
+      if(el) el.style.display = i===cur_rehabModal ? '' : 'none';
     }
-    document.getElementById('rehab-modal-lbl').textContent = labels_rehab-modal[cur_rehab-modal];
-    var d=document.getElementById('rehab-modal-dots'); d.innerHTML='';
-    for(var i=0;i<total_rehab-modal;i++) {
-      var dot=document.createElement('div'); dot.className='app-modal-dot'+(i===cur_rehab-modal?' on':'');
-      (function(idx){ dot.onclick=function(){cur_rehab-modal=idx;show_rehab-modal();}; })(i);
+    document.getElementById('rehabModal-lbl').textContent = labels_rehabModal[cur_rehabModal];
+    var d=document.getElementById('rehabModal-dots'); d.innerHTML='';
+    for(var i=0;i<total_rehabModal;i++) {
+      var dot=document.createElement('div'); dot.className='app-modal-dot'+(i===cur_rehabModal?' on':'');
+      (function(idx){ dot.onclick=function(){cur_rehabModal=idx;show_rehabModal();}; })(i);
       d.appendChild(dot);
     }
   }
   window.openAppModal = window.openAppModal || function(id) {
     document.getElementById(id+'-overlay').classList.add('open');
   };
-  window.openAppModal_rehab-modal = function() {
-    cur_rehab-modal=0; show_rehab-modal();
-    document.getElementById('rehab-modal-overlay').classList.add('open');
+  window.openAppModal_rehabModal = function() {
+    cur_rehabModal=0; show_rehabModal();
+    document.getElementById('rehabModal-overlay').classList.add('open');
   };
   window.closeAppModal = window.closeAppModal || function(id) {
     document.getElementById(id+'-overlay').classList.remove('open');
   };
   window.navAppModal = window.navAppModal || function(id, dir) {
-    if(id==='rehab-modal') { cur_rehab-modal=(cur_rehab-modal+dir+total_rehab-modal)%total_rehab-modal; show_rehab-modal(); }
+    if(id==='rehabModal') { cur_rehabModal=(cur_rehabModal+dir+total_rehabModal)%total_rehabModal; show_rehabModal(); }
   };
-  document.getElementById('rehab-modal-overlay').addEventListener('click', function(e) {
+  document.getElementById('rehabModal-overlay').addEventListener('click', function(e) {
     if(e.target===this) this.classList.remove('open');
   });
   document.addEventListener('keydown', function(e) {
-    if(!document.getElementById('rehab-modal-overlay').classList.contains('open')) return;
-    if(e.key==='ArrowLeft') { cur_rehab-modal=(cur_rehab-modal-1+total_rehab-modal)%total_rehab-modal; show_rehab-modal(); }
-    if(e.key==='ArrowRight') { cur_rehab-modal=(cur_rehab-modal+1)%total_rehab-modal; show_rehab-modal(); }
-    if(e.key==='Escape') document.getElementById('rehab-modal-overlay').classList.remove('open');
+    if(!document.getElementById('rehabModal-overlay').classList.contains('open')) return;
+    if(e.key==='ArrowLeft') { cur_rehabModal=(cur_rehabModal-1+total_rehabModal)%total_rehabModal; show_rehabModal(); }
+    if(e.key==='ArrowRight') { cur_rehabModal=(cur_rehabModal+1)%total_rehabModal; show_rehabModal(); }
+    if(e.key==='Escape') document.getElementById('rehabModal-overlay').classList.remove('open');
   });
-  show_rehab-modal();
+  show_rehabModal();
 })();
 </script>
     <a href="https://varendemo-rehab-scheduler.netlify.app/" target="_blank" class="project-link" style="margin-top:20px;">View live demo &#8594;</a>
