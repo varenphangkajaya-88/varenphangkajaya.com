@@ -769,12 +769,30 @@
   /* Scale mock content inside gallery containers using zoom */
   .project-gallery-img.full .rep-wrap,
   .project-gallery-img.full .rh-wrap {
-    zoom: 0.42;
+
   }
   .project-gallery-img.portrait .mock-wrap,
   .project-gallery-img.portrait .pin-wrap,
   .project-gallery-img.portrait > div {
-    zoom: 0.28;
+
+  }
+
+  /* Mock screen scaling — fixed size inner + transform scale to fit */
+  .project-gallery-img { position: relative; overflow: hidden; }
+
+  .mock-scale-hero {
+    position: absolute;
+    top: 0; left: 0;
+    width: 1200px;
+    height: 525px;
+    transform-origin: top left;
+  }
+  .mock-scale-portrait {
+    position: absolute;
+    top: 0; left: 0;
+    width: 320px;
+    height: 568px;
+    transform-origin: top left;
   }
   /* Animations */
   .fade-in { animation: fadeIn 0.5s ease forwards; }
@@ -1225,7 +1243,7 @@
       </ul>
     </div>
     <div class="project-gallery">
-      <div class="project-gallery-img full"><div class="rep-wrap">
+      <div class="project-gallery-img full"><div class="mock-scale-hero"><div class="rep-wrap" style="width:100%;height:100%;">
         <div class="rep-hdr">
           <span style="font-size:11px;font-weight:500;color:#1A1714;">Production Report</span>
           <span style="font-size:8px;color:#9B9189;">April 2026 · Factory Internal System</span>
@@ -1264,10 +1282,10 @@
             </div>
           </div>
         </div>
-      </div></div>
+      </div></div></div>
     </div>
     <div class="project-gallery-portrait">
-      <div class="project-gallery-img portrait"><div class="mock-wrap">
+      <div class="project-gallery-img portrait"><div class="mock-scale-portrait"><div class="mock-wrap" style="width:100%;height:100%;">
           <div class="mk-hdr"><span class="mk-ht">Raw Materials</span><span class="mk-hs">Admin</span></div>
           <div class="mk-tabs"><div class="mk-tab on">Stock</div><div class="mk-tab">Buy</div><div class="mk-tab">Sell</div><div class="mk-tab">Value</div></div>
           <div class="mk-body">
@@ -1281,7 +1299,7 @@
             <div class="mk-card"><div class="mk-row"><span class="mk-lbl">PB-2026-017</span><span class="mk-gold">2.850 g</span></div><div class="mk-sub">Supplier B · 28 Apr</div></div>
           </div>
         </div></div>
-      <div class="project-gallery-img portrait"><div class="mock-wrap">
+      <div class="project-gallery-img portrait"><div class="mock-scale-portrait"><div class="mock-wrap" style="width:100%;height:100%;">
           <div class="mk-hdr"><span class="mk-ht">Production</span><span class="mk-hs">Admin</span></div>
           <div class="mk-tabs"><div class="mk-tab on">Batch</div><div class="mk-tab">Invoice</div><div class="mk-tab">Stock</div></div>
           <div class="mk-body">
@@ -1294,7 +1312,7 @@
             <div class="mk-card"><div class="mk-row"><span class="mk-lbl">INV-2026-040</span><span class="mk-gold">Rp 2.1M</span></div><div class="mk-sub">Buyer B · 28 Apr</div></div>
           </div>
         </div></div>
-      <div class="project-gallery-img portrait"><div class="pin-wrap">
+      <div class="project-gallery-img portrait"><div class="mock-scale-portrait"><div class="pin-wrap" style="width:100%;height:100%;">
           <div class="pin-logo"><span class="pin-lt">FS</span></div>
           <div class="pin-t">Factory System</div>
           <div class="pin-s">Masuk dengan PIN kamu</div>
@@ -1315,7 +1333,7 @@
           </div>
           <div style="font-size:7px;color:#9B9189;margin-top:8px;">Lupa PIN? Hubungi admin</div>
         </div></div>
-      <div class="project-gallery-img portrait"><div class="mock-wrap">
+      <div class="project-gallery-img portrait"><div class="mock-scale-portrait"><div class="mock-wrap" style="width:100%;height:100%;">
           <div class="mk-hdr"><span class="mk-ht">Absensi</span><span class="mk-hs">Senin, 9 Mei · 07:15</span></div>
           <div class="mk-tabs"><div class="mk-tab on">Hari ini</div><div class="mk-tab">Riwayat</div></div>
           <div class="mk-body">
@@ -1401,7 +1419,7 @@
       </ul>
     </div>
     <div class="project-gallery">
-      <div class="project-gallery-img full"><div class="rh-wrap">
+      <div class="project-gallery-img full"><div class="mock-scale-hero"><div class="rh-wrap" style="width:100%;height:100%;">
         <div class="rh-hdr">
           <span style="font-size:12px;font-weight:500;color:#111;">RehabScheduler</span>
           <span style="font-size:9px;color:#666;">Friday, 9 May 2026</span>
@@ -1427,7 +1445,7 @@
             </div>
           </div>
         </div>
-      </div></div>
+      </div></div></div>
     </div>
     <div class="project-gallery-portrait">
       <div class="project-gallery-img portrait"><div class="mock-wrap" style="background:#F7F7F5;">
@@ -1477,7 +1495,7 @@
             </div>
           </div>
         </div></div>
-      <div class="project-gallery-img portrait"><div style="width:100%;height:100%;display:flex;flex-direction:column;position:relative;overflow:hidden;">
+      <div class="project-gallery-img portrait"><div class="mock-scale-portrait"><div style="width:100%;height:100%;display:flex;flex-direction:column;position:relative;overflow:hidden;">
           <div style="opacity:0.3;display:flex;flex-direction:column;flex:1;overflow:hidden;background:#F1EFE8;">
             <div style="background:#fff;border-bottom:0.5px solid #E8E8E4;padding:8px 12px;display:flex;justify-content:space-between;"><span style="font-size:11px;font-weight:500;color:#111;">RehabScheduler</span><span style="font-size:8px;color:#666;">9 May 2026</span></div>
             <div style="padding:8px 10px;display:flex;flex-direction:column;gap:5px;flex:1;">
@@ -1662,6 +1680,30 @@
       showPage('home');
     }
   }
+
+
+  // Scale mock screens to fit their gallery containers
+  function scaleMocks() {
+    document.querySelectorAll('.mock-scale-hero').forEach(el => {
+      const container = el.parentElement;
+      const scaleX = container.offsetWidth / 1200;
+      const scaleY = container.offsetHeight / 525;
+      const scale = Math.min(scaleX, scaleY);
+      el.style.transform = 'scale(' + scale + ')';
+    });
+    document.querySelectorAll('.mock-scale-portrait').forEach(el => {
+      const container = el.parentElement;
+      const scaleX = container.offsetWidth / 320;
+      const scaleY = container.offsetHeight / 568;
+      const scale = Math.min(scaleX, scaleY);
+      el.style.transform = 'scale(' + scale + ')';
+    });
+  }
+  window.addEventListener('load', scaleMocks);
+  window.addEventListener('resize', scaleMocks);
+  // Also scale when navigating to project pages
+  const _origShowPage = window.showPage || function(){};
+  window.addEventListener('hashchange', function(){ setTimeout(scaleMocks, 50); });
 
   window.addEventListener('hashchange', handleHash);
   window.addEventListener('load', handleHash);
