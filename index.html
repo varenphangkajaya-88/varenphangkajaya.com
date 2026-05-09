@@ -520,18 +520,20 @@
   }
 
 
-  /* Journal — Option B layout */
-  .journal-list { display: flex; flex-direction: column; margin-top: 32px; }
-  .journal-item { display: grid; grid-template-columns: 100px 1fr auto; gap: 32px; align-items: baseline; border-top: 0.5px solid var(--border); padding: 24px 0; cursor: pointer; transition: opacity 0.2s; }
-  .journal-item:last-child { border-bottom: 0.5px solid var(--border); }
-  .journal-item:hover { opacity: 0.6; }
-  .journal-year { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 18px; color: var(--text-3); }
-  .journal-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(20px, 2.4vw, 26px); color: var(--text); line-height: 1.25; margin-bottom: 6px; }
-  .journal-title em { font-style: italic; color: var(--text-2); }
-  .journal-excerpt { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 300; color: var(--text-2); line-height: 1.6; }
-  .journal-arrow { font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--text-3); }
+  /* Journal grid */
+  .journal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px 32px; margin-top: 40px; }
+  .journal-card { cursor: pointer; transition: opacity 0.2s; }
+  .journal-card:hover { opacity: 0.7; }
+  .journal-cover { aspect-ratio: 4/5; background: #C8C4BC; overflow: hidden; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; }
+  .journal-cover img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(100%); transition: filter 0.4s; }
+  .journal-card:hover .journal-cover img { filter: grayscale(0%); }
+  .journal-cover-placeholder { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(0,0,0,0.2); }
+  .journal-year { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 14px; color: var(--text-3); margin-bottom: 6px; }
+  .journal-card-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(18px, 2vw, 22px); color: var(--text); line-height: 1.25; margin-bottom: 8px; }
+  .journal-card-title em { font-style: italic; color: var(--text-2); }
+  .journal-card-excerpt { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 300; color: var(--text-2); line-height: 1.6; }
   @media (max-width: 600px) {
-    .journal-item { grid-template-columns: 60px 1fr auto; gap: 16px; }
+    .journal-grid { gap: 32px 16px; }
   }
 
   /* Journal article */
@@ -554,6 +556,33 @@
   .contact-social { font-size: 12px; font-weight: 300; letter-spacing: 0.1em; color: var(--text-2); text-decoration: none; display: flex; align-items: center; gap: 8px; }
   .contact-social:hover { color: var(--text); }
   @media (max-width: 600px) { .contact-page { padding: 0 20px 60px; } }
+
+
+  /* Journal article — narrow center layout */
+  .journal-article {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+  .journal-article-hero {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #C8C4BC;
+    overflow: hidden;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .journal-article-hero img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .journal-article-hero-placeholder { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(0,0,0,0.2); }
+  .journal-article-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 32px 0; }
+  .journal-article-pair-photo { aspect-ratio: 4/5; background: #C8C4BC; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+  .journal-article-pair-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .journal-article-pair-placeholder { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(0,0,0,0.2); }
+  @media (max-width: 600px) {
+    .journal-article { padding: 32px 20px 60px; }
+  }
 
   /* Animations */
   .fade-in { animation: fadeIn 0.5s ease forwards; }
@@ -938,15 +967,31 @@
 
 <!-- Journal: Pop-up lessons -->
 <div class="page fade-in" id="page-journal-popup">
-  <div class="project-page">
+  <div class="journal-article">
+    <div class="journal-article-hero">
+      <!-- swap: <img src="images/journal/popup-hero.jpg" alt=""> -->
+      <span class="journal-article-hero-placeholder">Hero photo</span>
+    </div>
     <div class="journal-article-date">2025</div>
-    <h1 class="journal-article-title">Five lessons no one taught me<br>until I opened my own pop-up</h1>
+    <h1 class="journal-article-title">Five lessons no one taught me until I opened my own pop-up</h1>
     <div class="journal-article-body">
       <p>I had run Hertape for three years before we did our first pop-up. I thought I was ready. I had the products, the team, the aesthetics locked. What I didn't have was any real understanding of what it means to operate in physical space — and how differently people behave when they can touch things.</p>
       <p>Here's what I wish someone had told me before we opened the doors.</p>
       <ol>
         <li><strong>The layout is the product.</strong> How you arrange a physical space shapes what people buy and how long they stay. We redesigned our floor layout three times across three pop-ups. Every change moved the numbers. It's not decoration — it's conversion rate optimization in three dimensions.</li>
         <li><strong>Your best customers will show up on day one.</strong> The people who follow you most closely, who've been waiting — they come first. Build something worth their loyalty. The energy of that first wave sets the tone for everything that follows.</li>
+      </ol>
+      <div class="journal-article-pair">
+        <div class="journal-article-pair-photo">
+          <!-- swap: <img src="images/journal/popup-1.jpg" alt=""> -->
+          <span class="journal-article-pair-placeholder">Photo</span>
+        </div>
+        <div class="journal-article-pair-photo">
+          <!-- swap: <img src="images/journal/popup-2.jpg" alt=""> -->
+          <span class="journal-article-pair-placeholder">Photo</span>
+        </div>
+      </div>
+      <ol start="3">
         <li><strong>Offline traffic doesn't convert online automatically.</strong> We had thousands of people walk through. Our online sales barely moved during the event. The bridge between offline and online has to be built deliberately — QR codes, exclusive drops, email capture at the door. It doesn't happen by itself.</li>
         <li><strong>Your team's energy is visible.</strong> When my team was tired, customers felt it. When they were excited, the space felt different. Managing morale during a 9-day run is as important as any logistics decision.</li>
         <li><strong>The real value comes after.</strong> The best thing that came from our pop-ups wasn't the revenue during the event. It was the content, the community, the trust signals for customers who weren't there. Document everything. The pop-up ends. The content doesn't.</li>
@@ -957,14 +1002,30 @@
 
 <!-- Journal: Restart -->
 <div class="page fade-in" id="page-journal-restart">
-  <div class="project-page">
+  <div class="journal-article">
+    <div class="journal-article-hero">
+      <!-- swap: <img src="images/journal/restart-hero.jpg" alt=""> -->
+      <span class="journal-article-hero-placeholder">Hero photo</span>
+    </div>
     <div class="journal-article-date">2025</div>
-    <h1 class="journal-article-title">If I could start my business again,<br>I'd do these <em>five things</em> differently</h1>
+    <h1 class="journal-article-title">If I could start my business again, I'd do these <em>five things</em> differently</h1>
     <div class="journal-article-body">
       <p>Hertape didn't start with a plan. It started with a product I wanted to exist and a stubborn belief that I could figure out the rest as I went. That worked — until it didn't. Here's the honest version of what I'd change.</p>
       <ol>
         <li><strong>I'd build the system before I needed it.</strong> I spent years running operations in my head and on WhatsApp. By the time I built Hertape Smart App — a proper internal OS for the team — we were already behind. Systems should be infrastructure, not a rescue mission.</li>
         <li><strong>I'd collect emails from day one.</strong> We had customers before we had a list. Every sale that happened before we had CRM set up was a relationship we couldn't build on. Email is the only channel you actually own.</li>
+      </ol>
+      <div class="journal-article-pair">
+        <div class="journal-article-pair-photo">
+          <!-- swap: <img src="images/journal/restart-1.jpg" alt=""> -->
+          <span class="journal-article-pair-placeholder">Photo</span>
+        </div>
+        <div class="journal-article-pair-photo">
+          <!-- swap: <img src="images/journal/restart-2.jpg" alt=""> -->
+          <span class="journal-article-pair-placeholder">Photo</span>
+        </div>
+      </div>
+      <ol start="3">
         <li><strong>I'd charge more, earlier.</strong> Underpricing is a confidence problem wearing a strategy costume. The customers who push back on price are rarely the ones who become your best customers anyway.</li>
         <li><strong>I'd document the brand before building the product.</strong> We had a clear aesthetic in our heads for years before we wrote it down. That meant every new team member had to reverse-engineer the vibe from existing work. A proper brand guide would have saved us months.</li>
         <li><strong>I'd build in public.</strong> The brands that grew fastest around us weren't necessarily the best — they were the most visible about their process. People don't just buy products. They buy into stories. I started too late.</li>
@@ -988,15 +1049,31 @@
 </div>
 <!-- Journal: Pop-up lessons -->
 <div class="page fade-in" id="page-journal-popup">
-  <div class="project-page">
+  <div class="journal-article">
+    <div class="journal-article-hero">
+      <!-- swap: <img src="images/journal/popup-hero.jpg" alt=""> -->
+      <span class="journal-article-hero-placeholder">Hero photo</span>
+    </div>
     <div class="journal-article-date">2025</div>
-    <h1 class="journal-article-title">Five lessons no one taught me<br>until I opened my own pop-up</h1>
+    <h1 class="journal-article-title">Five lessons no one taught me until I opened my own pop-up</h1>
     <div class="journal-article-body">
       <p>I had run Hertape for three years before we did our first pop-up. I thought I was ready. I had the products, the team, the aesthetics locked. What I didn't have was any real understanding of what it means to operate in physical space — and how differently people behave when they can touch things.</p>
       <p>Here's what I wish someone had told me before we opened the doors.</p>
       <ol>
         <li><strong>The layout is the product.</strong> How you arrange a physical space shapes what people buy and how long they stay. We redesigned our floor layout three times across three pop-ups. Every change moved the numbers. It's not decoration — it's conversion rate optimization in three dimensions.</li>
         <li><strong>Your best customers will show up on day one.</strong> The people who follow you most closely, who've been waiting — they come first. Build something worth their loyalty. The energy of that first wave sets the tone for everything that follows.</li>
+      </ol>
+      <div class="journal-article-pair">
+        <div class="journal-article-pair-photo">
+          <!-- swap: <img src="images/journal/popup-1.jpg" alt=""> -->
+          <span class="journal-article-pair-placeholder">Photo</span>
+        </div>
+        <div class="journal-article-pair-photo">
+          <!-- swap: <img src="images/journal/popup-2.jpg" alt=""> -->
+          <span class="journal-article-pair-placeholder">Photo</span>
+        </div>
+      </div>
+      <ol start="3">
         <li><strong>Offline traffic doesn't convert online automatically.</strong> We had thousands of people walk through. Our online sales barely moved during the event. The bridge between offline and online has to be built deliberately — QR codes, exclusive drops, email capture at the door. It doesn't happen by itself.</li>
         <li><strong>Your team's energy is visible.</strong> When my team was tired, customers felt it. When they were excited, the space felt different. Managing morale during a 9-day run is as important as any logistics decision.</li>
         <li><strong>The real value comes after.</strong> The best thing that came from our pop-ups wasn't the revenue during the event. It was the content, the community, the trust signals for customers who weren't there. Document everything. The pop-up ends. The content doesn't.</li>
@@ -1007,14 +1084,30 @@
 
 <!-- Journal: Restart -->
 <div class="page fade-in" id="page-journal-restart">
-  <div class="project-page">
+  <div class="journal-article">
+    <div class="journal-article-hero">
+      <!-- swap: <img src="images/journal/restart-hero.jpg" alt=""> -->
+      <span class="journal-article-hero-placeholder">Hero photo</span>
+    </div>
     <div class="journal-article-date">2025</div>
-    <h1 class="journal-article-title">If I could start my business again,<br>I'd do these <em>five things</em> differently</h1>
+    <h1 class="journal-article-title">If I could start my business again, I'd do these <em>five things</em> differently</h1>
     <div class="journal-article-body">
       <p>Hertape didn't start with a plan. It started with a product I wanted to exist and a stubborn belief that I could figure out the rest as I went. That worked — until it didn't. Here's the honest version of what I'd change.</p>
       <ol>
         <li><strong>I'd build the system before I needed it.</strong> I spent years running operations in my head and on WhatsApp. By the time I built Hertape Smart App — a proper internal OS for the team — we were already behind. Systems should be infrastructure, not a rescue mission.</li>
         <li><strong>I'd collect emails from day one.</strong> We had customers before we had a list. Every sale that happened before we had CRM set up was a relationship we couldn't build on. Email is the only channel you actually own.</li>
+      </ol>
+      <div class="journal-article-pair">
+        <div class="journal-article-pair-photo">
+          <!-- swap: <img src="images/journal/restart-1.jpg" alt=""> -->
+          <span class="journal-article-pair-placeholder">Photo</span>
+        </div>
+        <div class="journal-article-pair-photo">
+          <!-- swap: <img src="images/journal/restart-2.jpg" alt=""> -->
+          <span class="journal-article-pair-placeholder">Photo</span>
+        </div>
+      </div>
+      <ol start="3">
         <li><strong>I'd charge more, earlier.</strong> Underpricing is a confidence problem wearing a strategy costume. The customers who push back on price are rarely the ones who become your best customers anyway.</li>
         <li><strong>I'd document the brand before building the product.</strong> We had a clear aesthetic in our heads for years before we wrote it down. That meant every new team member had to reverse-engineer the vibe from existing work. A proper brand guide would have saved us months.</li>
         <li><strong>I'd build in public.</strong> The brands that grew fastest around us weren't necessarily the best — they were the most visible about their process. People don't just buy products. They buy into stories. I started too late.</li>
