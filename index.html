@@ -826,6 +826,7 @@
     border-radius: 8px; overflow: hidden;
     font-family: -apple-system, 'Helvetica Neue', sans-serif;
     font-size: 12px; line-height: 1.4;
+    display: flex; flex-direction: column;
   }
   .app-modal-screen .s-hdr {
     background: #fff; border-bottom: 0.5px solid #E2DDD5;
@@ -1384,7 +1385,7 @@
   <div class="app-modal-layout">
     <button class="app-modal-nav" onclick="navAppModal('factoryModal',-1)">&#8249;</button>
     <div class="app-modal-center">
-      <div style="width:340px;">
+      <div style="width:100%;aspect-ratio:16/9;">
         <div id="factoryModal-s0" class="app-modal-screen"><div class="s-hdr"><span class="s-hdr-t">Raw Materials</span><span class="s-hdr-s">Admin</span></div>
         <div class="s-tabs"><div class="s-tab on">Stock</div><div class="s-tab">Buy</div><div class="s-tab">Sell</div><div class="s-tab">Value</div></div>
         <div class="s-body">
@@ -1485,19 +1486,13 @@
       d.appendChild(dot);
     }
   }
-  window.openAppModal = window.openAppModal || function(id) {
-    document.getElementById(id+'-overlay').classList.add('open');
-  };
-  window.openAppModal_factoryModal = function() {
-    cur_factoryModal=0; show_factoryModal();
-    document.getElementById('factoryModal-overlay').classList.add('open');
-  };
-  window.closeAppModal = window.closeAppModal || function(id) {
-    document.getElementById(id+'-overlay').classList.remove('open');
-  };
-  window.navAppModal = window.navAppModal || function(id, dir) {
-    if(id==='factoryModal') { cur_factoryModal=(cur_factoryModal+dir+total_factoryModal)%total_factoryModal; show_factoryModal(); }
-  };
+  window._openHandlers = window._openHandlers || {};
+  window._openHandlers['factoryModal'] = function() { cur_factoryModal=0; show_factoryModal(); document.getElementById('factoryModal-overlay').classList.add('open'); };
+  window.openAppModal = function(id) { if(window._openHandlers[id]) window._openHandlers[id](); else document.getElementById(id+'-overlay').classList.add('open'); };
+  window.closeAppModal = window.closeAppModal || function(id) { document.getElementById(id+'-overlay').classList.remove('open'); };
+  window._navHandlers = window._navHandlers || {};
+  window._navHandlers['factoryModal'] = function(dir) { cur_factoryModal=(cur_factoryModal+dir+total_factoryModal)%total_factoryModal; show_factoryModal(); };
+  window.navAppModal = function(id, dir) { if(window._navHandlers[id]) window._navHandlers[id](dir); };
   document.getElementById('factoryModal-overlay').addEventListener('click', function(e) {
     if(e.target===this) this.classList.remove('open');
   });
@@ -1540,7 +1535,7 @@
   <div class="app-modal-layout">
     <button class="app-modal-nav" onclick="navAppModal('rehabModal',-1)">&#8249;</button>
     <div class="app-modal-center">
-      <div style="width:340px;">
+      <div style="width:100%;aspect-ratio:16/9;">
         <div id="rehabModal-s0" class="app-modal-screen"><div class="rh-hdr"><span class="rh-ht">RehabScheduler</span><span class="rh-hs">Fri, 9 May 2026</span></div>
         <div class="rh-tabs"><div class="rh-tab on">Dashboard</div><div class="rh-tab">Schedule</div><div class="rh-tab">Patients</div></div>
         <div class="rh-body">
@@ -1634,19 +1629,11 @@
       d.appendChild(dot);
     }
   }
-  window.openAppModal = window.openAppModal || function(id) {
-    document.getElementById(id+'-overlay').classList.add('open');
-  };
-  window.openAppModal_rehabModal = function() {
-    cur_rehabModal=0; show_rehabModal();
-    document.getElementById('rehabModal-overlay').classList.add('open');
-  };
-  window.closeAppModal = window.closeAppModal || function(id) {
-    document.getElementById(id+'-overlay').classList.remove('open');
-  };
-  window.navAppModal = window.navAppModal || function(id, dir) {
-    if(id==='rehabModal') { cur_rehabModal=(cur_rehabModal+dir+total_rehabModal)%total_rehabModal; show_rehabModal(); }
-  };
+  window._openHandlers = window._openHandlers || {};
+  window._openHandlers['rehabModal'] = function() { cur_rehabModal=0; show_rehabModal(); document.getElementById('rehabModal-overlay').classList.add('open'); };
+  window.closeAppModal = window.closeAppModal || function(id) { document.getElementById(id+'-overlay').classList.remove('open'); };
+  window._navHandlers = window._navHandlers || {};
+  window._navHandlers['rehabModal'] = function(dir) { cur_rehabModal=(cur_rehabModal+dir+total_rehabModal)%total_rehabModal; show_rehabModal(); };
   document.getElementById('rehabModal-overlay').addEventListener('click', function(e) {
     if(e.target===this) this.classList.remove('open');
   });
