@@ -184,7 +184,7 @@
     font-family: 'DM Sans', sans-serif;
     font-size: 11px;
     font-weight: 300;
-    color: var(--text-3);
+    color: var(--text-2);
     line-height: 1.6;
     margin-top: 6px;
     letter-spacing: 0.01em;
@@ -294,8 +294,8 @@
     max-width: 900px;
   }
   .project-hero-img {
-    width: calc(100% + 80px);
-    margin-left: -40px;
+    width: calc(100% + 144px);
+    margin-left: -72px;
     aspect-ratio: 16/7;
     background: #C8C4BC;
     overflow: hidden;
@@ -523,6 +523,14 @@
     .nav-hamburger { display: none; }
   }
 
+
+  .journal-page {
+    padding: 40px 72px 80px;
+    max-width: 900px;
+  }
+  @media (max-width: 600px) {
+    .journal-page { padding: 32px 20px 60px; }
+  }
 
   /* Journal */
   .journal-list { display: flex; flex-direction: column; gap: 0; margin-top: 32px; }
@@ -908,7 +916,7 @@
 
 <!-- Journal list -->
 <div class="page fade-in" id="page-journal">
-  <div class="project-page" style="max-width:800px;">
+  <div class="journal-page">
     <div class="project-cat">Journal</div>
     <h1 class="project-title">Writing & Notes</h1>
     <div class="journal-list">
