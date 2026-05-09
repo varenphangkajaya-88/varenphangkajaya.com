@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;1,9..40,300&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #F5F2EC;
+    --bg: #F0EDE6;
     --text: #111111;
     --text-2: #888888;
     --text-3: #BBBBBB;
@@ -184,7 +184,7 @@
     font-family: 'DM Sans', sans-serif;
     font-size: 11px;
     font-weight: 300;
-    color: #555;
+    color: var(--text-3);
     line-height: 1.6;
     margin-top: 6px;
     letter-spacing: 0.01em;
@@ -283,19 +283,17 @@
     .site-footer { padding: 36px 20px 36px; }
     .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
   }
-    .footer-top { flex-direction: column; align-items: flex-start; gap: 20px; }
-  }
 
   /* ══════════════════════════════
      PROJECT PAGES
   ══════════════════════════════ */
   .project-page {
-    padding: 40px 72px 80px;
+    padding: 0 72px 80px;
     max-width: 900px;
   }
   .project-hero-img {
-    width: calc(100% + 144px);
-    margin-left: -72px;
+    width: calc(100% + 80px);
+    margin-left: -40px;
     aspect-ratio: 16/7;
     background: #C8C4BC;
     overflow: hidden;
@@ -464,7 +462,7 @@
     .home-about { padding: 24px 20px; flex-direction: column; align-items: flex-start; gap: 16px; }
     .home-about-right { text-align: left; }
     .site-footer { padding: 16px 20px; }
-    .project-page { padding: 0 20px 60px; }
+    .project-page { padding: 32px 20px 60px; }
     .project-hero-img { width: calc(100% + 40px); margin-left: -20px; }
     .project-meta { gap: 20px; }
     .project-gallery { grid-template-columns: 1fr; }
@@ -524,23 +522,19 @@
   }
 
 
-  .journal-page {
-    padding: 40px 72px 80px;
-    max-width: 900px;
-  }
-  @media (max-width: 600px) {
-    .journal-page { padding: 32px 20px 60px; }
-  }
-
-  /* Journal */
-  .journal-list { display: flex; flex-direction: column; gap: 0; margin-top: 32px; }
-  .journal-item { border-top: 0.5px solid var(--border); padding: 24px 0; cursor: pointer; }
+  /* Journal — Option B layout */
+  .journal-list { display: flex; flex-direction: column; margin-top: 32px; }
+  .journal-item { display: grid; grid-template-columns: 100px 1fr auto; gap: 32px; align-items: baseline; border-top: 0.5px solid var(--border); padding: 24px 0; cursor: pointer; transition: opacity 0.2s; }
   .journal-item:last-child { border-bottom: 0.5px solid var(--border); }
-  .journal-item:hover .journal-title { opacity: 0.6; }
-  .journal-date { font-size: 10px; font-weight: 300; letter-spacing: 0.16em; color: var(--text-3); text-transform: uppercase; margin-bottom: 8px; }
-  .journal-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(20px, 3vw, 28px); color: var(--text); line-height: 1.2; transition: opacity 0.2s; }
-  .journal-title em { font-style: italic; }
-  .journal-excerpt { font-size: 12px; font-weight: 300; color: var(--text-3); line-height: 1.7; margin-top: 8px; max-width: 560px; }
+  .journal-item:hover { opacity: 0.6; }
+  .journal-year { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 18px; color: var(--text-3); }
+  .journal-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(20px, 2.4vw, 26px); color: var(--text); line-height: 1.25; margin-bottom: 6px; }
+  .journal-title em { font-style: italic; color: var(--text-2); }
+  .journal-excerpt { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 300; color: var(--text-2); line-height: 1.6; }
+  .journal-arrow { font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--text-3); }
+  @media (max-width: 600px) {
+    .journal-item { grid-template-columns: 60px 1fr auto; gap: 16px; }
+  }
 
   /* Journal article */
   .journal-article-date { font-size: 10px; font-weight: 300; letter-spacing: 0.16em; color: var(--text-3); text-transform: uppercase; margin-bottom: 12px; }
@@ -575,7 +569,7 @@
   <span class="nav-brand" onclick="goHome()">VARENPHANGKAJAYA.COM</span>
   <div class="nav-right">
     <div class="nav-links" id="nav-links">
-<a onclick="openProject('journal')">Journal</a>
+      <a onclick="openProject('journal')">Journal</a>
       <a onclick="openProject('contact')">Contact</a>
     </div>
     <button class="nav-back" id="nav-back" onclick="goHome()">← Back</button>
@@ -913,24 +907,31 @@
     </div>
     <a href="https://carat-app-pi.vercel.app" target="_blank" class="project-link">View live app →</a>
   </div>
+</div>
 
 <!-- Journal list -->
 <div class="page fade-in" id="page-journal">
-  <div class="journal-page">
+  <div class="project-page" style="max-width:800px;">
     <div class="project-cat">Journal</div>
     <h1 class="project-title">Writing & Notes</h1>
     <div class="journal-list">
 
       <div class="journal-item" onclick="openProject('journal-popup')">
-        <div class="journal-date">2025</div>
-        <div class="journal-title">Five lessons no one taught me until I opened my own pop-up</div>
-        <div class="journal-excerpt">Everything I thought I knew about running a brand fell apart the moment we opened the doors. Here's what actually happened.</div>
+        <div class="journal-year">2025</div>
+        <div class="journal-content">
+          <div class="journal-title">Five lessons no one taught me until I opened my own pop-up</div>
+          <div class="journal-excerpt">Everything I thought I knew about running a brand fell apart the moment we opened the doors.</div>
+        </div>
+        <div class="journal-arrow">→</div>
       </div>
 
       <div class="journal-item" onclick="openProject('journal-restart')">
-        <div class="journal-date">2025</div>
-        <div class="journal-title">If I could start my business again, I'd do these <em>five things</em> differently</div>
-        <div class="journal-excerpt">Hindsight is brutal. But if it helps someone skip the mistakes I made, it's worth writing down.</div>
+        <div class="journal-year">2025</div>
+        <div class="journal-content">
+          <div class="journal-title">If I could start my business again, I'd do these <em>five things</em> differently</div>
+          <div class="journal-excerpt">Hindsight is brutal. But if it helps someone skip the mistakes I made.</div>
+        </div>
+        <div class="journal-arrow">→</div>
       </div>
 
     </div>
@@ -988,8 +989,55 @@
   </div>
 </div>
 <!-- Journal: Pop-up lessons -->
+<div class="page fade-in" id="page-journal-popup">
+  <div class="project-page" style="max-width:680px;">
+    <div class="journal-article-date">2025</div>
+    <h1 class="journal-article-title">Five lessons no one taught me<br>until I opened my own pop-up</h1>
+    <div class="journal-article-body">
+      <p>I had run Hertape for three years before we did our first pop-up. I thought I was ready. I had the products, the team, the aesthetics locked. What I didn't have was any real understanding of what it means to operate in physical space — and how differently people behave when they can touch things.</p>
+      <p>Here's what I wish someone had told me before we opened the doors.</p>
+      <ol>
+        <li><strong>The layout is the product.</strong> How you arrange a physical space shapes what people buy and how long they stay. We redesigned our floor layout three times across three pop-ups. Every change moved the numbers. It's not decoration — it's conversion rate optimization in three dimensions.</li>
+        <li><strong>Your best customers will show up on day one.</strong> The people who follow you most closely, who've been waiting — they come first. Build something worth their loyalty. The energy of that first wave sets the tone for everything that follows.</li>
+        <li><strong>Offline traffic doesn't convert online automatically.</strong> We had thousands of people walk through. Our online sales barely moved during the event. The bridge between offline and online has to be built deliberately — QR codes, exclusive drops, email capture at the door. It doesn't happen by itself.</li>
+        <li><strong>Your team's energy is visible.</strong> When my team was tired, customers felt it. When they were excited, the space felt different. Managing morale during a 9-day run is as important as any logistics decision.</li>
+        <li><strong>The real value comes after.</strong> The best thing that came from our pop-ups wasn't the revenue during the event. It was the content, the community, the trust signals for customers who weren't there. Document everything. The pop-up ends. The content doesn't.</li>
+      </ol>
+    </div>
+  </div>
 </div>
 
+<!-- Journal: Restart -->
+<div class="page fade-in" id="page-journal-restart">
+  <div class="project-page" style="max-width:680px;">
+    <div class="journal-article-date">2025</div>
+    <h1 class="journal-article-title">If I could start my business again,<br>I'd do these <em>five things</em> differently</h1>
+    <div class="journal-article-body">
+      <p>Hertape didn't start with a plan. It started with a product I wanted to exist and a stubborn belief that I could figure out the rest as I went. That worked — until it didn't. Here's the honest version of what I'd change.</p>
+      <ol>
+        <li><strong>I'd build the system before I needed it.</strong> I spent years running operations in my head and on WhatsApp. By the time I built Hertape Smart App — a proper internal OS for the team — we were already behind. Systems should be infrastructure, not a rescue mission.</li>
+        <li><strong>I'd collect emails from day one.</strong> We had customers before we had a list. Every sale that happened before we had CRM set up was a relationship we couldn't build on. Email is the only channel you actually own.</li>
+        <li><strong>I'd charge more, earlier.</strong> Underpricing is a confidence problem wearing a strategy costume. The customers who push back on price are rarely the ones who become your best customers anyway.</li>
+        <li><strong>I'd document the brand before building the product.</strong> We had a clear aesthetic in our heads for years before we wrote it down. That meant every new team member had to reverse-engineer the vibe from existing work. A proper brand guide would have saved us months.</li>
+        <li><strong>I'd build in public.</strong> The brands that grew fastest around us weren't necessarily the best — they were the most visible about their process. People don't just buy products. They buy into stories. I started too late.</li>
+      </ol>
+      <p>None of this is regret. Hertape is what it is because of everything I learned the hard way. But if you're earlier in the journey than I was — maybe some of this saves you a lap.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Contact -->
+<div class="page fade-in" id="page-contact">
+  <div class="contact-page">
+    <div class="project-cat">Contact</div>
+    <h1 class="project-title">Let's talk</h1>
+    <p class="contact-intro">For project inquiries, collaborations, or just to say hello — reach out directly.</p>
+    <a href="mailto:varenphangkajaya@gmail.com" class="contact-email" target="_blank">varenphangkajaya@gmail.com</a>
+    <div class="contact-socials">
+      <a href="https://instagram.com/hertape.id" target="_blank" class="contact-social">Instagram — @hertape.id</a>
+      <a href="https://upwork.com/freelancers/~0124205ffc9e45813f" target="_blank" class="contact-social">Upwork — Varen Phangkajaya</a>
+    </div>
+  </div>
 </div>
 
 <script>
