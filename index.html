@@ -600,6 +600,144 @@
     .journal-article { padding: 32px 20px 60px; }
   }
 
+
+  /* Mock screen styles for factory + rehab galleries */
+  .mock-wrap { width:100%; height:100%; display:flex; flex-direction:column; font-family:-apple-system,sans-serif; overflow:hidden; }
+  .mk-hdr { background:#fff; border-bottom:0.5px solid #E2DDD5; padding:8px 12px; display:flex; justify-content:space-between; align-items:center; flex-shrink:0; }
+  .mk-ht { font-size:11px; font-weight:500; color:#1A1714; }
+  .mk-hs { font-size:8px; color:#9B9189; }
+  .mk-tabs { display:flex; background:#fff; border-bottom:0.5px solid #E2DDD5; padding:0 10px; flex-shrink:0; }
+  .mk-tab { padding:5px 8px; font-size:8px; color:#9B9189; border-bottom:2px solid transparent; }
+  .mk-tab.on { color:#1A1714; border-bottom-color:#B8975A; font-weight:500; }
+  .mk-body { background:#F7F4EF; padding:8px 10px; flex:1; display:flex; flex-direction:column; gap:5px; overflow:hidden; }
+  .mk-card { background:#fff; border:0.5px solid #E2DDD5; border-radius:7px; padding:7px 9px; }
+  .mk-row { display:flex; justify-content:space-between; align-items:center; }
+  .mk-lbl { font-size:9px; font-weight:500; color:#1A1714; }
+  .mk-val { font-size:9px; color:#9B9189; }
+  .mk-sub { font-size:8px; color:#9B9189; margin-top:1px; }
+  .mk-gold { color:#B8975A; font-weight:500; }
+  .mk-green { color:#2E7D5E; }
+  .mk-pill { font-size:7px; padding:2px 6px; border-radius:20px; font-weight:500; }
+  .mk-ok { background:#E1F5EE; color:#085041; }
+  .mk-wip { background:#FAEEDA; color:#633806; }
+  .mk-sh { font-size:7px; letter-spacing:0.1em; text-transform:uppercase; color:#9B9189; margin-bottom:1px; }
+  .mk-track { height:3px; background:#F1EFE8; border-radius:2px; margin-top:4px; overflow:hidden; }
+  .mk-fill { height:100%; border-radius:2px; }
+  /* hero report */
+  .rep-wrap { width:100%; height:100%; background:#F7F4EF; display:flex; flex-direction:column; font-family:-apple-system,sans-serif; overflow:hidden; }
+  .rep-hdr { background:#fff; border-bottom:0.5px solid #E2DDD5; padding:8px 16px; display:flex; justify-content:space-between; align-items:center; flex-shrink:0; }
+  .rep-body { flex:1; display:flex; gap:8px; padding:10px 14px; overflow:hidden; }
+  .rep-left { flex:1; display:flex; flex-direction:column; gap:6px; min-width:0; }
+  .rep-right { width:34%; display:flex; flex-direction:column; gap:6px; flex-shrink:0; }
+  .rep-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; }
+  .rep-stat { background:#fff; border:0.5px solid #E2DDD5; border-radius:6px; padding:7px 10px; }
+  .rep-sl { font-size:7px; letter-spacing:0.08em; text-transform:uppercase; color:#9B9189; margin-bottom:2px; }
+  .rep-sv { font-size:16px; font-weight:500; color:#1A1714; line-height:1.1; }
+  .rep-table { background:#fff; border:0.5px solid #E2DDD5; border-radius:6px; overflow:hidden; flex:1; }
+  .rep-th { display:grid; grid-template-columns:44px 1fr 60px 56px 68px; background:#FBF7F0; border-bottom:0.5px solid #E2DDD5; }
+  .rep-tc { padding:4px 8px; font-size:7px; letter-spacing:0.08em; text-transform:uppercase; color:#9B9189; }
+  .rep-tr { display:grid; grid-template-columns:44px 1fr 60px 56px 68px; border-bottom:0.5px solid #F0EDE6; }
+  .rep-tr:last-child { border-bottom:none; }
+  .rep-td { padding:5px 8px; font-size:9px; color:#1A1714; display:flex; align-items:center; }
+  .rep-chart { background:#fff; border:0.5px solid #E2DDD5; border-radius:6px; padding:8px 10px; flex:1; }
+  .rep-cl { font-size:7px; letter-spacing:0.08em; text-transform:uppercase; color:#9B9189; margin-bottom:6px; }
+  .rep-bars { display:flex; align-items:flex-end; gap:6px; height:50px; }
+  .rep-bc { flex:1; display:flex; flex-direction:column; align-items:center; gap:2px; }
+  .rep-br { width:100%; border-radius:2px 2px 0 0; }
+  .rep-bll { font-size:6px; color:#9B9189; }
+  .rep-sum { background:#fff; border:0.5px solid #E2DDD5; border-radius:6px; padding:8px 10px; }
+  .rep-srow { display:flex; justify-content:space-between; padding:3px 0; border-bottom:0.5px solid #F0EDE6; }
+  .rep-srow:last-child { border-bottom:none; }
+  .rep-sk { font-size:9px; color:#1A1714; }
+  .rep-sv2 { font-size:9px; color:#B8975A; font-weight:500; }
+  /* rehab hero */
+  .rh-wrap { width:100%; height:100%; background:#F7F7F5; display:flex; flex-direction:column; font-family:-apple-system,sans-serif; overflow:hidden; }
+  .rh-hdr { background:#fff; border-bottom:0.5px solid #E8E8E4; padding:8px 16px; display:flex; justify-content:space-between; align-items:center; flex-shrink:0; }
+  .rh-tabs { display:flex; background:#fff; border-bottom:0.5px solid #E8E8E4; padding:0 16px; flex-shrink:0; }
+  .rh-tab { padding:6px 10px; font-size:9px; color:#AAA; border-bottom:2px solid transparent; }
+  .rh-tab.on { color:#111; border-bottom-color:#111; font-weight:500; }
+  .rh-body { flex:1; display:flex; overflow:hidden; }
+  .rh-metrics { width:110px; background:#fff; border-right:0.5px solid #E8E8E4; padding:10px; display:flex; flex-direction:column; gap:6px; flex-shrink:0; }
+  .rh-m { background:#F1EFE8; border-radius:6px; padding:6px 8px; }
+  .rh-ml { font-size:7px; color:#666; margin-bottom:1px; }
+  .rh-mv { font-size:15px; font-weight:500; color:#111; line-height:1.1; }
+  .rh-board { flex:1; padding:10px 12px; overflow:hidden; }
+  .brd { background:#fff; border:0.5px solid #E8E8E4; border-radius:7px; overflow:hidden; }
+  .brd-head { display:grid; grid-template-columns:40px repeat(5,1fr); background:#F1EFE8; border-bottom:0.5px solid #E8E8E4; }
+  .brd-hc { padding:4px 6px; font-size:7px; font-weight:500; color:#666; border-right:0.5px solid #E8E8E4; }
+  .brd-row { display:grid; grid-template-columns:40px repeat(5,1fr); border-bottom:0.5px solid #E8E8E4; }
+  .brd-row:last-child { border-bottom:none; }
+  .brd-time { padding:4px 6px; font-size:7px; color:#AAA; background:#F1EFE8; border-right:0.5px solid #E8E8E4; display:flex; align-items:center; }
+  .brd-slot { padding:3px 4px; min-height:26px; border-right:0.5px solid #E8E8E4; display:flex; align-items:center; }
+  .s-pt { background:#E6F1FB; color:#0C447C; border-radius:3px; padding:2px 4px; font-size:7px; font-weight:500; width:100%; }
+  .s-ot { background:#E1F5EE; color:#085041; border-radius:3px; padding:2px 4px; font-size:7px; font-weight:500; width:100%; }
+  .s-st { background:#FAEEDA; color:#633806; border-radius:3px; padding:2px 4px; font-size:7px; font-weight:500; width:100%; }
+  /* rehab portraits */
+  .rp-body { background:#F1EFE8; padding:8px 10px; flex:1; display:flex; flex-direction:column; gap:5px; overflow:hidden; }
+  .rp-card { background:#fff; border:0.5px solid #E8E8E4; border-radius:7px; padding:7px 9px; }
+  .rp-name { font-size:9px; font-weight:500; color:#111; }
+  .rp-sub { font-size:8px; color:#666; margin-top:1px; }
+  .rp-row { display:flex; justify-content:space-between; align-items:flex-start; }
+  .rp-pill { font-size:7px; padding:2px 5px; border-radius:20px; font-weight:500; }
+  .rp-ok { background:#E1F5EE; color:#085041; }
+  .rp-risk { background:#FAEEDA; color:#633806; }
+  .rp-pt { background:#E6F1FB; color:#0C447C; }
+  .rp-st { background:#FAEEDA; color:#633806; }
+  .rp-track { height:3px; background:#F1EFE8; border-radius:2px; margin-top:4px; overflow:hidden; }
+  .rp-fill { height:100%; border-radius:2px; }
+  /* PIN */
+  .pin-wrap { background:#F7F4EF; width:100%; height:100%; display:flex; flex-direction:column; align-items:center; padding:16px 12px 8px; overflow:hidden; font-family:-apple-system,sans-serif; }
+  .pin-logo { width:40px; height:40px; background:#1A1714; border-radius:9px; display:flex; align-items:center; justify-content:center; margin-bottom:8px; flex-shrink:0; }
+  .pin-lt { font-size:10px; font-weight:500; color:#F7F4EF; letter-spacing:0.04em; }
+  .pin-t { font-size:12px; font-weight:500; color:#1A1714; margin-bottom:1px; }
+  .pin-s { font-size:8px; color:#9B9189; margin-bottom:10px; }
+  .pin-nik { background:#fff; border:0.5px solid #E2DDD5; border-radius:7px; padding:6px 14px; text-align:center; margin-bottom:10px; width:100%; }
+  .pin-nl { font-size:7px; color:#9B9189; margin-bottom:1px; }
+  .pin-nv { font-size:10px; font-weight:500; color:#1A1714; letter-spacing:0.08em; }
+  .pin-dots { display:flex; gap:8px; justify-content:center; margin-bottom:10px; }
+  .pin-dot { width:9px; height:9px; border-radius:50%; border:1.2px solid #C8C4BC; }
+  .pin-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:4px; width:100%; }
+  .pin-key { background:#fff; border:0.5px solid #E2DDD5; border-radius:7px; padding:7px 4px; text-align:center; font-size:12px; color:#1A1714; }
+  /* absensi */
+  .ab-status { background:#E8F5EE; border:0.5px solid #B0DFC4; border-radius:7px; padding:5px 8px; display:flex; align-items:center; gap:5px; flex-shrink:0; }
+  .ab-dot { width:6px; height:6px; border-radius:50%; background:#2E7D5E; flex-shrink:0; }
+  .ab-txt { font-size:8px; color:#2E7D5E; }
+  .ab-card { background:#fff; border:0.5px solid #E2DDD5; border-radius:7px; overflow:hidden; }
+  .ab-ch { padding:5px 9px; border-bottom:0.5px solid #F0EDE6; font-size:7px; letter-spacing:0.1em; text-transform:uppercase; color:#9B9189; }
+  .ab-row { display:flex; justify-content:space-between; align-items:center; padding:5px 9px; border-bottom:0.5px solid #F0EDE6; }
+  .ab-row:last-child { border-bottom:none; }
+  .ab-rl { font-size:9px; color:#1A1714; }
+  .ab-rv { font-size:9px; color:#9B9189; }
+  .ab-btn { background:#1A1714; border-radius:7px; padding:8px; text-align:center; font-size:9px; font-weight:500; color:#F7F4EF; display:flex; align-items:center; justify-content:center; gap:5px; flex-shrink:0; }
+  .ab-bdot { width:6px; height:6px; border-radius:50%; background:#F7F4EF; }
+  .slip-dark { background:#1A1714; border-radius:7px; padding:8px; }
+  .slip-dl { font-size:7px; letter-spacing:0.08em; text-transform:uppercase; color:#6B645A; margin-bottom:1px; }
+  .slip-dv { font-size:14px; font-weight:500; color:#B8975A; }
+  .slip-dp { font-size:7px; color:#6B645A; margin-top:1px; }
+  .slip-row { display:flex; justify-content:space-between; padding:4px 0; border-bottom:0.5px solid #F0EDE6; }
+  .slip-row:last-child { border-bottom:none; }
+  .slip-rl { font-size:8px; color:#6B645A; }
+  .slip-rv { font-size:8px; color:#1A1714; }
+  .bnav { background:#fff; border-top:0.5px solid #E2DDD5; display:flex; padding:5px 0 6px; flex-shrink:0; }
+  .bnav-i { flex:1; display:flex; flex-direction:column; align-items:center; gap:1px; }
+  .bnav-il { font-size:7px; color:#9B9189; }
+  .bnav-il.on { color:#B8975A; font-weight:500; }
+  /* modal */
+  .modal-overlay { background:rgba(0,0,0,0.48); display:flex; align-items:flex-end; width:100%; height:100%; }
+  .modal-sheet { background:#fff; border-radius:12px 12px 0 0; width:100%; padding:0 0 12px; }
+  .modal-hdr { display:flex; justify-content:space-between; align-items:center; padding:11px 14px 8px; border-bottom:0.5px solid #F0F0EE; }
+  .modal-t { font-size:11px; font-weight:500; color:#111; }
+  .modal-x { font-size:13px; color:#AAA; }
+  .modal-body { padding:8px 14px; display:flex; flex-direction:column; gap:6px; }
+  .mf { display:flex; flex-direction:column; gap:2px; }
+  .mfl { font-size:8px; color:#666; }
+  .mfi { background:#F7F7F5; border:0.5px solid #E8E8E4; border-radius:6px; padding:5px 8px; font-size:9px; color:#111; }
+  .mfpt { background:#E6F1FB; border-radius:6px; padding:5px 8px; font-size:9px; color:#0C447C; font-weight:500; }
+  .mf2 { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+  .modal-btns { display:grid; grid-template-columns:1fr 1fr; gap:6px; padding:0 14px; margin-top:4px; }
+  .mbtn-ghost { background:none; border:0.5px solid #E8E8E4; border-radius:6px; padding:7px; font-size:9px; color:#666; text-align:center; }
+  .mbtn-save { background:#111; border-radius:6px; padding:7px; font-size:9px; color:#fff; text-align:center; }
+
   /* Animations */
   .fade-in { animation: fadeIn 0.5s ease forwards; }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
@@ -987,8 +1125,45 @@
 <div class="page fade-in" id="page-factory">
   <div class="project-page">
     <div class="project-hero-img">
-      <div class="project-hero-illus">
-        <svg viewBox="0 0 80 80" fill="none"><rect x="10" y="36" width="60" height="30" rx="1" stroke="#111" stroke-width="1.2"/><rect x="18" y="24" width="14" height="12" rx="1" stroke="#111" stroke-width="1.2"/><rect x="48" y="18" width="14" height="18" rx="1" stroke="#111" stroke-width="1.2"/><line x1="10" y1="66" x2="70" y2="66" stroke="#111" stroke-width="1.2"/><line x1="25" y1="46" x2="25" y2="56" stroke="#111" stroke-width="1.2" stroke-linecap="round"/><line x1="40" y1="46" x2="40" y2="56" stroke="#111" stroke-width="1.2" stroke-linecap="round"/><line x1="55" y1="46" x2="55" y2="56" stroke="#111" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <div class="rep-wrap">
+        <div class="rep-hdr">
+          <span style="font-size:11px;font-weight:500;color:#1A1714;">Production Report</span>
+          <span style="font-size:8px;color:#9B9189;">April 2026 · Factory Internal System</span>
+        </div>
+        <div class="rep-body">
+          <div class="rep-left">
+            <div class="rep-stats">
+              <div class="rep-stat"><div class="rep-sl">Total batches</div><div class="rep-sv">11</div></div>
+              <div class="rep-stat"><div class="rep-sl">Total output</div><div class="rep-sv" style="color:#B8975A;">34.200 g</div></div>
+              <div class="rep-stat"><div class="rep-sl">Revenue</div><div class="rep-sv" style="color:#2E7D5E;">Rp 68.4M</div></div>
+            </div>
+            <div class="rep-table">
+              <div class="rep-th"><div class="rep-tc">Batch</div><div class="rep-tc">Date</div><div class="rep-tc">Output</div><div class="rep-tc">Grade</div><div class="rep-tc">Revenue</div></div>
+              <div class="rep-tr"><div class="rep-td">#021</div><div class="rep-td" style="color:#6B645A;">10 Apr</div><div class="rep-td mk-gold">3.100 g</div><div class="rep-td" style="color:#9B9189;">A, B</div><div class="rep-td mk-gold">Rp 6.2M</div></div>
+              <div class="rep-tr"><div class="rep-td">#020</div><div class="rep-td" style="color:#6B645A;">3 Apr</div><div class="rep-td mk-gold">2.800 g</div><div class="rep-td" style="color:#9B9189;">A, C</div><div class="rep-td mk-gold">Rp 5.6M</div></div>
+              <div class="rep-tr"><div class="rep-td">#019</div><div class="rep-td" style="color:#6B645A;">28 Mar</div><div class="rep-td mk-gold">3.400 g</div><div class="rep-td" style="color:#9B9189;">A,B,C</div><div class="rep-td mk-gold">Rp 6.8M</div></div>
+              <div class="rep-tr"><div class="rep-td">#018</div><div class="rep-td" style="color:#6B645A;">21 Mar</div><div class="rep-td mk-gold">2.950 g</div><div class="rep-td" style="color:#9B9189;">B, C</div><div class="rep-td mk-gold">Rp 5.9M</div></div>
+            </div>
+          </div>
+          <div class="rep-right">
+            <div class="rep-chart">
+              <div class="rep-cl">Output per week (g)</div>
+              <div class="rep-bars">
+                <div class="rep-bc"><div class="rep-br" style="height:38px;background:#B8975A;"></div><div class="rep-bll">W1</div></div>
+                <div class="rep-bc"><div class="rep-br" style="height:50px;background:#B8975A;"></div><div class="rep-bll">W2</div></div>
+                <div class="rep-bc"><div class="rep-br" style="height:34px;background:#B8975A;"></div><div class="rep-bll">W3</div></div>
+                <div class="rep-bc"><div class="rep-br" style="height:50px;background:#3B8A7A;"></div><div class="rep-bll">W4</div></div>
+              </div>
+            </div>
+            <div class="rep-sum">
+              <div style="font-size:7px;letter-spacing:0.08em;text-transform:uppercase;color:#9B9189;margin-bottom:5px;">Stock summary</div>
+              <div class="rep-srow"><span class="rep-sk">Grade A</span><span class="rep-sv2">12.450 g</span></div>
+              <div class="rep-srow"><span class="rep-sk">Grade B</span><span class="rep-sv2">8.200 g</span></div>
+              <div class="rep-srow"><span class="rep-sk">Grade C</span><span class="rep-sv2">4.700 g</span></div>
+              <div class="rep-srow"><span class="rep-sk">Sortiran</span><span style="font-size:9px;color:#9B9189;">1.380 g</span></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="project-cat">Systems</div>
@@ -1002,23 +1177,137 @@
     <div class="project-scope">
       <div class="project-scope-title">Scope of work</div>
       <ul class="project-scope-list">
-        <li>Raw material inventory — purchase & sale tracking per grade</li>
+        <li>Raw material inventory — purchase &amp; sale tracking per grade</li>
         <li>Production batch management with batch history</li>
-        <li>Invoice generation & sharing (PDF / Web Share API)</li>
-        <li>Employee & payroll management</li>
+        <li>Invoice generation &amp; sharing (PDF / Web Share API)</li>
+        <li>Employee portal — GPS attendance check-in/out</li>
+        <li>Automated payroll calculation from attendance data</li>
+        <li>PIN-based employee authentication per NIK</li>
         <li>Offline-first with local data persistence</li>
-        <li>Settings — buyers, grades, bank accounts, company logo</li>
       </ul>
     </div>
     <div class="project-gallery">
-      <!-- swap: <img src="images/factory-hero-screen.jpg" alt=""> on the .full div -->
-      <div class="project-gallery-img full"><div style="width:100%;height:100%;background:#C8C4BC;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Dashboard overview</div></div>
+      <div class="project-gallery-img full"><div class="rep-wrap">
+        <div class="rep-hdr">
+          <span style="font-size:11px;font-weight:500;color:#1A1714;">Production Report</span>
+          <span style="font-size:8px;color:#9B9189;">April 2026 · Factory Internal System</span>
+        </div>
+        <div class="rep-body">
+          <div class="rep-left">
+            <div class="rep-stats">
+              <div class="rep-stat"><div class="rep-sl">Total batches</div><div class="rep-sv">11</div></div>
+              <div class="rep-stat"><div class="rep-sl">Total output</div><div class="rep-sv" style="color:#B8975A;">34.200 g</div></div>
+              <div class="rep-stat"><div class="rep-sl">Revenue</div><div class="rep-sv" style="color:#2E7D5E;">Rp 68.4M</div></div>
+            </div>
+            <div class="rep-table">
+              <div class="rep-th"><div class="rep-tc">Batch</div><div class="rep-tc">Date</div><div class="rep-tc">Output</div><div class="rep-tc">Grade</div><div class="rep-tc">Revenue</div></div>
+              <div class="rep-tr"><div class="rep-td">#021</div><div class="rep-td" style="color:#6B645A;">10 Apr</div><div class="rep-td mk-gold">3.100 g</div><div class="rep-td" style="color:#9B9189;">A, B</div><div class="rep-td mk-gold">Rp 6.2M</div></div>
+              <div class="rep-tr"><div class="rep-td">#020</div><div class="rep-td" style="color:#6B645A;">3 Apr</div><div class="rep-td mk-gold">2.800 g</div><div class="rep-td" style="color:#9B9189;">A, C</div><div class="rep-td mk-gold">Rp 5.6M</div></div>
+              <div class="rep-tr"><div class="rep-td">#019</div><div class="rep-td" style="color:#6B645A;">28 Mar</div><div class="rep-td mk-gold">3.400 g</div><div class="rep-td" style="color:#9B9189;">A,B,C</div><div class="rep-td mk-gold">Rp 6.8M</div></div>
+              <div class="rep-tr"><div class="rep-td">#018</div><div class="rep-td" style="color:#6B645A;">21 Mar</div><div class="rep-td mk-gold">2.950 g</div><div class="rep-td" style="color:#9B9189;">B, C</div><div class="rep-td mk-gold">Rp 5.9M</div></div>
+            </div>
+          </div>
+          <div class="rep-right">
+            <div class="rep-chart">
+              <div class="rep-cl">Output per week (g)</div>
+              <div class="rep-bars">
+                <div class="rep-bc"><div class="rep-br" style="height:38px;background:#B8975A;"></div><div class="rep-bll">W1</div></div>
+                <div class="rep-bc"><div class="rep-br" style="height:50px;background:#B8975A;"></div><div class="rep-bll">W2</div></div>
+                <div class="rep-bc"><div class="rep-br" style="height:34px;background:#B8975A;"></div><div class="rep-bll">W3</div></div>
+                <div class="rep-bc"><div class="rep-br" style="height:50px;background:#3B8A7A;"></div><div class="rep-bll">W4</div></div>
+              </div>
+            </div>
+            <div class="rep-sum">
+              <div style="font-size:7px;letter-spacing:0.08em;text-transform:uppercase;color:#9B9189;margin-bottom:5px;">Stock summary</div>
+              <div class="rep-srow"><span class="rep-sk">Grade A</span><span class="rep-sv2">12.450 g</span></div>
+              <div class="rep-srow"><span class="rep-sk">Grade B</span><span class="rep-sv2">8.200 g</span></div>
+              <div class="rep-srow"><span class="rep-sk">Grade C</span><span class="rep-sv2">4.700 g</span></div>
+              <div class="rep-srow"><span class="rep-sk">Sortiran</span><span style="font-size:9px;color:#9B9189;">1.380 g</span></div>
+            </div>
+          </div>
+        </div>
+      </div></div>
     </div>
     <div class="project-gallery-portrait">
-      <div class="project-gallery-img portrait"><div style="width:100%;height:100%;background:#C0BDB5;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Bahan baku</div></div>
-      <div class="project-gallery-img portrait"><div style="width:100%;height:100%;background:#B8B5AD;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Produksi</div></div>
-      <div class="project-gallery-img portrait"><div style="width:100%;height:100%;background:#C4C1B9;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Invoice</div></div>
-      <div class="project-gallery-img portrait"><div style="width:100%;height:100%;background:#BCB9B1;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Karyawan</div></div>
+      <div class="project-gallery-img portrait"><div class="mock-wrap">
+          <div class="mk-hdr"><span class="mk-ht">Raw Materials</span><span class="mk-hs">Admin</span></div>
+          <div class="mk-tabs"><div class="mk-tab on">Stock</div><div class="mk-tab">Buy</div><div class="mk-tab">Sell</div><div class="mk-tab">Value</div></div>
+          <div class="mk-body">
+            <div class="mk-sh">Current stock</div>
+            <div class="mk-card"><div class="mk-row"><span class="mk-lbl">Grade A</span><span class="mk-gold">12.450 g</span></div><div class="mk-sub">Last in: 3 May 2026</div></div>
+            <div class="mk-card"><div class="mk-row"><span class="mk-lbl">Grade B</span><span class="mk-gold">8.200 g</span></div><div class="mk-sub">Last in: 28 Apr 2026</div></div>
+            <div class="mk-card"><div class="mk-row"><span class="mk-lbl">Grade C</span><span class="mk-gold">4.700 g</span></div><div class="mk-sub">Last in: 20 Apr 2026</div></div>
+            <div class="mk-card"><div class="mk-row"><span class="mk-lbl">Sortiran</span><span class="mk-val">1.380 g</span></div><div class="mk-sub">Last in: 15 Apr 2026</div></div>
+            <div class="mk-sh" style="margin-top:2px;">Recent purchases</div>
+            <div class="mk-card"><div class="mk-row"><span class="mk-lbl">PB-2026-018</span><span class="mk-gold">3.200 g</span></div><div class="mk-sub">Supplier A · 5 May</div></div>
+            <div class="mk-card"><div class="mk-row"><span class="mk-lbl">PB-2026-017</span><span class="mk-gold">2.850 g</span></div><div class="mk-sub">Supplier B · 28 Apr</div></div>
+          </div>
+        </div></div>
+      <div class="project-gallery-img portrait"><div class="mock-wrap">
+          <div class="mk-hdr"><span class="mk-ht">Production</span><span class="mk-hs">Admin</span></div>
+          <div class="mk-tabs"><div class="mk-tab on">Batch</div><div class="mk-tab">Invoice</div><div class="mk-tab">Stock</div></div>
+          <div class="mk-body">
+            <div class="mk-card"><div class="mk-row"><span class="mk-lbl">Batch #024</span><span class="mk-pill mk-ok">Done</span></div><div class="mk-sub">Output: 3.200 g · 5 May</div></div>
+            <div class="mk-card"><div class="mk-row"><span class="mk-lbl">Batch #023</span><span class="mk-pill mk-ok">Done</span></div><div class="mk-sub">Output: 2.850 g · 28 Apr</div></div>
+            <div class="mk-card"><div class="mk-row"><span class="mk-lbl">Batch #022</span><span class="mk-pill mk-wip">In progress</span></div><div class="mk-sub">Started: 22 Apr</div></div>
+            <div class="mk-card"><div class="mk-row"><span class="mk-lbl">Batch #021</span><span class="mk-pill mk-ok">Done</span></div><div class="mk-sub">Output: 2.100 g · 10 Apr</div></div>
+            <div class="mk-sh" style="margin-top:2px;">Open invoices</div>
+            <div class="mk-card"><div class="mk-row"><span class="mk-lbl">INV-2026-041</span><span class="mk-gold">Rp 3.6M</span></div><div class="mk-sub">Buyer A · 5 May</div></div>
+            <div class="mk-card"><div class="mk-row"><span class="mk-lbl">INV-2026-040</span><span class="mk-gold">Rp 2.1M</span></div><div class="mk-sub">Buyer B · 28 Apr</div></div>
+          </div>
+        </div></div>
+      <div class="project-gallery-img portrait"><div class="pin-wrap">
+          <div class="pin-logo"><span class="pin-lt">FS</span></div>
+          <div class="pin-t">Factory System</div>
+          <div class="pin-s">Masuk dengan PIN kamu</div>
+          <div class="pin-nik"><div class="pin-nl">NIK</div><div class="pin-nv">EMP001</div></div>
+          <div class="pin-dots">
+            <div class="pin-dot" style="background:#1A1714;border-color:#1A1714;"></div>
+            <div class="pin-dot" style="background:#1A1714;border-color:#1A1714;"></div>
+            <div class="pin-dot"></div>
+            <div class="pin-dot"></div>
+          </div>
+          <div class="pin-grid">
+            <div class="pin-key">1</div><div class="pin-key">2</div><div class="pin-key">3</div>
+            <div class="pin-key">4</div><div class="pin-key">5</div><div class="pin-key">6</div>
+            <div class="pin-key">7</div><div class="pin-key">8</div><div class="pin-key">9</div>
+            <div class="pin-key" style="font-size:10px;color:#9B9189;">←</div>
+            <div class="pin-key">0</div>
+            <div class="pin-key" style="font-size:10px;color:#2E7D5E;">✓</div>
+          </div>
+          <div style="font-size:7px;color:#9B9189;margin-top:8px;">Lupa PIN? Hubungi admin</div>
+        </div></div>
+      <div class="project-gallery-img portrait"><div class="mock-wrap">
+          <div class="mk-hdr"><span class="mk-ht">Absensi</span><span class="mk-hs">Senin, 9 Mei · 07:15</span></div>
+          <div class="mk-tabs"><div class="mk-tab on">Hari ini</div><div class="mk-tab">Riwayat</div></div>
+          <div class="mk-body">
+            <div class="ab-status"><div class="ab-dot"></div><span class="ab-txt">Lokasi terverifikasi · 0.8m dari titik absensi</span></div>
+            <div class="ab-card">
+              <div class="ab-ch">Status hari ini</div>
+              <div class="ab-row"><span class="ab-rl">Check-in</span><span class="ab-rv">Belum</span></div>
+              <div class="ab-row"><span class="ab-rl">Check-out</span><span class="ab-rv">—</span></div>
+              <div class="ab-row"><span class="ab-rl">Status</span><span style="font-size:7px;background:#F1EFE8;padding:2px 6px;border-radius:20px;color:#9B9189;">Belum absen</span></div>
+            </div>
+            <div class="ab-btn"><div class="ab-bdot"></div>Check-in Sekarang</div>
+            <div style="font-size:7px;color:#9B9189;text-align:center;">Kamu berada di area pabrik</div>
+            <div class="mk-sh" style="margin-top:2px;">Slip gaji — April 2026</div>
+            <div class="mk-card">
+              <div class="slip-dark"><div class="slip-dl">Take home pay</div><div class="slip-dv">Rp 3.200.000</div><div class="slip-dp">April 2026 · 26 hari kerja</div></div>
+              <div style="padding:5px 0 0;">
+                <div class="slip-row"><span class="slip-rl">Gaji pokok</span><span class="slip-rv">Rp 3.000.000</span></div>
+                <div class="slip-row"><span class="slip-rl">Tunjangan hadir</span><span class="slip-rv">Rp 300.000</span></div>
+                <div class="slip-row"><span class="slip-rl">Potongan</span><span style="font-size:8px;color:#C0392B;">−Rp 100.000</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="bnav">
+            <div class="bnav-i"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9B9189" stroke-width="1.5"><path d="M3 12L12 4l9 8"/><path d="M5 10v9h4v-5h6v5h4v-9"/></svg><div class="bnav-il">Beranda</div></div>
+            <div class="bnav-i"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9B9189" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><div class="bnav-il">Kerja</div></div>
+            <div class="bnav-i"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B8975A" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div class="bnav-il on">Absensi</div></div>
+            <div class="bnav-i"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9B9189" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg><div class="bnav-il">Gaji</div></div>
+            <div class="bnav-i"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9B9189" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><div class="bnav-il">Profil</div></div>
+          </div>
+        </div></div>
     </div>
   </div>
 </div>
@@ -1027,8 +1316,32 @@
 <div class="page fade-in" id="page-rehab">
   <div class="project-page">
     <div class="project-hero-img">
-      <div class="project-hero-illus">
-        <svg viewBox="0 0 80 80" fill="none"><rect x="16" y="12" width="48" height="56" rx="2" stroke="#111" stroke-width="1.2"/><line x1="28" y1="12" x2="28" y2="68" stroke="#111" stroke-width="1.2"/><line x1="16" y1="28" x2="70" y2="28" stroke="#111" stroke-width="1.2"/><line x1="16" y1="44" x2="70" y2="44" stroke="#111" stroke-width="1.2"/><circle cx="22" cy="20" r="2.5" stroke="#111" stroke-width="1.2"/><circle cx="22" cy="36" r="2.5" stroke="#111" stroke-width="1.2"/><circle cx="22" cy="52" r="2.5" stroke="#111" stroke-width="1.2"/></svg>
+      <div class="rh-wrap">
+        <div class="rh-hdr">
+          <span style="font-size:12px;font-weight:500;color:#111;">RehabScheduler</span>
+          <span style="font-size:9px;color:#666;">Friday, 9 May 2026</span>
+        </div>
+        <div class="rh-tabs">
+          <div class="rh-tab on">Dashboard</div><div class="rh-tab">Schedule</div><div class="rh-tab">Patients</div><div class="rh-tab">Therapists</div>
+        </div>
+        <div class="rh-body">
+          <div class="rh-metrics">
+            <div class="rh-m"><div class="rh-ml">Patients today</div><div class="rh-mv">8</div></div>
+            <div class="rh-m"><div class="rh-ml">Sessions</div><div class="rh-mv" style="color:#0F6E56;">14</div></div>
+            <div class="rh-m"><div class="rh-ml">Missed</div><div class="rh-mv" style="color:#854F0B;">2</div></div>
+            <div class="rh-m"><div class="rh-ml">Therapists</div><div class="rh-mv">3</div></div>
+          </div>
+          <div class="rh-board">
+            <div class="brd">
+              <div class="brd-head"><div class="brd-hc">Time</div><div class="brd-hc">Therapist A (PT)</div><div class="brd-hc">Therapist B (OT)</div><div class="brd-hc">Therapist C (ST)</div><div class="brd-hc">Therapist D (PT)</div><div class="brd-hc">Therapist E (OT)</div></div>
+              <div class="brd-row"><div class="brd-time">08:00</div><div class="brd-slot"><div class="s-pt">Patient A</div></div><div class="brd-slot"><div class="s-ot">Patient D</div></div><div class="brd-slot"></div><div class="brd-slot"><div class="s-pt">Patient G</div></div><div class="brd-slot"></div></div>
+              <div class="brd-row"><div class="brd-time">09:00</div><div class="brd-slot"><div class="s-pt">Patient E</div></div><div class="brd-slot"></div><div class="brd-slot"><div class="s-st">Patient B</div></div><div class="brd-slot"></div><div class="brd-slot"><div class="s-ot">Patient H</div></div></div>
+              <div class="brd-row"><div class="brd-time">10:00</div><div class="brd-slot"></div><div class="brd-slot"><div class="s-ot">Patient A</div></div><div class="brd-slot"><div class="s-st">Patient F</div></div><div class="brd-slot"><div class="s-pt">Patient C</div></div><div class="brd-slot"></div></div>
+              <div class="brd-row"><div class="brd-time">11:00</div><div class="brd-slot"><div class="s-pt">Patient C</div></div><div class="brd-slot"><div class="s-ot">Patient E</div></div><div class="brd-slot"></div><div class="brd-slot"></div><div class="brd-slot"><div class="s-ot">Patient B</div></div></div>
+              <div class="brd-row" style="background:#F7F5F2;"><div class="brd-time">12:00</div><div style="grid-column:2/-1;padding:4px 6px;font-size:7px;color:#AAA;display:flex;align-items:center;justify-content:center;">Lunch break</div></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="project-cat">Systems</div>
@@ -1050,13 +1363,106 @@
       </ul>
     </div>
     <div class="project-gallery">
-      <div class="project-gallery-img full"><div style="width:100%;height:100%;background:#C8C4BC;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Schedule board</div></div>
+      <div class="project-gallery-img full"><div class="rh-wrap">
+        <div class="rh-hdr">
+          <span style="font-size:12px;font-weight:500;color:#111;">RehabScheduler</span>
+          <span style="font-size:9px;color:#666;">Friday, 9 May 2026</span>
+        </div>
+        <div class="rh-tabs">
+          <div class="rh-tab on">Dashboard</div><div class="rh-tab">Schedule</div><div class="rh-tab">Patients</div><div class="rh-tab">Therapists</div>
+        </div>
+        <div class="rh-body">
+          <div class="rh-metrics">
+            <div class="rh-m"><div class="rh-ml">Patients today</div><div class="rh-mv">8</div></div>
+            <div class="rh-m"><div class="rh-ml">Sessions</div><div class="rh-mv" style="color:#0F6E56;">14</div></div>
+            <div class="rh-m"><div class="rh-ml">Missed</div><div class="rh-mv" style="color:#854F0B;">2</div></div>
+            <div class="rh-m"><div class="rh-ml">Therapists</div><div class="rh-mv">3</div></div>
+          </div>
+          <div class="rh-board">
+            <div class="brd">
+              <div class="brd-head"><div class="brd-hc">Time</div><div class="brd-hc">Therapist A (PT)</div><div class="brd-hc">Therapist B (OT)</div><div class="brd-hc">Therapist C (ST)</div><div class="brd-hc">Therapist D (PT)</div><div class="brd-hc">Therapist E (OT)</div></div>
+              <div class="brd-row"><div class="brd-time">08:00</div><div class="brd-slot"><div class="s-pt">Patient A</div></div><div class="brd-slot"><div class="s-ot">Patient D</div></div><div class="brd-slot"></div><div class="brd-slot"><div class="s-pt">Patient G</div></div><div class="brd-slot"></div></div>
+              <div class="brd-row"><div class="brd-time">09:00</div><div class="brd-slot"><div class="s-pt">Patient E</div></div><div class="brd-slot"></div><div class="brd-slot"><div class="s-st">Patient B</div></div><div class="brd-slot"></div><div class="brd-slot"><div class="s-ot">Patient H</div></div></div>
+              <div class="brd-row"><div class="brd-time">10:00</div><div class="brd-slot"></div><div class="brd-slot"><div class="s-ot">Patient A</div></div><div class="brd-slot"><div class="s-st">Patient F</div></div><div class="brd-slot"><div class="s-pt">Patient C</div></div><div class="brd-slot"></div></div>
+              <div class="brd-row"><div class="brd-time">11:00</div><div class="brd-slot"><div class="s-pt">Patient C</div></div><div class="brd-slot"><div class="s-ot">Patient E</div></div><div class="brd-slot"></div><div class="brd-slot"></div><div class="brd-slot"><div class="s-ot">Patient B</div></div></div>
+              <div class="brd-row" style="background:#F7F5F2;"><div class="brd-time">12:00</div><div style="grid-column:2/-1;padding:4px 6px;font-size:7px;color:#AAA;display:flex;align-items:center;justify-content:center;">Lunch break</div></div>
+            </div>
+          </div>
+        </div>
+      </div></div>
     </div>
     <div class="project-gallery-portrait">
-      <div class="project-gallery-img portrait"><div style="width:100%;height:100%;background:#C0BDB5;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Dashboard</div></div>
-      <div class="project-gallery-img portrait"><div style="width:100%;height:100%;background:#B8B5AD;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Patients</div></div>
-      <div class="project-gallery-img portrait"><div style="width:100%;height:100%;background:#C4C1B9;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Session log</div></div>
-      <div class="project-gallery-img portrait"><div style="width:100%;height:100%;background:#BCB9B1;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Therapist view</div></div>
+      <div class="project-gallery-img portrait"><div class="mock-wrap" style="background:#F7F7F5;">
+          <div class="mk-hdr" style="background:#fff;border-color:#E8E8E4;"><span class="mk-ht">Schedule</span><span class="mk-hs">Today</span></div>
+          <div style="background:#fff;padding:6px 8px;flex:1;overflow:hidden;">
+            <div style="background:#fff;border:0.5px solid #E8E8E4;border-radius:7px;overflow:hidden;">
+              <div style="display:grid;grid-template-columns:36px repeat(3,1fr);background:#F1EFE8;border-bottom:0.5px solid #E8E8E4;">
+                <div style="padding:4px 5px;font-size:7px;font-weight:500;color:#666;border-right:0.5px solid #E8E8E4;">Time</div>
+                <div style="padding:4px 5px;font-size:7px;font-weight:500;color:#666;border-right:0.5px solid #E8E8E4;">T. A</div>
+                <div style="padding:4px 5px;font-size:7px;font-weight:500;color:#666;border-right:0.5px solid #E8E8E4;">T. B</div>
+                <div style="padding:4px 5px;font-size:7px;font-weight:500;color:#666;">T. C</div>
+              </div>
+              <div style="display:grid;grid-template-columns:36px repeat(3,1fr);border-bottom:0.5px solid #E8E8E4;"><div style="padding:4px 5px;font-size:7px;color:#AAA;background:#F1EFE8;border-right:0.5px solid #E8E8E4;display:flex;align-items:center;">08:00</div><div style="padding:3px 4px;min-height:26px;border-right:0.5px solid #E8E8E4;display:flex;align-items:center;"><div class="s-pt">Pasien A</div></div><div style="padding:3px 4px;border-right:0.5px solid #E8E8E4;display:flex;align-items:center;"><div class="s-ot">Pasien D</div></div><div style="padding:3px 4px;"></div></div>
+              <div style="display:grid;grid-template-columns:36px repeat(3,1fr);border-bottom:0.5px solid #E8E8E4;"><div style="padding:4px 5px;font-size:7px;color:#AAA;background:#F1EFE8;border-right:0.5px solid #E8E8E4;display:flex;align-items:center;">09:00</div><div style="padding:3px 4px;border-right:0.5px solid #E8E8E4;display:flex;align-items:center;"><div class="s-pt">Pasien E</div></div><div style="padding:3px 4px;border-right:0.5px solid #E8E8E4;"></div><div style="padding:3px 4px;display:flex;align-items:center;"><div class="s-st">Pasien B</div></div></div>
+              <div style="display:grid;grid-template-columns:36px repeat(3,1fr);border-bottom:0.5px solid #E8E8E4;"><div style="padding:4px 5px;font-size:7px;color:#AAA;background:#F1EFE8;border-right:0.5px solid #E8E8E4;display:flex;align-items:center;">10:00</div><div style="padding:3px 4px;border-right:0.5px solid #E8E8E4;"></div><div style="padding:3px 4px;border-right:0.5px solid #E8E8E4;display:flex;align-items:center;"><div class="s-ot">Pasien A</div></div><div style="padding:3px 4px;display:flex;align-items:center;"><div class="s-st">Pasien F</div></div></div>
+              <div style="display:grid;grid-template-columns:36px repeat(3,1fr);border-bottom:0.5px solid #E8E8E4;"><div style="padding:4px 5px;font-size:7px;color:#AAA;background:#F1EFE8;border-right:0.5px solid #E8E8E4;display:flex;align-items:center;">11:00</div><div style="padding:3px 4px;border-right:0.5px solid #E8E8E4;display:flex;align-items:center;"><div class="s-pt">Pasien C</div></div><div style="padding:3px 4px;border-right:0.5px solid #E8E8E4;display:flex;align-items:center;"><div class="s-ot">Pasien E</div></div><div style="padding:3px 4px;"></div></div>
+              <div style="display:grid;grid-template-columns:36px repeat(3,1fr);background:#F7F5F2;"><div style="padding:4px 5px;font-size:7px;color:#AAA;background:#F1EFE8;border-right:0.5px solid #E8E8E4;display:flex;align-items:center;">12:00</div><div style="grid-column:2/-1;padding:4px 6px;font-size:7px;color:#AAA;display:flex;align-items:center;justify-content:center;">Lunch break</div></div>
+              <div style="display:grid;grid-template-columns:36px repeat(3,1fr);border-top:0.5px solid #E8E8E4;"><div style="padding:4px 5px;font-size:7px;color:#AAA;background:#F1EFE8;border-right:0.5px solid #E8E8E4;display:flex;align-items:center;">13:00</div><div style="padding:3px 4px;border-right:0.5px solid #E8E8E4;display:flex;align-items:center;"><div class="s-pt">Pasien G</div></div><div style="padding:3px 4px;border-right:0.5px solid #E8E8E4;display:flex;align-items:center;"><div class="s-ot">Pasien C</div></div><div style="padding:3px 4px;display:flex;align-items:center;"><div class="s-st">Pasien H</div></div></div>
+            </div>
+          </div>
+        </div></div>
+      <div class="project-gallery-img portrait"><div class="mock-wrap" style="background:#F1EFE8;">
+          <div class="mk-hdr" style="background:#fff;border-color:#E8E8E4;"><span class="mk-ht">Patients</span><span class="mk-hs">8 active</span></div>
+          <div class="rp-body">
+            <div class="rp-card"><div class="rp-row"><div><div class="rp-name">Patient A</div><div class="rp-sub">Room 201 · Day 14</div></div><span class="rp-pill rp-pt">PT</span></div><div style="display:flex;gap:3px;margin-top:3px;"><span class="rp-pill rp-ok" style="background:#E1F5EE;color:#085041;">OT</span></div><div class="rp-track" style="margin-top:4px;"><div class="rp-fill" style="width:75%;background:#1D9E75;"></div></div><div style="font-size:7px;color:#AAA;margin-top:1px;">75/100 mins</div></div>
+            <div class="rp-card"><div class="rp-row"><div><div class="rp-name">Patient B</div><div class="rp-sub">Room 105 · Day 8</div></div><span class="rp-pill rp-st">ST</span></div><div class="rp-track" style="margin-top:4px;"><div class="rp-fill" style="width:40%;background:#BA7517;"></div></div><div style="font-size:7px;color:#AAA;margin-top:1px;">40/100 mins</div></div>
+            <div class="rp-card"><div class="rp-row"><div><div class="rp-name">Patient C</div><div class="rp-sub">Room 303 · Day 3</div></div><span class="rp-pill rp-pt">PT</span></div><div class="rp-track" style="margin-top:4px;"><div class="rp-fill" style="width:90%;background:#1D9E75;"></div></div><div style="font-size:7px;color:#AAA;margin-top:1px;">90/100 mins</div></div>
+            <div class="rp-card"><div class="rp-row"><div><div class="rp-name">Patient D</div><div class="rp-sub">Room 102 · Day 21</div></div><span class="rp-pill rp-ok">OT</span></div><div class="rp-track" style="margin-top:4px;"><div class="rp-fill" style="width:60%;background:#1D9E75;"></div></div><div style="font-size:7px;color:#AAA;margin-top:1px;">60/100 mins</div></div>
+          </div>
+        </div></div>
+      <div class="project-gallery-img portrait"><div class="mock-wrap" style="background:#F1EFE8;">
+          <div class="mk-hdr" style="background:#fff;border-color:#E8E8E4;"><span class="mk-ht">Therapists</span><span class="mk-hs">Productivity</span></div>
+          <div class="rp-body">
+            <div class="rp-card">
+              <div class="rp-row" style="margin-bottom:5px;"><div><div class="rp-name">Therapist A</div><div class="rp-sub">Physical Therapy</div></div><span class="rp-pill rp-ok">Active</span></div>
+              <div style="display:flex;align-items:center;gap:5px;margin-bottom:2px;"><div style="font-size:7px;color:#666;min-width:40px;">Sessions</div><div class="rp-track" style="flex:1;margin-top:0;"><div class="rp-fill" style="width:80%;background:#1D9E75;"></div></div><div style="font-size:7px;color:#666;">4/5</div></div>
+              <div style="display:flex;align-items:center;gap:5px;"><div style="font-size:7px;color:#666;min-width:40px;">Minutes</div><div class="rp-track" style="flex:1;margin-top:0;"><div class="rp-fill" style="width:72%;background:#185FA5;"></div></div><div style="font-size:7px;color:#666;">216</div></div>
+            </div>
+            <div class="rp-card">
+              <div class="rp-row" style="margin-bottom:5px;"><div><div class="rp-name">Therapist B</div><div class="rp-sub">Occupational Therapy</div></div><span class="rp-pill rp-ok">Active</span></div>
+              <div style="display:flex;align-items:center;gap:5px;margin-bottom:2px;"><div style="font-size:7px;color:#666;min-width:40px;">Sessions</div><div class="rp-track" style="flex:1;margin-top:0;"><div class="rp-fill" style="width:60%;background:#1D9E75;"></div></div><div style="font-size:7px;color:#666;">3/5</div></div>
+              <div style="display:flex;align-items:center;gap:5px;"><div style="font-size:7px;color:#666;min-width:40px;">Minutes</div><div class="rp-track" style="flex:1;margin-top:0;"><div class="rp-fill" style="width:55%;background:#185FA5;"></div></div><div style="font-size:7px;color:#666;">165</div></div>
+            </div>
+            <div class="rp-card">
+              <div class="rp-row" style="margin-bottom:5px;"><div><div class="rp-name">Therapist C</div><div class="rp-sub">Speech Therapy</div></div><span class="rp-pill rp-risk">Missed 1</span></div>
+              <div style="display:flex;align-items:center;gap:5px;"><div style="font-size:7px;color:#666;min-width:40px;">Sessions</div><div class="rp-track" style="flex:1;margin-top:0;"><div class="rp-fill" style="width:40%;background:#BA7517;"></div></div><div style="font-size:7px;color:#666;">2/5</div></div>
+            </div>
+          </div>
+        </div></div>
+      <div class="project-gallery-img portrait"><div style="width:100%;height:100%;display:flex;flex-direction:column;position:relative;overflow:hidden;">
+          <div style="opacity:0.3;display:flex;flex-direction:column;flex:1;overflow:hidden;background:#F1EFE8;">
+            <div style="background:#fff;border-bottom:0.5px solid #E8E8E4;padding:8px 12px;display:flex;justify-content:space-between;"><span style="font-size:11px;font-weight:500;color:#111;">RehabScheduler</span><span style="font-size:8px;color:#666;">9 May 2026</span></div>
+            <div style="padding:8px 10px;display:flex;flex-direction:column;gap:5px;flex:1;">
+              <div style="background:#fff;border:0.5px solid #E8E8E4;border-radius:7px;padding:7px 9px;"><div style="font-size:9px;font-weight:500;color:#111;margin-bottom:3px;">Patient A</div><div style="height:3px;background:#E1F5EE;border-radius:2px;"><div style="width:75%;height:100%;background:#1D9E75;border-radius:2px;"></div></div></div>
+              <div style="background:#fff;border:0.5px solid #E8E8E4;border-radius:7px;padding:7px 9px;"><div style="font-size:9px;font-weight:500;color:#111;margin-bottom:3px;">Patient B</div><div style="height:3px;background:#FAEEDA;border-radius:2px;"><div style="width:40%;height:100%;background:#BA7517;border-radius:2px;"></div></div></div>
+            </div>
+          </div>
+          <div style="position:absolute;inset:0;background:rgba(0,0,0,0.45);display:flex;align-items:flex-end;">
+            <div style="background:#fff;border-radius:11px 11px 0 0;width:100%;padding-bottom:10px;">
+              <div class="modal-hdr"><span class="modal-t">Add session</span><span class="modal-x">×</span></div>
+              <div class="modal-body">
+                <div class="mf"><div class="mfl">Patient</div><div class="mfi">Patient A — Room 201</div></div>
+                <div class="mf"><div class="mfl">Therapist</div><div class="mfi">Therapist A (PT)</div></div>
+                <div class="mf2">
+                  <div class="mf"><div class="mfl">Time</div><div class="mfi">14:00</div></div>
+                  <div class="mf"><div class="mfl">Duration</div><div class="mfi">60 min</div></div>
+                </div>
+                <div class="mf"><div class="mfl">Type</div><div class="mfpt">Physical Therapy (PT)</div></div>
+              </div>
+              <div class="modal-btns"><div class="mbtn-ghost">Cancel</div><div class="mbtn-save">Save</div></div>
+            </div>
+          </div>
+        </div></div>
     </div>
     <a href="https://varendemo-rehab-scheduler.netlify.app/" target="_blank" class="project-link">View live demo →</a>
   </div>
