@@ -451,6 +451,21 @@
     aspect-ratio: 16/7;
   }
 
+
+  /* Portrait screenshot gallery — Option C */
+  .project-gallery-portrait {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .project-gallery-img.portrait {
+    aspect-ratio: 9/16;
+    grid-column: auto;
+  }
+  @media (max-width: 600px) {
+    .project-gallery-portrait { grid-template-columns: 1fr 1fr; }
+  }
   /* Mobile adjustments */
   @media (max-width: 600px) {
     .site-nav { padding: 16px 20px; }
@@ -621,12 +636,12 @@
   <div class="index-section">
     <div class="index-title">
       Index:&nbsp;
-      <button class="filter-btn active" data-filter="all" onclick="filterWork(this)">ALL <span class="filter-count">6</span></button>&nbsp;
+      <button class="filter-btn active" data-filter="all" onclick="filterWork(this)">ALL <span class="filter-count">8</span></button>&nbsp;
       <button class="filter-btn" data-filter="creative" onclick="filterWork(this)">CREATIVE <span class="filter-count">1</span></button>&nbsp;
       <button class="filter-btn" data-filter="activation" onclick="filterWork(this)">ACTIVATION <span class="filter-count">1</span></button>&nbsp;
       <button class="filter-btn" data-filter="shopify" onclick="filterWork(this)">SHOPIFY <span class="filter-count">1</span></button>&nbsp;
       <button class="filter-btn" data-filter="crm" onclick="filterWork(this)">CRM <span class="filter-count">1</span></button>&nbsp;
-      <button class="filter-btn" data-filter="systems" onclick="filterWork(this)">SYSTEMS <span class="filter-count">1</span></button>&nbsp;
+      <button class="filter-btn" data-filter="systems" onclick="filterWork(this)">SYSTEMS <span class="filter-count">3</span></button>&nbsp;
       <button class="filter-btn" data-filter="webapp" onclick="filterWork(this)">WEB APP <span class="filter-count">1</span></button>
     </div>
   </div>
@@ -718,13 +733,44 @@
         </div>
       </div>
       <div class="work-card-info">
-        <div class="work-card-name">Carat App</div>
+        <div class="work-card-name">Financial Planner App</div>
         <div class="work-card-cat">Web App</div>
-        <div class="work-card-desc">K-pop themed personal finance planner. Next.js + Supabase.</div>
+        <div class="work-card-desc">Personal finance planner — income, expenses, goals, debts, AI analysis. Next.js + Supabase.</div>
       </div>
     </div>
 
-  </div>
+
+    <!-- 07 Factory Internal System -->
+    <div class="work-card" data-cat="systems" onclick="openProject('factory')">
+      <div class="work-card-img">
+        <!-- swap: <img src="images/factory-cover.jpg" alt="Factory System"> -->
+        <div class="work-illus-wrap">
+          <svg viewBox="0 0 80 80" fill="none"><rect x="10" y="36" width="60" height="30" rx="1" stroke="#111" stroke-width="1.2"/><rect x="18" y="24" width="14" height="12" rx="1" stroke="#111" stroke-width="1.2"/><rect x="48" y="18" width="14" height="18" rx="1" stroke="#111" stroke-width="1.2"/><line x1="10" y1="66" x2="70" y2="66" stroke="#111" stroke-width="1.2"/><line x1="25" y1="46" x2="25" y2="56" stroke="#111" stroke-width="1.2" stroke-linecap="round"/><line x1="40" y1="46" x2="40" y2="56" stroke="#111" stroke-width="1.2" stroke-linecap="round"/><line x1="55" y1="46" x2="55" y2="56" stroke="#111" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+      <div class="work-card-info">
+        <div class="work-card-name">Factory Internal System</div>
+        <div class="work-card-cat">Systems</div>
+        <div class="work-card-desc">End-to-end ops system — inventory, production batches, invoicing, payroll.</div>
+      </div>
+    </div>
+
+    <!-- 08 Medical Treatment Center -->
+    <div class="work-card" data-cat="systems" onclick="openProject('rehab')">
+      <div class="work-card-img">
+        <!-- swap: <img src="images/rehab-cover.jpg" alt="Rehab Scheduler"> -->
+        <div class="work-illus-wrap">
+          <svg viewBox="0 0 80 80" fill="none"><rect x="16" y="12" width="48" height="56" rx="2" stroke="#111" stroke-width="1.2"/><line x1="28" y1="12" x2="28" y2="68" stroke="#111" stroke-width="1.2"/><line x1="16" y1="28" x2="70" y2="28" stroke="#111" stroke-width="1.2"/><line x1="16" y1="44" x2="70" y2="44" stroke="#111" stroke-width="1.2"/><circle cx="22" cy="20" r="2.5" stroke="#111" stroke-width="1.2"/><circle cx="22" cy="36" r="2.5" stroke="#111" stroke-width="1.2"/><circle cx="22" cy="52" r="2.5" stroke="#111" stroke-width="1.2"/></svg>
+        </div>
+      </div>
+      <div class="work-card-info">
+        <div class="work-card-name">Medical Treatment Center</div>
+        <div class="work-card-cat">Systems</div>
+        <div class="work-card-desc">Inpatient rehab scheduler — daily sessions, therapist tracking, patient status.</div>
+      </div>
+    </div>
+
+    </div>
 
   
   <footer class="site-footer">
@@ -915,13 +961,13 @@
       </div>
     </div>
     <div class="project-cat">Web App</div>
-    <h1 class="project-title">Carat App — <em>Personal Finance</em></h1>
+    <h1 class="project-title">Financial Planner App — <em>Moneymani</em></h1>
     <div class="project-meta">
       <div class="project-meta-item"><div class="project-meta-label">Stack</div><div class="project-meta-value">Next.js · Supabase</div></div>
-      <div class="project-meta-item"><div class="project-meta-label">Theme</div><div class="project-meta-value">K-pop inspired</div></div>
+      <div class="project-meta-item"><div class="project-meta-label">Theme</div><div class="project-meta-value">Personal finance</div></div>
       <div class="project-meta-item"><div class="project-meta-label">Status</div><div class="project-meta-value">Live</div></div>
     </div>
-    <p class="project-body">A K-pop themed personal finance planner — track income, expenses, savings goals, and debts with an AI analysis assistant. Built for fans who want to manage money with a bit of personality.</p>
+    <p class="project-body">A personal finance planner built from scratch — track income, expenses, saving goals, and debts with an AI analysis assistant. Bilingual ID/EN, mobile-first PWA.</p>
     <div class="project-scope">
       <div class="project-scope-title">Scope of work</div>
       <ul class="project-scope-list">
@@ -934,6 +980,85 @@
       </ul>
     </div>
     <a href="https://carat-app-pi.vercel.app" target="_blank" class="project-link">View live app →</a>
+  </div>
+</div>
+
+<!-- Factory Internal System -->
+<div class="page fade-in" id="page-factory">
+  <div class="project-page">
+    <div class="project-hero-img">
+      <div class="project-hero-illus">
+        <svg viewBox="0 0 80 80" fill="none"><rect x="10" y="36" width="60" height="30" rx="1" stroke="#111" stroke-width="1.2"/><rect x="18" y="24" width="14" height="12" rx="1" stroke="#111" stroke-width="1.2"/><rect x="48" y="18" width="14" height="18" rx="1" stroke="#111" stroke-width="1.2"/><line x1="10" y1="66" x2="70" y2="66" stroke="#111" stroke-width="1.2"/><line x1="25" y1="46" x2="25" y2="56" stroke="#111" stroke-width="1.2" stroke-linecap="round"/><line x1="40" y1="46" x2="40" y2="56" stroke="#111" stroke-width="1.2" stroke-linecap="round"/><line x1="55" y1="46" x2="55" y2="56" stroke="#111" stroke-width="1.2" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+    <div class="project-cat">Systems</div>
+    <h1 class="project-title">Factory Internal System — <em>End-to-end Ops</em></h1>
+    <div class="project-meta">
+      <div class="project-meta-item"><div class="project-meta-label">Client</div><div class="project-meta-value">Confidential</div></div>
+      <div class="project-meta-item"><div class="project-meta-label">Type</div><div class="project-meta-value">PWA</div></div>
+      <div class="project-meta-item"><div class="project-meta-label">Stack</div><div class="project-meta-value">HTML · JS · IndexedDB</div></div>
+    </div>
+    <p class="project-body">A fully offline-capable internal system built for a production factory — replacing manual spreadsheets and WhatsApp coordination with one unified tool. Covers raw material intake, grading, batch production, invoicing, and payroll, all in Bahasa Indonesia.</p>
+    <div class="project-scope">
+      <div class="project-scope-title">Scope of work</div>
+      <ul class="project-scope-list">
+        <li>Raw material inventory — purchase & sale tracking per grade</li>
+        <li>Production batch management with batch history</li>
+        <li>Invoice generation & sharing (PDF / Web Share API)</li>
+        <li>Employee & payroll management</li>
+        <li>Offline-first with local data persistence</li>
+        <li>Settings — buyers, grades, bank accounts, company logo</li>
+      </ul>
+    </div>
+    <div class="project-gallery">
+      <!-- swap: <img src="images/factory-hero-screen.jpg" alt=""> on the .full div -->
+      <div class="project-gallery-img full"><div style="width:100%;height:100%;background:#C8C4BC;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Dashboard overview</div></div>
+    </div>
+    <div class="project-gallery-portrait">
+      <div class="project-gallery-img portrait"><div style="width:100%;height:100%;background:#C0BDB5;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Bahan baku</div></div>
+      <div class="project-gallery-img portrait"><div style="width:100%;height:100%;background:#B8B5AD;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Produksi</div></div>
+      <div class="project-gallery-img portrait"><div style="width:100%;height:100%;background:#C4C1B9;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Invoice</div></div>
+      <div class="project-gallery-img portrait"><div style="width:100%;height:100%;background:#BCB9B1;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Karyawan</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Medical Treatment Center -->
+<div class="page fade-in" id="page-rehab">
+  <div class="project-page">
+    <div class="project-hero-img">
+      <div class="project-hero-illus">
+        <svg viewBox="0 0 80 80" fill="none"><rect x="16" y="12" width="48" height="56" rx="2" stroke="#111" stroke-width="1.2"/><line x1="28" y1="12" x2="28" y2="68" stroke="#111" stroke-width="1.2"/><line x1="16" y1="28" x2="70" y2="28" stroke="#111" stroke-width="1.2"/><line x1="16" y1="44" x2="70" y2="44" stroke="#111" stroke-width="1.2"/><circle cx="22" cy="20" r="2.5" stroke="#111" stroke-width="1.2"/><circle cx="22" cy="36" r="2.5" stroke="#111" stroke-width="1.2"/><circle cx="22" cy="52" r="2.5" stroke="#111" stroke-width="1.2"/></svg>
+      </div>
+    </div>
+    <div class="project-cat">Systems</div>
+    <h1 class="project-title">Medical Treatment Center — <em>Rehab Scheduler</em></h1>
+    <div class="project-meta">
+      <div class="project-meta-item"><div class="project-meta-label">Client</div><div class="project-meta-value">Confidential</div></div>
+      <div class="project-meta-item"><div class="project-meta-label">Type</div><div class="project-meta-value">PWA</div></div>
+      <div class="project-meta-item"><div class="project-meta-label">Stack</div><div class="project-meta-value">HTML · JS · LocalStorage</div></div>
+    </div>
+    <p class="project-body">A scheduling tool built for an inpatient rehabilitation center — helping therapists manage daily sessions, track patient progress, and monitor department-wide productivity. Designed for quick access on mobile during rounds.</p>
+    <div class="project-scope">
+      <div class="project-scope-title">Scope of work</div>
+      <ul class="project-scope-list">
+        <li>Daily schedule board — sessions per therapist per time slot</li>
+        <li>Patient list with room, status, and therapy type</li>
+        <li>Therapist productivity metrics</li>
+        <li>Session logging and patient history</li>
+        <li>Mobile-first PWA, installable on staff devices</li>
+      </ul>
+    </div>
+    <div class="project-gallery">
+      <div class="project-gallery-img full"><div style="width:100%;height:100%;background:#C8C4BC;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Schedule board</div></div>
+    </div>
+    <div class="project-gallery-portrait">
+      <div class="project-gallery-img portrait"><div style="width:100%;height:100%;background:#C0BDB5;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Dashboard</div></div>
+      <div class="project-gallery-img portrait"><div style="width:100%;height:100%;background:#B8B5AD;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Patients</div></div>
+      <div class="project-gallery-img portrait"><div style="width:100%;height:100%;background:#C4C1B9;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Session log</div></div>
+      <div class="project-gallery-img portrait"><div style="width:100%;height:100%;background:#BCB9B1;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Therapist view</div></div>
+    </div>
+    <a href="https://varendemo-rehab-scheduler.netlify.app/" target="_blank" class="project-link">View live demo →</a>
   </div>
 </div>
 
@@ -1055,7 +1180,7 @@
 </div>
 <script>
   // ── ROUTING ──
-  const projects = ['campaign','activation','shopify','crm','systems','webapp','journal','journal-popup','journal-restart','contact'];
+  const projects = ['campaign','activation','shopify','crm','systems','webapp','factory','rehab','journal','journal-popup','journal-restart','contact'];
 
   function showPage(id) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
