@@ -79,7 +79,7 @@
 
   /* Index filter */
   .index-section {
-    padding: 56px 40px 48px;
+    padding: 56px 120px 48px;
     text-align: center;
   }
   .index-title {
@@ -184,7 +184,7 @@
     font-family: 'DM Sans', sans-serif;
     font-size: 11px;
     font-weight: 300;
-    color: var(--text-3);
+    color: var(--text-2);
     line-height: 1.6;
     margin-top: 6px;
     letter-spacing: 0.01em;
@@ -521,7 +521,7 @@
 
 
   /* Journal 2-col grid */
-  .journal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 40px; }
+  .journal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; margin-top: 40px; }
   .journal-card { cursor: pointer; transition: opacity 0.25s; padding-bottom: 56px; }
   .journal-card:hover { opacity: 0.65; }
   .journal-cover { width: 100%; aspect-ratio: 3/2; background: #C8C4BC; overflow: hidden; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; }
@@ -942,8 +942,7 @@
 <!-- Journal list -->
 <div class="page fade-in" id="page-journal">
   <div class="project-page">
-    <div class="project-cat">Journal</div>
-    <h1 class="project-title">Writing & Notes</h1>
+    <h1 class="project-title">Journal</h1>
     <div class="journal-grid">
 
       <div class="journal-card" onclick="openProject('journal-popup')">
