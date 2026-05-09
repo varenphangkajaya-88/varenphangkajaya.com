@@ -1289,7 +1289,230 @@
         <li>Custom project tracker for client handover</li>
       </ul>
     </div>
-    <a href="https://mk-crm-demo.netlify.app" target="_blank" class="project-link">View live demo →</a>
+    <button class="app-preview-btn" onclick="openAppModal('mkModal')">Preview project &#8594;</button>
+
+<div class="app-modal-overlay" id="mkModal-overlay">
+  <button class="app-modal-close" onclick="closeAppModal('mkModal')">&times;</button>
+  <div class="app-modal-layout">
+    <button class="app-modal-nav" onclick="navAppModal('mkModal',-1)">&#8249;</button>
+    <div class="app-modal-center">
+      <div style="width:320px;aspect-ratio:9/16;position:relative;">
+        <div id="mkModal-s0" class="app-modal-screen"><div style="background:#A8C3D8;height:3px;flex-shrink:0;"></div>
+        <div style="background:#fff;padding:10px 16px;border-bottom:0.5px solid #e8e8e8;flex-shrink:0;">
+          <div style="font-size:13px;font-weight:600;color:#1a1a1a;">MK Brand Web Dev</div>
+          <div style="font-size:10px;color:#888;">Phase 3 · CRM System</div>
+        </div>
+        <div style="display:flex;gap:5px;padding:10px 16px;background:#fff;border-bottom:0.5px solid #e8e8e8;flex-wrap:wrap;flex-shrink:0;">
+          <span style="font-size:10px;padding:4px 10px;border-radius:20px;background:#A8C3D8;color:#1a1a1a;font-weight:500;">Campaign flows</span>
+          <span style="font-size:10px;padding:4px 10px;border-radius:20px;border:0.5px solid #ccc;color:#666;">Email copy</span>
+          <span style="font-size:10px;padding:4px 10px;border-radius:20px;border:0.5px solid #ccc;color:#666;">Design</span>
+          <span style="font-size:10px;padding:4px 10px;border-radius:20px;border:0.5px solid #ccc;color:#666;">To-do</span>
+        </div>
+        <div style="padding:12px 16px;flex:1;overflow:hidden;background:#f5f5f3;display:flex;flex-direction:column;gap:8px;">
+          <div style="font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#999;border-bottom:0.5px solid #e8e8e8;padding-bottom:5px;">5 Automated flows</div>
+          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:8px;padding:9px 12px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-size:12px;font-weight:500;color:#1a1a1a;">Welcome Series</span>
+              <span style="font-size:10px;padding:2px 8px;border-radius:20px;background:#d4edda;color:#155724;">Active</span>
+            </div>
+            <div style="font-size:10px;color:#888;margin-top:2px;">3 emails · ID / MY / SG</div>
+          </div>
+          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:8px;padding:9px 12px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-size:12px;font-weight:500;color:#1a1a1a;">Abandoned Cart</span>
+              <span style="font-size:10px;padding:2px 8px;border-radius:20px;background:#d4edda;color:#155724;">Active</span>
+            </div>
+            <div style="font-size:10px;color:#888;margin-top:2px;">2 emails · with coupon</div>
+          </div>
+          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:8px;padding:9px 12px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-size:12px;font-weight:500;color:#1a1a1a;">Win-back</span>
+              <span style="font-size:10px;padding:2px 8px;border-radius:20px;background:#d4edda;color:#155724;">Active</span>
+            </div>
+            <div style="font-size:10px;color:#888;margin-top:2px;">1 email · 7-day expiry</div>
+          </div>
+          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:8px;padding:9px 12px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-size:12px;font-weight:500;color:#1a1a1a;">Birthday</span>
+              <span style="font-size:10px;padding:2px 8px;border-radius:20px;background:#d4edda;color:#155724;">Active</span>
+            </div>
+            <div style="font-size:10px;color:#888;margin-top:2px;">1 email · yearly repeat</div>
+          </div>
+          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:8px;padding:9px 12px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-size:12px;font-weight:500;color:#1a1a1a;">Back in Stock</span>
+              <span style="font-size:10px;padding:2px 8px;border-radius:20px;background:#d4edda;color:#155724;">Active</span>
+            </div>
+            <div style="font-size:10px;color:#888;margin-top:2px;">Klaviyo App Embed</div>
+          </div>
+        </div></div>
+<div id="mkModal-s1" class="app-modal-screen" style="display:none;"><div style="background:#A8C3D8;height:3px;flex-shrink:0;"></div>
+        <div style="background:#fff;padding:10px 16px;border-bottom:0.5px solid #e8e8e8;flex-shrink:0;">
+          <div style="font-size:13px;font-weight:600;color:#1a1a1a;">Email copy</div>
+          <div style="font-size:10px;color:#888;">Welcome flow · Indonesia</div>
+        </div>
+        <div style="padding:12px 16px;flex:1;overflow:hidden;background:#f5f5f3;display:flex;flex-direction:column;gap:8px;">
+          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:8px;overflow:hidden;">
+            <div style="background:#A8C3D8;padding:8px 12px;">
+              <div style="font-size:10px;font-weight:600;color:#1a1a1a;">Email 1 — Welcome</div>
+              <div style="font-size:9px;color:#1a1a1a;opacity:0.65;">Subject: Selamat datang di MAISON.Klub ✨</div>
+            </div>
+            <div style="padding:10px 12px;font-size:10px;color:#444;line-height:1.6;">
+              Halo [First Name],<br><br>
+              Terima kasih sudah bergabung. Nikmati <strong>10% off</strong> untuk pembelian pertamamu dengan kode di bawah.
+            </div>
+            <div style="margin:0 12px 10px;background:#f5f5f3;border-radius:6px;padding:8px 12px;text-align:center;">
+              <div style="font-size:9px;color:#888;margin-bottom:2px;">Kode promo</div>
+              <div style="font-size:14px;font-weight:600;color:#1a1a1a;letter-spacing:0.1em;">WELCOME10</div>
+              <div style="font-size:9px;color:#888;margin-top:1px;">Berlaku 7 hari</div>
+            </div>
+          </div>
+          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:8px;overflow:hidden;">
+            <div style="background:#e8f0f5;padding:8px 12px;">
+              <div style="font-size:10px;font-weight:600;color:#1a1a1a;">Email 2 — Brand story</div>
+              <div style="font-size:9px;color:#555;">Subject: Kenalan sama MAISON Kolori</div>
+            </div>
+            <div style="padding:10px 12px;font-size:10px;color:#444;line-height:1.6;">
+              Kami percaya fashion adalah ekspresi diri. Setiap koleksi dirancang dengan intention — untuk perempuan yang tahu apa yang dia mau.
+            </div>
+          </div>
+        </div></div>
+<div id="mkModal-s2" class="app-modal-screen" style="display:none;"><div style="background:#A8C3D8;height:3px;flex-shrink:0;"></div>
+        <div style="background:#fff;padding:10px 16px;border-bottom:0.5px solid #e8e8e8;flex-shrink:0;">
+          <div style="font-size:13px;font-weight:600;color:#1a1a1a;">Coupon pools</div>
+          <div style="font-size:10px;color:#888;">9 pools · 3 markets</div>
+        </div>
+        <div style="padding:12px 16px;flex:1;overflow:hidden;background:#f5f5f3;display:flex;flex-direction:column;gap:8px;">
+          <div style="font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#999;border-bottom:0.5px solid #e8e8e8;padding-bottom:5px;">Indonesia (ID)</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;">
+            <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 10px;text-align:center;">
+              <div style="font-size:9px;color:#888;margin-bottom:2px;">Welcome</div>
+              <div style="font-size:12px;font-weight:600;color:#1a1a1a;">10%</div>
+              <div style="font-size:8px;color:#A8C3D8;margin-top:1px;">WELCOME10ID</div>
+            </div>
+            <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 10px;text-align:center;">
+              <div style="font-size:9px;color:#888;margin-bottom:2px;">Win-back</div>
+              <div style="font-size:12px;font-weight:600;color:#1a1a1a;">15%</div>
+              <div style="font-size:8px;color:#A8C3D8;margin-top:1px;">WINBACK15ID</div>
+            </div>
+            <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 10px;text-align:center;">
+              <div style="font-size:9px;color:#888;margin-bottom:2px;">Birthday</div>
+              <div style="font-size:12px;font-weight:600;color:#1a1a1a;">20%</div>
+              <div style="font-size:8px;color:#A8C3D8;margin-top:1px;">BDAY20ID</div>
+            </div>
+          </div>
+          <div style="font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#999;border-bottom:0.5px solid #e8e8e8;padding-bottom:5px;margin-top:2px;">Malaysia (MY)</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;">
+            <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 10px;text-align:center;">
+              <div style="font-size:9px;color:#888;margin-bottom:2px;">Welcome</div>
+              <div style="font-size:12px;font-weight:600;color:#1a1a1a;">10%</div>
+              <div style="font-size:8px;color:#A8C3D8;margin-top:1px;">WELCOME10MY</div>
+            </div>
+            <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 10px;text-align:center;">
+              <div style="font-size:9px;color:#888;margin-bottom:2px;">Win-back</div>
+              <div style="font-size:12px;font-weight:600;color:#1a1a1a;">15%</div>
+              <div style="font-size:8px;color:#A8C3D8;margin-top:1px;">WINBACK15MY</div>
+            </div>
+            <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 10px;text-align:center;">
+              <div style="font-size:9px;color:#888;margin-bottom:2px;">Birthday</div>
+              <div style="font-size:12px;font-weight:600;color:#1a1a1a;">20%</div>
+              <div style="font-size:8px;color:#A8C3D8;margin-top:1px;">BDAY20MY</div>
+            </div>
+          </div>
+          <div style="font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#999;border-bottom:0.5px solid #e8e8e8;padding-bottom:5px;margin-top:2px;">Singapore (SG)</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;">
+            <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 10px;text-align:center;">
+              <div style="font-size:9px;color:#888;margin-bottom:2px;">Welcome</div>
+              <div style="font-size:12px;font-weight:600;color:#1a1a1a;">10%</div>
+              <div style="font-size:8px;color:#A8C3D8;margin-top:1px;">WELCOME10SG</div>
+            </div>
+            <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 10px;text-align:center;">
+              <div style="font-size:9px;color:#888;margin-bottom:2px;">Win-back</div>
+              <div style="font-size:12px;font-weight:600;color:#1a1a1a;">15%</div>
+              <div style="font-size:8px;color:#A8C3D8;margin-top:1px;">WINBACK15SG</div>
+            </div>
+            <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 10px;text-align:center;">
+              <div style="font-size:9px;color:#888;margin-bottom:2px;">Birthday</div>
+              <div style="font-size:12px;font-weight:600;color:#1a1a1a;">20%</div>
+              <div style="font-size:8px;color:#A8C3D8;margin-top:1px;">BDAY20SG</div>
+            </div>
+          </div>
+        </div></div>
+<div id="mkModal-s3" class="app-modal-screen" style="display:none;"><div style="background:#A8C3D8;height:3px;flex-shrink:0;"></div>
+        <div style="background:#fff;padding:10px 16px;border-bottom:0.5px solid #e8e8e8;flex-shrink:0;">
+          <div style="font-size:13px;font-weight:600;color:#1a1a1a;">To-do &amp; timeline</div>
+          <div style="font-size:10px;color:#888;">Phase 3 · Klaviyo setup</div>
+        </div>
+        <div style="padding:12px 16px;flex:1;overflow:hidden;background:#f5f5f3;display:flex;flex-direction:column;gap:6px;">
+          <div style="font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#999;border-bottom:0.5px solid #e8e8e8;padding-bottom:5px;">Completed</div>
+          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:11px;color:#1a1a1a;">5 Klaviyo flows setup</span>
+            <span style="font-size:9px;padding:2px 7px;border-radius:20px;background:#d4edda;color:#155724;">&#10003; Done</span>
+          </div>
+          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:11px;color:#1a1a1a;">9 email templates</span>
+            <span style="font-size:9px;padding:2px 7px;border-radius:20px;background:#d4edda;color:#155724;">&#10003; Done</span>
+          </div>
+          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:11px;color:#1a1a1a;">DNS &amp; deliverability setup</span>
+            <span style="font-size:9px;padding:2px 7px;border-radius:20px;background:#d4edda;color:#155724;">&#10003; Done</span>
+          </div>
+          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:11px;color:#1a1a1a;">3 signup forms</span>
+            <span style="font-size:9px;padding:2px 7px;border-radius:20px;background:#d4edda;color:#155724;">&#10003; Done</span>
+          </div>
+          <div style="font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#999;border-bottom:0.5px solid #e8e8e8;padding-bottom:5px;margin-top:2px;">In progress</div>
+          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:11px;color:#1a1a1a;">Back in Stock E2E test</span>
+            <span style="font-size:9px;padding:2px 7px;border-radius:20px;background:#fff3cd;color:#856404;">In progress</span>
+          </div>
+          <div style="background:#fff;border:0.5px solid #e0e0e0;border-radius:7px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:11px;color:#1a1a1a;">Boutique static codes</span>
+            <span style="font-size:9px;padding:2px 7px;border-radius:20px;background:#fff3cd;color:#856404;">In progress</span>
+          </div>
+        </div></div>
+
+      </div>
+      <div class="app-modal-dots" id="mkModal-dots"></div>
+      <div class="app-modal-lbl" id="mkModal-lbl"></div>
+    </div>
+    <button class="app-modal-nav" onclick="navAppModal('mkModal',1)">&#8250;</button>
+  </div>
+</div>
+<script>
+(function(){
+  var labels_mkModal = ['Campaign flows', 'Email copy', 'Coupon pools', 'Project tracker'];
+  var cur_mkModal = 0;
+  var total_mkModal = 4;
+  function show_mkModal() {
+    for(var i=0;i<total_mkModal;i++) {
+      var el=document.getElementById('mkModal-s'+i);
+      if(el) el.style.display = i===cur_mkModal ? '' : 'none';
+    }
+    document.getElementById('mkModal-lbl').textContent = labels_mkModal[cur_mkModal];
+    var d=document.getElementById('mkModal-dots'); d.innerHTML='';
+    for(var i=0;i<total_mkModal;i++) {
+      var dot=document.createElement('div'); dot.className='app-modal-dot'+(i===cur_mkModal?' on':'');
+      (function(idx){ dot.onclick=function(){cur_mkModal=idx;show_mkModal();}; })(i);
+      d.appendChild(dot);
+    }
+  }
+  window._openHandlers = window._openHandlers || {};
+  window._openHandlers['mkModal'] = function() { cur_mkModal=0; show_mkModal(); document.getElementById('mkModal-overlay').classList.add('open'); };
+  window._navHandlers = window._navHandlers || {};
+  window._navHandlers['mkModal'] = function(dir) { cur_mkModal=(cur_mkModal+dir+total_mkModal)%total_mkModal; show_mkModal(); };
+  document.getElementById('mkModal-overlay').addEventListener('click', function(e) {
+    if(e.target===this) this.classList.remove('open');
+  });
+  document.addEventListener('keydown', function(e) {
+    if(!document.getElementById('mkModal-overlay').classList.contains('open')) return;
+    if(e.key==='ArrowLeft') { cur_mkModal=(cur_mkModal-1+total_mkModal)%total_mkModal; show_mkModal(); }
+    if(e.key==='ArrowRight') { cur_mkModal=(cur_mkModal+1)%total_mkModal; show_mkModal(); }
+    if(e.key==='Escape') document.getElementById('mkModal-overlay').classList.remove('open');
+  });
+  show_mkModal();
+})();
+</script>
   </div>
 </div>
 
@@ -1352,7 +1575,229 @@
         <li>Mobile-first PWA</li>
       </ul>
     </div>
-    <a href="https://carat-app-pi.vercel.app" target="_blank" class="project-link">View live app →</a>
+    <button class="app-preview-btn" onclick="openAppModal('caratModal')">Preview app &#8594;</button>
+
+<div class="app-modal-overlay" id="caratModal-overlay">
+  <button class="app-modal-close" onclick="closeAppModal('caratModal')">&times;</button>
+  <div class="app-modal-layout">
+    <button class="app-modal-nav" onclick="navAppModal('caratModal',-1)">&#8249;</button>
+    <div class="app-modal-center">
+      <div style="width:320px;aspect-ratio:9/16;position:relative;">
+        <div id="caratModal-s0" class="app-modal-screen"><div style="background:#9AAED8;height:3px;flex-shrink:0;"></div>
+        <div style="background:#E8EEF7;padding:14px 16px 10px;flex-shrink:0;">
+          <div style="font-size:10px;color:#6B8BBF;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px;">Selamat datang</div>
+          <div style="font-size:22px;font-weight:500;color:#1a1a2e;">Rp 12.450.000</div>
+          <div style="font-size:11px;color:#6B8BBF;">Net worth · updated now</div>
+        </div>
+        <div style="padding:10px 16px;flex:1;overflow:hidden;background:#E8EEF7;display:flex;flex-direction:column;gap:8px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div style="background:#fff;border-radius:10px;padding:10px 12px;">
+              <div style="font-size:10px;color:#6B8BBF;margin-bottom:3px;">Pemasukan</div>
+              <div style="font-size:16px;font-weight:500;color:#1D9E75;">+5.000.000</div>
+              <div style="font-size:9px;color:#9AAED8;">Mei 2026</div>
+            </div>
+            <div style="background:#fff;border-radius:10px;padding:10px 12px;">
+              <div style="font-size:10px;color:#6B8BBF;margin-bottom:3px;">Pengeluaran</div>
+              <div style="font-size:16px;font-weight:500;color:#D85A30;">-2.340.000</div>
+              <div style="font-size:9px;color:#9AAED8;">Mei 2026</div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;padding:10px 12px;">
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+              <span style="font-size:11px;font-weight:500;color:#1a1a2e;">Saving rate</span>
+              <span style="font-size:11px;font-weight:500;color:#1D9E75;">53%</span>
+            </div>
+            <div style="height:6px;background:#E8EEF7;border-radius:3px;overflow:hidden;">
+              <div style="width:53%;height:100%;background:#9AAED8;border-radius:3px;"></div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;padding:10px 12px;">
+            <div style="font-size:11px;font-weight:500;color:#1a1a2e;margin-bottom:8px;">Transaksi terbaru</div>
+            <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:0.5px solid #E8EEF7;"><span style="font-size:11px;color:#444;">Gaji</span><span style="font-size:11px;color:#1D9E75;">+5.000.000</span></div>
+            <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:0.5px solid #E8EEF7;"><span style="font-size:11px;color:#444;">Groceries</span><span style="font-size:11px;color:#D85A30;">-450.000</span></div>
+            <div style="display:flex;justify-content:space-between;padding:4px 0;"><span style="font-size:11px;color:#444;">Kopi</span><span style="font-size:11px;color:#D85A30;">-55.000</span></div>
+          </div>
+        </div>
+        <div style="background:#fff;border-top:0.5px solid #E8EEF7;display:flex;padding:8px 0 10px;">
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AAED8" stroke-width="1.5"><path d="M3 12L12 4l9 8"/><path d="M5 10v9h4v-5h6v5h4v-9"/></svg><span style="font-size:9px;color:#9AAED8;font-weight:500;">Home</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg><span style="font-size:9px;color:#ccc;">Akun</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><div style="width:30px;height:30px;border-radius:50%;background:#9AAED8;display:flex;align-items:center;justify-content:center;margin-top:-8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg><span style="font-size:9px;color:#ccc;">Report</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg><span style="font-size:9px;color:#ccc;">Settings</span></div>
+        </div></div>
+<div id="caratModal-s1" class="app-modal-screen" style="display:none;"><div style="background:#9AAED8;padding:14px 16px 12px;flex-shrink:0;">
+          <div style="font-size:11px;color:rgba(255,255,255,0.7);margin-bottom:2px;">Net Worth</div>
+          <div style="font-size:24px;font-weight:500;color:#fff;">Rp 12.450.000</div>
+        </div>
+        <div style="padding:10px 16px;flex:1;overflow:hidden;background:#E8EEF7;display:flex;flex-direction:column;gap:8px;">
+          <div style="font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#6B8BBF;">Bank</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div style="background:#fff;border-radius:10px;overflow:hidden;">
+              <div style="height:4px;background:#1D9E75;"></div>
+              <div style="padding:10px 12px;">
+                <div style="font-size:10px;color:#6B8BBF;margin-bottom:2px;">BCA</div>
+                <div style="font-size:14px;font-weight:500;color:#1a1a2e;">Rp 8.200.000</div>
+              </div>
+            </div>
+            <div style="background:#fff;border-radius:10px;overflow:hidden;">
+              <div style="height:4px;background:#9AAED8;"></div>
+              <div style="padding:10px 12px;">
+                <div style="font-size:10px;color:#6B8BBF;margin-bottom:2px;">Mandiri</div>
+                <div style="font-size:14px;font-weight:500;color:#1a1a2e;">Rp 2.750.000</div>
+              </div>
+            </div>
+          </div>
+          <div style="font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#6B8BBF;margin-top:2px;">E-wallet</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div style="background:#fff;border-radius:10px;overflow:hidden;">
+              <div style="height:4px;background:#D85A30;"></div>
+              <div style="padding:10px 12px;">
+                <div style="font-size:10px;color:#6B8BBF;margin-bottom:2px;">GoPay</div>
+                <div style="font-size:14px;font-weight:500;color:#1a1a2e;">Rp 850.000</div>
+              </div>
+            </div>
+            <div style="background:#fff;border-radius:10px;overflow:hidden;">
+              <div style="height:4px;background:#9B59B6;"></div>
+              <div style="padding:10px 12px;">
+                <div style="font-size:10px;color:#6B8BBF;margin-bottom:2px;">OVO</div>
+                <div style="font-size:14px;font-weight:500;color:#1a1a2e;">Rp 650.000</div>
+              </div>
+            </div>
+          </div>
+          <div style="font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#6B8BBF;margin-top:2px;">Cash</div>
+          <div style="background:#fff;border-radius:10px;overflow:hidden;width:50%;">
+            <div style="height:4px;background:#F39C12;"></div>
+            <div style="padding:10px 12px;">
+              <div style="font-size:10px;color:#6B8BBF;margin-bottom:2px;">Dompet</div>
+              <div style="font-size:14px;font-weight:500;color:#1a1a2e;">Rp 0</div>
+            </div>
+          </div>
+        </div>
+        <div style="background:#fff;border-top:0.5px solid #E8EEF7;display:flex;padding:8px 0 10px;">
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><path d="M3 12L12 4l9 8"/><path d="M5 10v9h4v-5h6v5h4v-9"/></svg><span style="font-size:9px;color:#ccc;">Home</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AAED8" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg><span style="font-size:9px;color:#9AAED8;font-weight:500;">Akun</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><div style="width:30px;height:30px;border-radius:50%;background:#9AAED8;display:flex;align-items:center;justify-content:center;margin-top:-8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg><span style="font-size:9px;color:#ccc;">Report</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg><span style="font-size:9px;color:#ccc;">Settings</span></div>
+        </div></div>
+<div id="caratModal-s2" class="app-modal-screen" style="display:none;"><div style="background:#E8EEF7;padding:14px 16px 10px;flex-shrink:0;">
+          <div style="font-size:14px;font-weight:500;color:#1a1a2e;">Saving goals</div>
+          <div style="font-size:11px;color:#6B8BBF;">3 goals aktif</div>
+        </div>
+        <div style="padding:10px 16px;flex:1;overflow:hidden;background:#E8EEF7;display:flex;flex-direction:column;gap:8px;">
+          <div style="background:#fff;border-radius:10px;padding:12px 14px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
+              <div><div style="font-size:12px;font-weight:500;color:#1a1a2e;">Emergency fund</div><div style="font-size:10px;color:#6B8BBF;">Target: Rp 30.000.000</div></div>
+              <span style="font-size:10px;padding:2px 8px;border-radius:20px;background:#E8EEF7;color:#6B8BBF;">41%</span>
+            </div>
+            <div style="height:6px;background:#E8EEF7;border-radius:3px;overflow:hidden;"><div style="width:41%;height:100%;background:#9AAED8;border-radius:3px;"></div></div>
+            <div style="font-size:10px;color:#6B8BBF;margin-top:4px;">Rp 12.450.000 terkumpul</div>
+          </div>
+          <div style="background:#fff;border-radius:10px;padding:12px 14px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
+              <div><div style="font-size:12px;font-weight:500;color:#1a1a2e;">MacBook Pro</div><div style="font-size:10px;color:#6B8BBF;">Target: Rp 25.000.000</div></div>
+              <span style="font-size:10px;padding:2px 8px;border-radius:20px;background:#E8EEF7;color:#6B8BBF;">68%</span>
+            </div>
+            <div style="height:6px;background:#E8EEF7;border-radius:3px;overflow:hidden;"><div style="width:68%;height:100%;background:#1D9E75;border-radius:3px;"></div></div>
+            <div style="font-size:10px;color:#6B8BBF;margin-top:4px;">Rp 17.000.000 terkumpul</div>
+          </div>
+          <div style="background:#fff;border-radius:10px;padding:12px 14px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
+              <div><div style="font-size:12px;font-weight:500;color:#1a1a2e;">Liburan Seoul</div><div style="font-size:10px;color:#6B8BBF;">Target: Rp 15.000.000</div></div>
+              <span style="font-size:10px;padding:2px 8px;border-radius:20px;background:#E8EEF7;color:#6B8BBF;">20%</span>
+            </div>
+            <div style="height:6px;background:#E8EEF7;border-radius:3px;overflow:hidden;"><div style="width:20%;height:100%;background:#D85A30;border-radius:3px;"></div></div>
+            <div style="font-size:10px;color:#6B8BBF;margin-top:4px;">Rp 3.000.000 terkumpul</div>
+          </div>
+        </div>
+        <div style="background:#fff;border-top:0.5px solid #E8EEF7;display:flex;padding:8px 0 10px;">
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><path d="M3 12L12 4l9 8"/><path d="M5 10v9h4v-5h6v5h4v-9"/></svg><span style="font-size:9px;color:#ccc;">Home</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg><span style="font-size:9px;color:#ccc;">Akun</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><div style="width:30px;height:30px;border-radius:50%;background:#9AAED8;display:flex;align-items:center;justify-content:center;margin-top:-8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg><span style="font-size:9px;color:#ccc;">Report</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg><span style="font-size:9px;color:#ccc;">Settings</span></div>
+        </div></div>
+<div id="caratModal-s3" class="app-modal-screen" style="display:none;"><div style="background:#E8EEF7;padding:14px 16px 10px;flex-shrink:0;">
+          <div style="font-size:14px;font-weight:500;color:#1a1a2e;">AI Analysis</div>
+          <div style="font-size:11px;color:#6B8BBF;">Powered by Claude</div>
+        </div>
+        <div style="padding:10px 16px;flex:1;overflow:hidden;background:#E8EEF7;display:flex;flex-direction:column;gap:8px;">
+          <div style="background:#fff;border-radius:10px;padding:12px 14px;">
+            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:8px;">
+              <div style="width:28px;height:28px;border-radius:50%;background:#9AAED8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="font-size:11px;color:#fff;font-weight:500;">AI</span></div>
+              <div style="background:#E8EEF7;border-radius:0 10px 10px 10px;padding:9px 12px;flex:1;">
+                <div style="font-size:11px;color:#1a1a2e;line-height:1.5;">Saving rate kamu bulan ini <strong>53%</strong> — sangat bagus! Emergency fund sudah 41% dari target. Prioritaskan top-up supaya bisa capai 3 bulan pengeluaran.</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:8px;flex-direction:row-reverse;">
+              <div style="width:28px;height:28px;border-radius:50%;background:#E8EEF7;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="font-size:11px;color:#6B8BBF;">U</span></div>
+              <div style="background:#9AAED8;border-radius:10px 0 10px 10px;padding:9px 12px;flex:1;">
+                <div style="font-size:11px;color:#fff;line-height:1.5;">Berapa yang harus aku sisihkan tiap bulan buat emergency fund?</div>
+              </div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;padding:12px 14px;">
+            <div style="display:flex;align-items:flex-start;gap:8px;">
+              <div style="width:28px;height:28px;border-radius:50%;background:#9AAED8;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><span style="font-size:11px;color:#fff;font-weight:500;">AI</span></div>
+              <div style="background:#E8EEF7;border-radius:0 10px 10px 10px;padding:9px 12px;flex:1;">
+                <div style="font-size:11px;color:#1a1a2e;line-height:1.5;">Sisa target: <strong>Rp 17.550.000</strong>. Kalau sisihkan <strong>Rp 1.500.000/bulan</strong>, selesai dalam ~12 bulan. Mau aku buatkan reminder bulanan?</div>
+              </div>
+            </div>
+          </div>
+          <div style="background:#fff;border-radius:10px;padding:8px 14px;display:flex;gap:8px;align-items:center;">
+            <div style="flex:1;font-size:11px;color:#9AAED8;">Tanya sesuatu...</div>
+            <div style="width:28px;height:28px;border-radius:50%;background:#9AAED8;display:flex;align-items:center;justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
+          </div>
+        </div>
+        <div style="background:#fff;border-top:0.5px solid #E8EEF7;display:flex;padding:8px 0 10px;">
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><path d="M3 12L12 4l9 8"/><path d="M5 10v9h4v-5h6v5h4v-9"/></svg><span style="font-size:9px;color:#ccc;">Home</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg><span style="font-size:9px;color:#ccc;">Akun</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><div style="width:30px;height:30px;border-radius:50%;background:#9AAED8;display:flex;align-items:center;justify-content:center;margin-top:-8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg><span style="font-size:9px;color:#ccc;">Report</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg><span style="font-size:9px;color:#ccc;">Settings</span></div>
+        </div></div>
+
+      </div>
+      <div class="app-modal-dots" id="caratModal-dots"></div>
+      <div class="app-modal-lbl" id="caratModal-lbl"></div>
+    </div>
+    <button class="app-modal-nav" onclick="navAppModal('caratModal',1)">&#8250;</button>
+  </div>
+</div>
+<script>
+(function(){
+  var labels_caratModal = ['Dashboard', 'Akun', 'Goals', 'AI analysis'];
+  var cur_caratModal = 0;
+  var total_caratModal = 4;
+  function show_caratModal() {
+    for(var i=0;i<total_caratModal;i++) {
+      var el=document.getElementById('caratModal-s'+i);
+      if(el) el.style.display = i===cur_caratModal ? '' : 'none';
+    }
+    document.getElementById('caratModal-lbl').textContent = labels_caratModal[cur_caratModal];
+    var d=document.getElementById('caratModal-dots'); d.innerHTML='';
+    for(var i=0;i<total_caratModal;i++) {
+      var dot=document.createElement('div'); dot.className='app-modal-dot'+(i===cur_caratModal?' on':'');
+      (function(idx){ dot.onclick=function(){cur_caratModal=idx;show_caratModal();}; })(i);
+      d.appendChild(dot);
+    }
+  }
+  window._openHandlers = window._openHandlers || {};
+  window._openHandlers['caratModal'] = function() { cur_caratModal=0; show_caratModal(); document.getElementById('caratModal-overlay').classList.add('open'); };
+  window._navHandlers = window._navHandlers || {};
+  window._navHandlers['caratModal'] = function(dir) { cur_caratModal=(cur_caratModal+dir+total_caratModal)%total_caratModal; show_caratModal(); };
+  document.getElementById('caratModal-overlay').addEventListener('click', function(e) {
+    if(e.target===this) this.classList.remove('open');
+  });
+  document.addEventListener('keydown', function(e) {
+    if(!document.getElementById('caratModal-overlay').classList.contains('open')) return;
+    if(e.key==='ArrowLeft') { cur_caratModal=(cur_caratModal-1+total_caratModal)%total_caratModal; show_caratModal(); }
+    if(e.key==='ArrowRight') { cur_caratModal=(cur_caratModal+1)%total_caratModal; show_caratModal(); }
+    if(e.key==='Escape') document.getElementById('caratModal-overlay').classList.remove('open');
+  });
+  show_caratModal();
+})();
+</script>
   </div>
 </div>
 
@@ -1386,7 +1831,7 @@
   <div class="app-modal-layout">
     <button class="app-modal-nav" onclick="navAppModal('factoryModal',-1)">&#8249;</button>
     <div class="app-modal-center">
-      <div style="width:100%;aspect-ratio:16/9;position:relative;">
+      <div style="width:320px;aspect-ratio:9/16;position:relative;">
         <div id="factoryModal-s0" class="app-modal-screen"><div class="s-hdr"><span class="s-hdr-t">Raw Materials</span><span class="s-hdr-s">Admin</span></div>
         <div class="s-tabs"><div class="s-tab on">Stock</div><div class="s-tab">Buy</div><div class="s-tab">Sell</div><div class="s-tab">Value</div></div>
         <div class="s-body">
@@ -1529,124 +1974,7 @@
         <li>Mobile-first PWA, installable on staff devices</li>
       </ul>
     </div>
-    <button class="app-preview-btn" onclick="openAppModal('rehabModal')">Preview app &#8594;</button>
-
-<div class="app-modal-overlay" id="rehabModal-overlay">
-  <button class="app-modal-close" onclick="closeAppModal('rehabModal')">&times;</button>
-  <div class="app-modal-layout">
-    <button class="app-modal-nav" onclick="navAppModal('rehabModal',-1)">&#8249;</button>
-    <div class="app-modal-center">
-      <div style="width:100%;aspect-ratio:16/9;position:relative;">
-        <div id="rehabModal-s0" class="app-modal-screen"><div class="rh-hdr"><span class="rh-ht">RehabScheduler</span><span class="rh-hs">Fri, 9 May 2026</span></div>
-        <div class="rh-tabs"><div class="rh-tab on">Dashboard</div><div class="rh-tab">Schedule</div><div class="rh-tab">Patients</div></div>
-        <div class="rh-body">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-            <div style="background:#fff;border-radius:7px;padding:10px 12px;"><div style="font-size:10px;color:#666;margin-bottom:3px;">Patients today</div><div style="font-size:22px;font-weight:500;color:#111;">8</div></div>
-            <div style="background:#fff;border-radius:7px;padding:10px 12px;"><div style="font-size:10px;color:#666;margin-bottom:3px;">Sessions</div><div style="font-size:22px;font-weight:500;color:#0F6E56;">14</div></div>
-            <div style="background:#fff;border-radius:7px;padding:10px 12px;"><div style="font-size:10px;color:#666;margin-bottom:3px;">Missed</div><div style="font-size:22px;font-weight:500;color:#854F0B;">2</div></div>
-            <div style="background:#fff;border-radius:7px;padding:10px 12px;"><div style="font-size:10px;color:#666;margin-bottom:3px;">Therapists</div><div style="font-size:22px;font-weight:500;color:#111;">3</div></div>
-          </div>
-          <div style="font-size:10px;font-weight:500;letter-spacing:0.05em;text-transform:uppercase;color:#666;margin-top:2px;">Patient status</div>
-          <div class="rh-card"><div class="rh-row2"><div><div class="rh-name">Patient A</div><div class="rh-sub">Room 201 · PT + OT</div></div><span class="rh-pill rh-ok">On track</span></div><div class="rh-track"><div class="rh-fill" style="width:75%;background:#1D9E75;"></div></div></div>
-          <div class="rh-card"><div class="rh-row2"><div><div class="rh-name">Patient B</div><div class="rh-sub">Room 105 · ST</div></div><span class="rh-pill rh-risk">At risk</span></div><div class="rh-track"><div class="rh-fill" style="width:40%;background:#BA7517;"></div></div></div>
-          <div class="rh-card"><div class="rh-row2"><div><div class="rh-name">Patient C</div><div class="rh-sub">Room 303 · PT</div></div><span class="rh-pill rh-ok">On track</span></div><div class="rh-track"><div class="rh-fill" style="width:90%;background:#1D9E75;"></div></div></div>
-        </div></div>
-<div id="rehabModal-s1" class="app-modal-screen" style="display:none;"><div class="rh-hdr"><span class="rh-ht">Schedule</span><span class="rh-hs">Today</span></div>
-        <div style="background:#F1EFE8;flex:1;padding:12px 14px;">
-          <div class="s-brd">
-            <div class="s-brd-hd" style="grid-template-columns:52px repeat(3,1fr);">
-              <div class="s-brd-hc">Time</div><div class="s-brd-hc">T. A (PT)</div><div class="s-brd-hc">T. B (OT)</div><div class="s-brd-hc">T. C (ST)</div>
-            </div>
-            <div class="s-brd-r" style="grid-template-columns:52px repeat(3,1fr);"><div class="s-brd-t">08:00</div><div class="s-slot"><div class="s-spt">Pasien A</div></div><div class="s-slot"><div class="s-sot">Pasien D</div></div><div class="s-slot"></div></div>
-            <div class="s-brd-r" style="grid-template-columns:52px repeat(3,1fr);"><div class="s-brd-t">09:00</div><div class="s-slot"><div class="s-spt">Pasien E</div></div><div class="s-slot"></div><div class="s-slot"><div class="s-sst">Pasien B</div></div></div>
-            <div class="s-brd-r" style="grid-template-columns:52px repeat(3,1fr);"><div class="s-brd-t">10:00</div><div class="s-slot"></div><div class="s-slot"><div class="s-sot">Pasien A</div></div><div class="s-slot"><div class="s-sst">Pasien F</div></div></div>
-            <div class="s-brd-r" style="grid-template-columns:52px repeat(3,1fr);"><div class="s-brd-t">11:00</div><div class="s-slot"><div class="s-spt">Pasien C</div></div><div class="s-slot"><div class="s-sot">Pasien E</div></div><div class="s-slot"></div></div>
-            <div class="s-brd-r" style="grid-template-columns:52px repeat(3,1fr);background:#F7F5F2;"><div class="s-brd-t">12:00</div><div style="grid-column:2/-1;padding:6px 8px;font-size:10px;color:#AAA;display:flex;align-items:center;justify-content:center;">Lunch break</div></div>
-            <div class="s-brd-r" style="grid-template-columns:52px repeat(3,1fr);"><div class="s-brd-t">13:00</div><div class="s-slot"><div class="s-spt">Pasien G</div></div><div class="s-slot"><div class="s-sot">Pasien C</div></div><div class="s-slot"><div class="s-sst">Pasien H</div></div></div>
-          </div>
-        </div></div>
-<div id="rehabModal-s2" class="app-modal-screen" style="display:none;"><div class="rh-hdr"><span class="rh-ht">Therapists</span><span class="rh-hs">Productivity</span></div>
-        <div class="rh-body">
-          <div class="rh-card">
-            <div class="rh-row2" style="margin-bottom:7px;"><div><div class="rh-name">Therapist A</div><div class="rh-sub">Physical Therapy</div></div><span class="rh-pill rh-ok">Active</span></div>
-            <div class="rh-tbar"><div class="rh-tbar-l">Sessions</div><div class="rh-track" style="flex:1;margin-top:0;"><div class="rh-fill" style="width:80%;background:#1D9E75;"></div></div><div style="font-size:11px;color:#666;margin-left:6px;">4/5</div></div>
-            <div class="rh-tbar"><div class="rh-tbar-l">Minutes</div><div class="rh-track" style="flex:1;margin-top:0;"><div class="rh-fill" style="width:72%;background:#185FA5;"></div></div><div style="font-size:11px;color:#666;margin-left:6px;">216</div></div>
-          </div>
-          <div class="rh-card">
-            <div class="rh-row2" style="margin-bottom:7px;"><div><div class="rh-name">Therapist B</div><div class="rh-sub">Occupational Therapy</div></div><span class="rh-pill rh-ok">Active</span></div>
-            <div class="rh-tbar"><div class="rh-tbar-l">Sessions</div><div class="rh-track" style="flex:1;margin-top:0;"><div class="rh-fill" style="width:60%;background:#1D9E75;"></div></div><div style="font-size:11px;color:#666;margin-left:6px;">3/5</div></div>
-            <div class="rh-tbar"><div class="rh-tbar-l">Minutes</div><div class="rh-track" style="flex:1;margin-top:0;"><div class="rh-fill" style="width:55%;background:#185FA5;"></div></div><div style="font-size:11px;color:#666;margin-left:6px;">165</div></div>
-          </div>
-          <div class="rh-card">
-            <div class="rh-row2" style="margin-bottom:7px;"><div><div class="rh-name">Therapist C</div><div class="rh-sub">Speech Therapy</div></div><span class="rh-pill rh-risk">Missed 1</span></div>
-            <div class="rh-tbar"><div class="rh-tbar-l">Sessions</div><div class="rh-track" style="flex:1;margin-top:0;"><div class="rh-fill" style="width:40%;background:#BA7517;"></div></div><div style="font-size:11px;color:#666;margin-left:6px;">2/5</div></div>
-          </div>
-        </div></div>
-<div id="rehabModal-s3" class="app-modal-screen" style="display:none;"><div style="opacity:0.3;display:flex;flex-direction:column;overflow:hidden;flex:1;">
-          <div class="rh-hdr"><span class="rh-ht">RehabScheduler</span><span class="rh-hs">9 May 2026</span></div>
-          <div class="rh-body">
-            <div class="rh-card"><div class="rh-name">Patient A</div><div class="rh-track" style="margin-top:6px;"><div class="rh-fill" style="width:75%;background:#1D9E75;"></div></div></div>
-            <div class="rh-card"><div class="rh-name">Patient B</div><div class="rh-track" style="margin-top:6px;"><div class="rh-fill" style="width:40%;background:#BA7517;"></div></div></div>
-          </div>
-        </div>
-        <div class="rh-sheet-bg" style="flex-shrink:0;">
-          <div class="rh-sheet">
-            <div class="rh-sheet-hdr"><span class="rh-sheet-t">Add session</span><span class="rh-sheet-x">&times;</span></div>
-            <div class="rh-sheet-body">
-              <div class="rh-mf"><div class="rh-mfl">Patient</div><div class="rh-mfi">Patient A &mdash; Room 201</div></div>
-              <div class="rh-mf"><div class="rh-mfl">Therapist</div><div class="rh-mfi">Therapist A (PT)</div></div>
-              <div class="rh-mf2">
-                <div class="rh-mf"><div class="rh-mfl">Time</div><div class="rh-mfi">14:00</div></div>
-                <div class="rh-mf"><div class="rh-mfl">Duration</div><div class="rh-mfi">60 min</div></div>
-              </div>
-              <div class="rh-mf"><div class="rh-mfl">Type</div><div class="rh-mfpt">Physical Therapy (PT)</div></div>
-            </div>
-            <div class="rh-mbtns"><div class="rh-mbg">Cancel</div><div class="rh-mbs">Save</div></div>
-          </div>
-        </div></div>
-
-      </div>
-      <div class="app-modal-dots" id="rehabModal-dots"></div>
-      <div class="app-modal-lbl" id="rehabModal-lbl"></div>
-    </div>
-    <button class="app-modal-nav" onclick="navAppModal('rehabModal',1)">&#8250;</button>
-  </div>
-</div>
-<script>
-(function(){
-  var labels_rehabModal = ['Dashboard', 'Schedule board', 'Therapist productivity', 'Add session'];
-  var cur_rehabModal = 0;
-  var total_rehabModal = 4;
-  function show_rehabModal() {
-    for(var i=0;i<total_rehabModal;i++) {
-      var el=document.getElementById('rehabModal-s'+i);
-      if(el) el.style.display = i===cur_rehabModal ? '' : 'none';
-    }
-    document.getElementById('rehabModal-lbl').textContent = labels_rehabModal[cur_rehabModal];
-    var d=document.getElementById('rehabModal-dots'); d.innerHTML='';
-    for(var i=0;i<total_rehabModal;i++) {
-      var dot=document.createElement('div'); dot.className='app-modal-dot'+(i===cur_rehabModal?' on':'');
-      (function(idx){ dot.onclick=function(){cur_rehabModal=idx;show_rehabModal();}; })(i);
-      d.appendChild(dot);
-    }
-  }
-  window._openHandlers = window._openHandlers || {};
-  window._openHandlers['rehabModal'] = function() { cur_rehabModal=0; show_rehabModal(); document.getElementById('rehabModal-overlay').classList.add('open'); };
-  window.closeAppModal = window.closeAppModal || function(id) { document.getElementById(id+'-overlay').classList.remove('open'); };
-  window._navHandlers = window._navHandlers || {};
-  window._navHandlers['rehabModal'] = function(dir) { cur_rehabModal=(cur_rehabModal+dir+total_rehabModal)%total_rehabModal; show_rehabModal(); };
-  document.getElementById('rehabModal-overlay').addEventListener('click', function(e) {
-    if(e.target===this) this.classList.remove('open');
-  });
-  document.addEventListener('keydown', function(e) {
-    if(!document.getElementById('rehabModal-overlay').classList.contains('open')) return;
-    if(e.key==='ArrowLeft') { cur_rehabModal=(cur_rehabModal-1+total_rehabModal)%total_rehabModal; show_rehabModal(); }
-    if(e.key==='ArrowRight') { cur_rehabModal=(cur_rehabModal+1)%total_rehabModal; show_rehabModal(); }
-    if(e.key==='Escape') document.getElementById('rehabModal-overlay').classList.remove('open');
-  });
-  show_rehabModal();
-})();
-</script>
+    
     <a href="https://varendemo-rehab-scheduler.netlify.app/" target="_blank" class="project-link" style="margin-top:20px;">View live demo &#8594;</a>
   </div>
 </div>
