@@ -987,7 +987,6 @@
   display: block;
 }
 
-
   .work-card-img .work-illus-img {
     width: 60%; height: 60%;
     object-fit: contain !important;
@@ -997,38 +996,24 @@
     filter: grayscale(100%);
     transition: filter 0.4s ease;
   }
-  .work-card:hover .work-card-img .work-illus-img { filter: grayscale(0%); }[data-id="rehab"]      { order: 2; }
-    [data-id="activation"] { order: 3; }
-    [data-id="crm"]        { order: 4; }
-    [data-id="systems"]    { order: 5; }
-    [data-id="factory"]    { order: 6; }
-    [data-id="shopify"]    { order: 7; }
-    [data-id="webapp"]     { order: 8; }
-  }[data-id="rehab"]      { order: 2; }
-    [data-id="crm"]        { order: 3; }
-    [data-id="activation"] { order: 4; }
-    [data-id="systems"]    { order: 5; }
-    [data-id="factory"]    { order: 6; }
-    [data-id="webapp"]     { order: 7; }
-    [data-id="shopify"]    { order: 8; }
-  }
+  .work-card:hover .work-card-img .work-illus-img { filter: grayscale(0%); }
 
   /* Mobile
 
 
-  /* Desktop 4-col checkerboard */
+  /* Desktop 4-col zigzag */
   @media (min-width: 769px) {
     [data-id="campaign"]   { order: 1; }
     [data-id="rehab"]      { order: 2; }
     [data-id="activation"] { order: 3; }
     [data-id="crm"]        { order: 4; }
-    [data-id="factory"]    { order: 5; }
-    [data-id="systems"]    { order: 6; }
-    [data-id="webapp"]     { order: 7; }
-    [data-id="shopify"]    { order: 8; }
+    [data-id="webapp"]     { order: 5; }
+    [data-id="shopify"]    { order: 6; }
+    [data-id="factory"]    { order: 7; }
+    [data-id="systems"]    { order: 8; }
   }
 
-  /* Mobile 2-col checkerboard */
+  /* Mobile 2-col zigzag */
   @media (max-width: 768px) {
     [data-id="campaign"]   { order: 1; }
     [data-id="rehab"]      { order: 2; }
@@ -1181,6 +1166,10 @@
 <!-- Campaign -->
 <div class="page fade-in" id="page-campaign">
   <div class="project-page">
+    <div class="project-cat">Creative Direction</div>
+    <h1 class="project-title">Campaign Direction — <em>Concept to Execution</em></h1>
+    <div class="project-meta">
+      <div class="project-meta-item"><div class="project-meta-label">Role</div><div class="project-meta-value">Art Director</div></div>
       <div class="project-meta-item"><div class="project-meta-label">Campaigns</div><div class="project-meta-value">6</div></div>
       <div class="project-meta-item"><div class="project-meta-label">Years</div><div class="project-meta-value">2021–2026</div></div>
     </div>
@@ -1196,12 +1185,9 @@
         <li>Content rollout strategy</li>
       </ul>
     </div>
-    <div class="project-gallery">
-      <div class="project-gallery-img"><div style="width:100%;height:100%;background:#C8C4BC;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Photo</div></div>
-      <div class="project-gallery-img"><div style="width:100%;height:100%;background:#B8B4AC;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Photo</div></div>
-      <div class="project-gallery-img full"><div style="width:100%;height:100%;background:#D0CCC4;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Photo</div></div>
-
-    <button class="app-preview-btn" onclick="openCampaignModal()">View campaign &#8594;</button>
+    <button class="app-preview-btn" onclick="openCampaignModal()" style="margin-top:20px;">View campaign &#8594;</button>
+  </div>
+</div>
 
 <div class="app-modal-overlay" id="campaignModal-overlay">
   <button class="app-modal-close" onclick="document.getElementById('campaignModal-overlay').classList.remove('open')">&times;</button>
@@ -1275,13 +1261,14 @@
   show();
 })();
 </script>
-    </div>
-  </div>
-</div>
 
 <!-- Activation -->
 <div class="page fade-in" id="page-activation">
   <div class="project-page">
+    <div class="project-cat">Brand Activation</div>
+    <h1 class="project-title">Hertape Laundry Room <em>& Her Airlines</em></h1>
+    <div class="project-meta">
+      <div class="project-meta-item"><div class="project-meta-label">Role</div><div class="project-meta-value">Producer + AD</div></div>
       <div class="project-meta-item"><div class="project-meta-label">Pop Ups</div><div class="project-meta-value">3</div></div>
       <div class="project-meta-item"><div class="project-meta-label">Days</div><div class="project-meta-value">9</div></div>
       <div class="project-meta-item"><div class="project-meta-label">Revenue Growth</div><div class="project-meta-value">4×</div></div>
@@ -1299,12 +1286,9 @@
         <li>Branded freebies, packaging & sensory touchpoints</li>
       </ul>
     </div>
-    <div class="project-gallery">
-      <div class="project-gallery-img"><div style="width:100%;height:100%;background:#C8C4BC;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Photo</div></div>
-      <div class="project-gallery-img"><div style="width:100%;height:100%;background:#B8B4AC;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Photo</div></div>
-      <div class="project-gallery-img full"><div style="width:100%;height:100%;background:#D0CCC4;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:0.1em;text-transform:uppercase;">Photo</div></div>
-
-    <button class="app-preview-btn" onclick="openLaundryModal()">View activation &#8594;</button>
+    <button class="app-preview-btn" onclick="openLaundryModal()" style="margin-top:20px;">View activation &#8594;</button>
+  </div>
+</div>
 
 <div class="app-modal-overlay" id="laundryModal-overlay">
   <button class="app-modal-close" onclick="document.getElementById('laundryModal-overlay').classList.remove('open')">&times;</button>
@@ -1366,9 +1350,6 @@
   show();
 })();
 </script>
-    </div>
-  </div>
-</div>
 
 <!-- Shopify -->
 <div class="page fade-in" id="page-shopify">
