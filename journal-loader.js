@@ -250,16 +250,19 @@
     renderArticle: renderArticle
   };
 
-  function maybeRenderForCurrentHash() {
+  async function maybeRenderForCurrentHash() {
     const hash = location.hash.replace('#', '');
     if (hash === 'journal') {
       renderJournalList();
     } else if (hash && hash.startsWith('journal-')) {
       const slug = hash.replace('journal-', '');
-      renderArticle(slug);
+      const success = await renderArticle(slug);
+      if (success && typeof window.showPage === 'function') {
+        window.showPage(hash);
+      }
     }
   }
-
+  
   window.addEventListener('hashchange', maybeRenderForCurrentHash);
   window.addEventListener('load', () => {
     fetchJournalList().then(files => { JOURNAL_FILES = files; });
