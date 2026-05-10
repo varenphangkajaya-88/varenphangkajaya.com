@@ -1,12 +1,14 @@
 ---
 title: If I could start my business again, I'd do these five things differently
 date: 2026-03-14
-excerpt: Hindsight is a strange gift. You can't undo the years, but you can name what you wish you'd known. Five things I'd do differently if I had to start again.
-cover: ""
-hero: ""
+excerpt: Hindsight is a strange gift. You can't undo the years, but you can name
+  what you wish you'd known. Five things I'd do differently if I had to start
+  again.
+cover: /images/dscf7421-1-.jpg
+hero: /images/dscf7421-1-.jpg
 pair_photos:
-  left: ""
-  right: ""
+  left: /images/img_5989-2.jpg
+  right: /images/img_6167-2.jpg
 ---
 
 Hindsight is a strange gift. You can't undo the years, but you can name what you wish you'd known. After running Hertape for a few years now — through pop-ups, marketplaces, scaling, and rebuilding — these are the five things I'd do differently if I had to start again from day one.
