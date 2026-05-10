@@ -4,11 +4,11 @@ date: 2026-02-23
 excerpt: A few weeks ago, Hertape opened its first pop-up — and then a second
   one, in another city, almost back to back. Five things no founder course could
   have prepared me for.
-cover: ""
-hero: /images/16e28325-af4e-4ab0-9b3c-bc9bc4fc2d8a.jpg
+cover: /images/16e28325-af4e-4ab0-9b3c-bc9bc4fc2d8a-1-.jpg
+hero: /images/16e28325-af4e-4ab0-9b3c-bc9bc4fc2d8a-1-.jpg
 pair_photos:
-  left: /images/dscf6991.jpg
-  right: /images/dscf7429.jpg
+  left: /images/dscf7565-2-1-.jpg
+  right: /images/dscf7625-1-.jpg
 ---
 A few weeks ago, Hertape opened its first pop-up — and then a second one, in another city, almost back to back. It was the most ambitious thing I've built so far. And somewhere between the build-up, the breakdown, and the buzz of opening day, I learned five things no founder course could have prepared me for.
 
