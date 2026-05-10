@@ -6,6 +6,31 @@ media_folder: "images"
 public_folder: "/images"
 
 collections:
+  - name: "journal"
+    label: "Journal"
+    label_singular: "Article"
+    folder: "_journals"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{year}}"
+    sortable_fields: ['date', 'title']
+    fields:
+      - { label: "Title", name: "title", widget: "string", hint: "Headline of the article" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Excerpt", name: "excerpt", widget: "text", hint: "Short tagline shown on journal list (1-2 sentences)" }
+      - { label: "Cover Photo (4:5 ratio recommended)", name: "cover", widget: "image", required: false, hint: "Shown on journal list grid" }
+      - { label: "Hero Photo (16:9 ratio recommended)", name: "hero", widget: "image", required: false, hint: "Shown at top of article page" }
+      - { label: "Body", name: "body", widget: "markdown", hint: "Use ** for bold, * for italic, 1. for numbered lists" }
+      - label: "Pair Photos (optional)"
+        name: "pair_photos"
+        widget: "object"
+        required: false
+        collapsed: true
+        hint: "Two photos side-by-side, shown in middle of article. Leave empty if not needed."
+        fields:
+          - { label: "Left Photo (4:5 ratio)", name: "left", widget: "image", required: false }
+          - { label: "Right Photo (4:5 ratio)", name: "right", widget: "image", required: false }
+
   - name: "homepage"
     label: "Homepage"
     files:
@@ -36,13 +61,8 @@ collections:
         name: "campaigns"
         file: "_data/campaigns.json"
         fields:
-          - label: "Cover Photo"
-            name: "cover"
-            widget: "image"
-            required: false
-          - label: "Description"
-            name: "description"
-            widget: "text"
+          - { label: "Cover Photo", name: "cover", widget: "image", required: false }
+          - { label: "Description", name: "description", widget: "text" }
           - label: "Campaign Photos"
             name: "photos"
             widget: "list"
@@ -55,13 +75,8 @@ collections:
         name: "activation"
         file: "_data/activation.json"
         fields:
-          - label: "Cover Photo"
-            name: "cover"
-            widget: "image"
-            required: false
-          - label: "Description"
-            name: "description"
-            widget: "text"
+          - { label: "Cover Photo", name: "cover", widget: "image", required: false }
+          - { label: "Description", name: "description", widget: "text" }
           - label: "Hertape Laundry — Photos"
             name: "laundry_photos"
             widget: "list"
@@ -72,103 +87,3 @@ collections:
             widget: "list"
             fields:
               - { label: "Photo", name: "photo", widget: "image" }
-
-  - name: "shopify"
-    label: "Shopify & CRM"
-    files:
-      - label: "Hertape — Shopify Build"
-        name: "hertape_shop"
-        file: "_data/hertape_shop.json"
-        fields:
-          - label: "Cover Photo"
-            name: "cover"
-            widget: "image"
-            required: false
-          - label: "Description"
-            name: "description"
-            widget: "text"
-          - label: "Store Screenshots"
-            name: "photos"
-            widget: "list"
-            fields:
-              - { label: "Photo", name: "photo", widget: "image" }
-
-      - label: "Maison Kolori — CRM"
-        name: "maison"
-        file: "_data/maison.json"
-        fields:
-          - label: "Cover Photo"
-            name: "cover"
-            widget: "image"
-            required: false
-          - label: "Description"
-            name: "description"
-            widget: "text"
-          - label: "Work Photos"
-            name: "photos"
-            widget: "list"
-            fields:
-              - { label: "Photo", name: "photo", widget: "image" }
-
-  - name: "systems"
-    label: "Systems & Web App"
-    files:
-      - label: "Operational Systems"
-        name: "ops"
-        file: "_data/ops.json"
-        fields:
-          - label: "Cover Photo"
-            name: "cover"
-            widget: "image"
-            required: false
-          - label: "Description"
-            name: "description"
-            widget: "text"
-          - label: "Hertape Smart App — Photos"
-            name: "smartapp_photos"
-            widget: "list"
-            fields:
-              - { label: "Photo", name: "photo", widget: "image" }
-          - label: "Cahaya Walet Jaya — Photos"
-            name: "cwj_photos"
-            widget: "list"
-            fields:
-              - { label: "Photo", name: "photo", widget: "image" }
-
-      - label: "Moneymani Web App"
-        name: "finance"
-        file: "_data/finance.json"
-        fields:
-          - label: "Cover Photo"
-            name: "cover"
-            widget: "image"
-            required: false
-          - label: "Description"
-            name: "description"
-            widget: "text"
-          - label: "App Screenshots"
-            name: "photos"
-            widget: "list"
-            fields:
-              - { label: "Photo", name: "photo", widget: "image" }
-
-  - name: "journal"
-    label: "Journal"
-    folder: "_journals"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - label: "Title"
-        name: "title"
-        widget: "string"
-      - label: "Date"
-        name: "date"
-        widget: "datetime"
-        format: "YYYY-MM-DD"
-      - label: "Cover Photo"
-        name: "cover"
-        widget: "image"
-        required: false
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
