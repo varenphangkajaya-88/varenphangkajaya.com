@@ -94,7 +94,7 @@
 
   async function fetchJournalList() {
     try {
-      const res = await fetch('/_journals/index.json?t=' + Date.now());
+      const res = await fetch('/journals/index.json?t=' + Date.now());
       if (res.ok) {
         const data = await res.json();
         return data.files || [];
@@ -106,7 +106,7 @@
   }
 
   async function fetchArticle(filename) {
-    const res = await fetch('/_journals/' + filename + '?t=' + Date.now());
+    const res = await fetch('/journals/' + filename + '?t=' + Date.now());
     if (!res.ok) throw new Error('Failed to fetch ' + filename);
     const text = await res.text();
     return parseArticle(text);
