@@ -1,6 +1,6 @@
 // ═══════════════════════════════════════════════════════
 // JOURNAL LOADER
-// Fetches markdown files from _journals/ and renders to HTML
+// Fetches markdown files from journals/ and renders to HTML
 // ═══════════════════════════════════════════════════════
 
 (function() {
