@@ -1,0 +1,52 @@
+name: Build Journal Index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_journals/**'
+  workflow_dispatch:
+
+jobs:
+  build-index:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Generate index.json
+        run: |
+          cd _journals
+          python3 << 'EOF'
+          import json
+          import os
+          from pathlib import Path
+
+          files = sorted([
+              f.name for f in Path('.').iterdir()
+              if f.is_file() and f.name.endswith('.md') and not f.name.startswith('.')
+          ])
+
+          index = {
+              'files': files,
+              'count': len(files)
+          }
+
+          with open('index.json', 'w') as f:
+              json.dump(index, f, indent=2)
+
+          print(f"Generated index.json with {len(files)} articles:")
+          for f in files:
+              print(f"  - {f}")
+          EOF
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _journals/index.json
+          git diff --staged --quiet || git commit -m "Auto-update journal index"
+          git push
