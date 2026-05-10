@@ -9,7 +9,7 @@ collections:
   - name: "journal"
     label: "Journal"
     label_singular: "Article"
-    folder: "_journals"
+    folder: "journals"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     summary: "{{title}} — {{year}}"
