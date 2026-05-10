@@ -5,7 +5,7 @@ excerpt: A few weeks ago, Hertape opened its first pop-up — and then a second
   one, in another city, almost back to back. Five things no founder course could
   have prepared me for.
 cover: ""
-hero: ""
+hero: /images/16e28325-af4e-4ab0-9b3c-bc9bc4fc2d8a.jpg
 pair_photos:
   left: /images/dscf6991.jpg
   right: /images/dscf7429.jpg
