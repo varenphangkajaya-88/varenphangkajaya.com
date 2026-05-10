@@ -114,7 +114,13 @@
 
   function formatYear(dateStr) {
     if (!dateStr) return '';
-    return dateStr.substring(0, 4);
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const parts = dateStr.split('-');
+    if (parts.length < 2) return dateStr.substring(0, 4);
+    const year = parts[0];
+    const monthIdx = parseInt(parts[1], 10) - 1;
+    if (monthIdx < 0 || monthIdx > 11) return year;
+    return `${months[monthIdx]} ${year}`;
   }
 
   function renderTitle(title) {
