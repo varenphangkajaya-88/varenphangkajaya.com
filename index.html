@@ -973,7 +973,28 @@
   }
   .app-preview-btn:hover { opacity: 0.6; }
 
+  /* Mobile app modal — center properly */
+  @media (max-width: 600px) {
+    .app-modal-layout {
+      padding: 20px 12px 20px;
+      gap: 8px;
+    }
+    .app-modal-nav {
+      width: 32px; height: 32px;
+      flex-shrink: 0;
+    }
+    .app-modal-center > div[style*="width:320px"],
+    .app-modal-center > div[style*="max-width:480px"],
+    .app-modal-center > div[style*="max-width:400px"] {
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+    .app-modal-close {
+      top: 12px; right: 14px;
+    }
+  }
 
+  
   .work-card:hover .work-card-img img { filter: grayscale(0%) !important; }
   .work-card-img img { transition: filter 0.4s ease; }
 
