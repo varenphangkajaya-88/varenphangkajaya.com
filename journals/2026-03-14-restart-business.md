@@ -4,8 +4,6 @@ date: 2026-03-14
 excerpt: Hindsight is a strange gift. You can't undo the years, but you can name what you wish you'd known. Five things I'd do differently if I had to start again.
 cover: ""
 hero: ""
-cover: ""
-hero: ""
 pair_photos:
   left: ""
   right: ""
