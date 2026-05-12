@@ -48,10 +48,13 @@
     cursor: pointer;
   }
   .nav-right {
-    display: flex;
-    gap: 28px;
-    align-items: center;
-  }
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .nav-right { gap: 16px; }
+}
   .nav-links a, .nav-back {
     font-family: 'DM Sans', sans-serif;
     font-size: 11px;
@@ -67,7 +70,7 @@
   }
   .nav-links { display: flex; gap: 24px; }
   .nav-links a:hover, .nav-back:hover { color: var(--text); }
-  .nav-back { display: none; }
+  .nav-back { display: none; margin-right: 4px; }
 
   /* ── PAGES ── */
   .page { display: none; }
