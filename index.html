@@ -54,9 +54,6 @@
   flex-wrap: nowrap;
   flex-shrink: 0;
 }
-@media (max-width: 768px) {
-  .nav-right { gap: 12px; }
-}
   .nav-links a, .nav-back {
     font-family: 'DM Sans', sans-serif;
     font-size: 11px;
@@ -72,8 +69,23 @@
   }
   .nav-links { display: flex; gap: 24px; }
   .nav-links a:hover, .nav-back:hover { color: var(--text); }
-  .nav-back { display: none; margin-right: 0; white-space: nowrap; padding: 6px 0; font-size: 11px; letter-spacing: 0.1em; }
-
+  .nav-back { display: none; margin-right: 4px; white-space: nowrap; }
+@media (max-width: 768px) {
+  .nav-back { 
+    display: none; 
+    position: absolute; 
+    top: 56px; 
+    left: 20px; 
+    margin: 0;
+    padding: 8px 0;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+  }
+  .nav-back.show-mobile { display: inline-block; }
+  .site-nav { position: relative; }
+  body.has-back-btn { padding-top: 50px; }
+}
+  
   /* ── PAGES ── */
   .page { display: none; }
   .page.active { display: block; }
@@ -2003,7 +2015,15 @@
     }
     const isHome = id === 'home';
     document.getElementById('nav-links').style.display = isHome ? 'flex' : 'none';
-    document.getElementById('nav-back').style.display = isHome ? 'none' : 'inline-block';
+    const navBack = document.getElementById('nav-back');
+if (isHome) {
+  navBack.style.display = 'none';
+  navBack.classList.remove('show-mobile');
+  document.body.classList.remove('has-back-btn');
+} else {
+  navBack.style.display = 'inline-block';
+  navBack.classList.add('show-mobile');
+  document.body.classList.add('has-back-btn');
   }
 
   window.openProject = function(id) {
