@@ -2012,20 +2012,20 @@
       page.classList.add('active');
       window.scrollTo(0, 0);
       setTimeout(scaleMocks, 10);
-    
+    }
     const isHome = id === 'home';
     document.getElementById('nav-links').style.display = isHome ? 'flex' : 'none';
     const navBack = document.getElementById('nav-back');
-if (isHome) {
-  navBack.style.display = 'none';
-  navBack.classList.remove('show-mobile');
-  document.body.classList.remove('has-back-btn');
-} else {
-  navBack.style.display = 'inline-block';
-  navBack.classList.add('show-mobile');
-  document.body.classList.add('has-back-btn');
-  }
+    if (isHome) {
+      navBack.style.display = 'none';
+      navBack.classList.remove('show-mobile');
+      document.body.classList.remove('has-back-btn');
+    } else {
+      navBack.style.display = 'inline-block';
+      navBack.classList.add('show-mobile');
+      document.body.classList.add('has-back-btn');
     }
+  }
 
   window.openProject = function(id) {
     location.hash = id;
