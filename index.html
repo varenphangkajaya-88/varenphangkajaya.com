@@ -2012,7 +2012,7 @@
       page.classList.add('active');
       window.scrollTo(0, 0);
       setTimeout(scaleMocks, 10);
-    }
+    
     const isHome = id === 'home';
     document.getElementById('nav-links').style.display = isHome ? 'flex' : 'none';
     const navBack = document.getElementById('nav-back');
@@ -2025,6 +2025,7 @@ if (isHome) {
   navBack.classList.add('show-mobile');
   document.body.classList.add('has-back-btn');
   }
+    }
 
   window.openProject = function(id) {
     location.hash = id;
