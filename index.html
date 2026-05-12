@@ -589,6 +589,40 @@
   .journal-article-body li { line-height: 1.9; }
   .journal-article-body strong { font-weight: 400; color: var(--text); }
 
+  /* Services */
+  .services-page { padding: 40px 72px 80px; }
+  .services-intro { font-size: 14px; font-weight: 300; color: var(--text-2); line-height: 1.75; margin-bottom: 60px; max-width: 600px; }
+  .service-item { border-top: 0.5px solid var(--border); }
+  .service-item:last-of-type { border-bottom: 0.5px solid var(--border); }
+  .service-head { display: flex; align-items: center; justify-content: space-between; padding: 28px 0; cursor: pointer; gap: 20px; transition: color 0.2s; }
+  .service-head:hover .service-title { color: var(--text); }
+  .service-num { font-size: 10px; font-weight: 300; letter-spacing: 0.22em; color: var(--text-3); min-width: 32px; }
+  .service-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(24px, 3vw, 32px); line-height: 1.1; color: var(--text); flex: 1; transition: color 0.2s; letter-spacing: -0.01em; }
+  .service-title em { font-style: italic; }
+  .service-toggle { font-size: 20px; color: var(--text-2); transition: transform 0.3s ease; flex-shrink: 0; font-weight: 300; }
+  .service-item.open .service-toggle { transform: rotate(45deg); }
+  .service-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; }
+  .service-item.open .service-body { max-height: 2000px; padding-bottom: 36px; }
+  .service-desc { font-size: 14px; font-weight: 300; line-height: 1.85; color: var(--text); margin: 0 0 32px 52px; max-width: 600px; }
+  .service-block { margin: 0 0 28px 52px; }
+  .service-block-title { font-size: 10px; font-weight: 300; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-3); margin-bottom: 16px; }
+  .service-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; }
+  .service-list li { font-size: 14px; font-weight: 300; line-height: 1.6; color: var(--text); padding: 11px 0; border-bottom: 0.5px solid var(--border); display: flex; align-items: flex-start; gap: 12px; }
+  .service-list li:last-child { border-bottom: none; }
+  .service-list li::before { content: '—'; color: var(--text-3); flex-shrink: 0; font-size: 12px; }
+  .services-cta { margin-top: 80px; padding-top: 40px; border-top: 0.5px solid var(--border); text-align: center; }
+  .services-cta-text { font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: clamp(22px, 2.8vw, 32px); color: var(--text); margin-bottom: 20px; letter-spacing: 0.01em; }
+  .services-cta-btn { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); text-decoration: none; background: none; border: none; border-bottom: 0.5px solid var(--text); padding-bottom: 2px; cursor: pointer; transition: opacity 0.2s; }
+  .services-cta-btn:hover { opacity: 0.6; }
+  @media (max-width: 600px) {
+    .services-page { padding: 32px 20px 60px; }
+    .service-head { padding: 22px 0; gap: 12px; }
+    .service-num { min-width: 24px; }
+    .service-desc { margin-left: 36px; }
+    .service-block { margin-left: 36px; }
+    .services-cta { margin-top: 48px; padding-top: 32px; }
+  }
+
   /* Contact */
   .contact-page { padding: 40px 72px 80px; }
   .contact-intro { font-size: 14px; font-weight: 300; color: var(--text-2); line-height: 1.75; margin-bottom: 40px; }
@@ -1058,9 +1092,10 @@
   <span class="nav-brand" onclick="goHome()">VARENPHANGKAJAYA.COM</span>
   <div class="nv-right">
     <div class="nav-links" id="nav-links">
-      <a onclick="openProject('journal')">Journal</a>
-      <a onclick="openProject('contact')">Contact</a>
-    </div>
+  <a onclick="openProject('journal')">Journal</a>
+  <a onclick="openProject('services')">Services</a>
+  <a onclick="openProject('contact')">Contact</a>
+</div>
     <button class="nav-back" id="nav-back" onclick="goHome()">← Back</button>
     <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span>
@@ -1068,9 +1103,10 @@
   </div>
   <div class="nav-menu-overlay" id="nav-menu-overlay">
     <div class="nav-menu-links">
-      <a onclick="openProject('journal');toggleMenu()">Journal</a>
-      <a onclick="openProject('contact');toggleMenu()">Contact</a>
-    </div>
+  <a onclick="openProject('journal');toggleMenu()">Journal</a>
+  <a onclick="openProject('services');toggleMenu()">Services</a>
+  <a onclick="openProject('contact');toggleMenu()">Contact</a>
+</div>
   </div>
 </nav>
 
@@ -1765,6 +1801,177 @@
   </div>
 </div>
 
+  <!-- Services -->
+<div class="page fade-in" id="page-services">
+  <div class="services-page">
+    <div class="project-cat">Services</div>
+    <h1 class="project-title">What I <em>can build for you</em></h1>
+    <p class="services-intro">A focused practice across creative direction, e-commerce, retention systems, and internal tools — built for lifestyle brands that need to grow with intention. Each engagement is end-to-end, from strategy to handoff.</p>
+
+    <div class="service-item" onclick="toggleService(this)">
+      <div class="service-head">
+        <div class="service-num">01</div>
+        <div class="service-title">Creative <em>Direction</em></div>
+        <div class="service-toggle">+</div>
+      </div>
+      <div class="service-body">
+        <p class="service-desc">Concept-to-execution art direction for campaigns, lookbooks, and brand visuals. Build a cohesive visual language that resonates with your audience.</p>
+        <div class="service-block">
+          <div class="service-block-title">Scope of work</div>
+          <ul class="service-list">
+            <li>Campaign concept &amp; creative brief</li>
+            <li>Art direction &amp; visual language guide</li>
+            <li>Talent sourcing &amp; casting</li>
+            <li>On-set direction &amp; styling</li>
+            <li>Post-production &amp; retouching</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-item" onclick="toggleService(this)">
+      <div class="service-head">
+        <div class="service-num">02</div>
+        <div class="service-title">Shopify Build — <em>End to End</em></div>
+        <div class="service-toggle">+</div>
+      </div>
+      <div class="service-body">
+        <p class="service-desc">Full Shopify build from blank store to launch-ready. Covers product listing, 3PL fulfillment, payment gateway, shipping logic, and everything in between.</p>
+        <div class="service-block">
+          <div class="service-block-title">Common challenges this solves</div>
+          <ul class="service-list">
+            <li>Still on marketplaces, want to migrate to owned-channel</li>
+            <li>Theme template feels generic, not premium enough</li>
+            <li>Stuck on 3PL setup, shipping rates, or local payment gateways</li>
+            <li>Low conversion rate despite decent traffic</li>
+            <li>No technical team to handle Liquid customization</li>
+          </ul>
+        </div>
+        <div class="service-block">
+          <div class="service-block-title">Scope of work</div>
+          <ul class="service-list">
+            <li>Theme customization &amp; UX design</li>
+            <li>Product listing &amp; inventory setup</li>
+            <li>3PL integration (JNE, J&amp;T, SiCepat, Gojek, Grab, Paxel)</li>
+            <li>Payment gateway setup (Midtrans, Xendit)</li>
+            <li>Shipping zones &amp; rate configuration (domestic + international)</li>
+            <li>Custom Liquid features (size calc, bundle, gift threshold)</li>
+            <li>Checkout optimization</li>
+            <li>App stack curation (reviews, upsell, email capture)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-item" onclick="toggleService(this)">
+      <div class="service-head">
+        <div class="service-num">03</div>
+        <div class="service-title">CRM &amp; <em>Email Marketing</em></div>
+        <div class="service-toggle">+</div>
+      </div>
+      <div class="service-body">
+        <p class="service-desc">Build a full retention system from scratch. From zero CRM to full lifecycle automation in a matter of weeks.</p>
+        <div class="service-block">
+          <div class="service-block-title">Common challenges this solves</div>
+          <ul class="service-list">
+            <li>Customer database exists but never used</li>
+            <li>Repeat purchase rate stagnant — too dependent on new acquisition</li>
+            <li>Sending campaign emails manually — exhausting and not scalable</li>
+            <li>Emails landing in spam, deliverability is broken</li>
+            <li>Don't know how to segment customers or build a coupon strategy</li>
+            <li>Struggling to connect Klaviyo to Shopify properly</li>
+          </ul>
+        </div>
+        <div class="service-block">
+          <div class="service-block-title">Scope of work</div>
+          <ul class="service-list">
+            <li>Klaviyo integration &amp; full setup</li>
+            <li>5 essential flows (Welcome, Abandoned Cart, Win-back, Birthday, Back in Stock)</li>
+            <li>Membership program design &amp; implementation</li>
+            <li>Coupon strategy per market (multi-country support)</li>
+            <li>Customer segmentation &amp; list management</li>
+            <li>DNS &amp; email deliverability setup</li>
+            <li>Reporting dashboard</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-item" onclick="toggleService(this)">
+      <div class="service-head">
+        <div class="service-num">04</div>
+        <div class="service-title">Internal <em>Web App (PWA)</em></div>
+        <div class="service-toggle">+</div>
+      </div>
+      <div class="service-body">
+        <p class="service-desc">Custom PWA for your internal team — operations, attendance, inventory, or reporting. Replace WhatsApp groups and spreadsheets with one unified tool.</p>
+        <div class="service-block">
+          <div class="service-block-title">Common challenges this solves</div>
+          <ul class="service-list">
+            <li>Team is growing, coordination via WhatsApp is getting chaotic</li>
+            <li>Spreadsheets no longer enough to track daily operations</li>
+            <li>Hard to monitor attendance or productivity for on-the-ground staff</li>
+            <li>Inventory data scattered across multiple Excel files</li>
+            <li>No single source of truth for daily reporting</li>
+            <li>Want a custom tool but don't have an in-house developer</li>
+          </ul>
+        </div>
+        <div class="service-block">
+          <div class="service-block-title">Scope of work</div>
+          <ul class="service-list">
+            <li>Custom PWA (installable on mobile, offline-ready)</li>
+            <li>Database &amp; authentication setup</li>
+            <li>Role-based access (CEO, manager, staff)</li>
+            <li>Attendance system (GPS-based check-in/out)</li>
+            <li>Inventory tracking with barcode/QR scanning</li>
+            <li>Real-time sync</li>
+            <li>Push notifications</li>
+            <li>Department-specific modules (operations, finance, reporting, etc.)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-item" onclick="toggleService(this)">
+      <div class="service-head">
+        <div class="service-num">05</div>
+        <div class="service-title">Website <em>Development</em></div>
+        <div class="service-toggle">+</div>
+      </div>
+      <div class="service-body">
+        <p class="service-desc">Portfolio sites, landing pages, brand microsites, or directory websites. Clean, fast, and editable. For commerce, I prefer building on Shopify — see service 02.</p>
+        <div class="service-block">
+          <div class="service-block-title">Common challenges this solves</div>
+          <ul class="service-list">
+            <li>No web presence yet — too reliant on Instagram alone</li>
+            <li>Existing site looks cheap, generic, or outdated</li>
+            <li>Every content update requires contacting a developer</li>
+            <li>Slow loading, poor SEO</li>
+            <li>No structured way to showcase work for clients or investors</li>
+          </ul>
+        </div>
+        <div class="service-block">
+          <div class="service-block-title">Scope of work</div>
+          <ul class="service-list">
+            <li>Custom design &amp; development</li>
+            <li>Mobile-responsive (works on every device)</li>
+            <li>CMS integration (edit content without coding)</li>
+            <li>Domain &amp; deployment setup</li>
+            <li>Performance optimization (fast load, good SEO)</li>
+            <li>Maintenance handoff</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="services-cta">
+      <div class="services-cta-text">Have a project in mind?</div>
+      <button class="services-cta-btn" onclick="openProject('contact')">Get in touch →</button>
+    </div>
+
+  </div>
+</div>
+
 <!-- Contact -->
 <div class="page fade-in" id="page-contact">
   <div class="contact-page">
@@ -1779,7 +1986,7 @@
 </div>
 <script>
   // ── ROUTING ──
-  const projects = ['campaign','activation','shopify','crm','systems','webapp','factory','rehab','journal','contact'];
+  const projects = ['campaign','activation','shopify','crm','systems','webapp','factory','rehab','journal','services','contact'];
 
   function showPage(id) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -1847,6 +2054,11 @@
 
   window.addEventListener('hashchange', handleHash);
   window.addEventListener('load', handleHash);
+
+  // ── SERVICES ACCORDION ──
+  window.toggleService = function(el) {
+    el.classList.toggle('open');
+  }
 
   // ── FILTER ──
   window.filterWork = function(btn) {
