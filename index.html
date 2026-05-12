@@ -1854,7 +1854,7 @@
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     document.querySelectorAll('.work-card').forEach(card => {
-      const show = filter === 'all' || card.dataset.cat === filter;
+      const show = filter === 'all' || card.dataset.filter === filter;
       card.dataset.hidden = show ? 'false' : 'true';
     });
   }
